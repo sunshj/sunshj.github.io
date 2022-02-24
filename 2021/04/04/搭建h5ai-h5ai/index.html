@@ -9,7 +9,7 @@
     
     <title>
         
-            搭建h5ai |
+            h5ai |
         
         sunshj的博客
     </title>
@@ -153,7 +153,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">搭建h5ai</span>
+            <span class="title-hover-animation">h5ai</span>
         </div>
 
         
@@ -203,7 +203,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>435 字</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>439 字</span>
         </span>
     
     
@@ -226,13 +226,12 @@
         <div class="article-content markdown-body">
             <h2 id="利用宝塔搭建h5ai"><a href="#利用宝塔搭建h5ai" class="headerlink" title="利用宝塔搭建h5ai"></a>利用宝塔搭建h5ai</h2><br/>
 
-
 <h3 id="一、下载H5ai"><a href="#一、下载H5ai" class="headerlink" title="一、下载H5ai"></a>一、下载H5ai</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 官方版</span><br><span class="line">https://release.larsjung.de/h5ai/h5ai-0.30.0.zip</span><br><span class="line"># Dplayer版</span><br><span class="line">https://github.com/Pearlulu/h5ai_dplayer</span><br></pre></td></tr></table></figure>
 
-<p><a class="link"   target="_blank" rel="noopener" href="https://release.larsjung.de/h5ai/" >RELEASE<i class="fas fa-external-link-alt"></i></a><br><br/></p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://release.larsjung.de/h5ai/" >RELEASE<i class="fas fa-external-link-alt"></i></a><br><code>&lt;br/&gt;</code></p>
 <h3 id="二、配置"><a href="#二、配置" class="headerlink" title="二、配置"></a>二、配置</h3><br/>
 
-<h4 id="1、解压"><a href="#1、解压" class="headerlink" title="1、解压"></a>1、解压</h4><p>注意：将要展示的文件及文件夹请放在<code>_h5ai</code>同一目录下</p>
+<h4 id="1、解压"><a href="#1、解压" class="headerlink" title="1、解压"></a>1、解压</h4><p>注意：将要展示的文件及文件夹请放在 <code>_h5ai</code>同一目录下</p>
 <br/>
 
 <h4 id="2、修改默认文档及配置文件"><a href="#2、修改默认文档及配置文件" class="headerlink" title="2、修改默认文档及配置文件"></a>2、修改默认文档及配置文件</h4><br/>
@@ -243,7 +242,7 @@
 <br/>
 
 <p><strong>配置文件添加</strong></p>
-<p>禁止<code>/_h5ai/private</code>中的内容被访问</p>
+<p>禁止 <code>/_h5ai/private</code>中的内容被访问</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">location ~ ^/_h5ai/private/ &#123;</span><br><span class="line">   return 404;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
 
 <br/>
@@ -251,13 +250,14 @@
 <p><strong>如果打开网页出现以下错误：</strong></p>
 <p><code>Warning: putenv() has been disabled for security reasons in</code></p>
 <p>原因：禁用了部分存在危险的PHP函数</p>
-<p>解决方法： </p>
-<p><strong>php禁用函数删去<code>putenv</code></strong></p>
+<p>解决方法：</p>
+<p><strong>php禁用函数删去 <code>putenv</code></strong></p>
 <br/>
 
-<h4 id="3、修改网站配置"><a href="#3、修改网站配置" class="headerlink" title="3、修改网站配置"></a>3、修改网站配置</h4><p>根据个人需求，在<code>/_h5ai/private/conf/options.json</code>中修改配置</p>
+<h4 id="3、修改网站配置"><a href="#3、修改网站配置" class="headerlink" title="3、修改网站配置"></a>3、修改网站配置</h4><p>根据个人需求，在 <code>/_h5ai/private/conf/options.json</code>中修改配置</p>
 <p><strong>如设置默认语言为中文</strong></p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;l10n&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="comment">//用户是否可以自行选择语言</span></span><br><span class="line">    <span class="attr">&quot;enabled&quot;</span><span class="punctuation">:</span> <span class="keyword">true</span><span class="punctuation">,</span></span><br><span class="line">    <span class="comment">//默认语言，&quot;zh-cn&quot;为简体中文，其他支持的语言可以到&quot;/_h5ai/conf/l10n&quot;中查看</span></span><br><span class="line">    <span class="attr">&quot;lang&quot;</span><span class="punctuation">:</span> <span class="string">&quot;zh-cn&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="comment">//根据浏览器自动判断语言</span></span><br><span class="line">    <span class="attr">&quot;useBrowserLang&quot;</span><span class="punctuation">:</span> <span class="keyword">true</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
+
 <br/>
 
 <h2 id="h5ai修改美化"><a href="#h5ai修改美化" class="headerlink" title="h5ai修改美化"></a>h5ai修改美化</h2><h3 id="一、修改默认显示域名"><a href="#一、修改默认显示域名" class="headerlink" title="一、修改默认显示域名"></a>一、修改默认显示域名</h3><p>h5ai默认首页和主目录用域名显示，不够美观。</p>
@@ -267,7 +267,7 @@
 <p>修改为</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">===e?&#x27;你想显示的内容&#x27;:n.name</span><br></pre></td></tr></table></figure>
 
-<h3 id="二、修改网页标题"><a href="#二、修改网页标题" class="headerlink" title="二、修改网页标题"></a>二、修改网页标题</h3><p>修改<code>_h5ai/private/php/pages/index.php</code> 中的内容</p>
+<h3 id="二、修改网页标题"><a href="#二、修改网页标题" class="headerlink" title="二、修改网页标题"></a>二、修改网页标题</h3><p>修改 <code>_h5ai/private/php/pages/index.php</code> 中的内容</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;title&gt;index - powered by h5ai v0.29.2 (https://larsjung.de/h5ai/)&lt;/title&gt;</span><br></pre></td></tr></table></figure>
 
 <p>替换为</p>
@@ -276,10 +276,8 @@
 <p>建议保留网站右上角的版权信息。</p>
 <p>参照：</p>
 <ul>
-<li><p><a class="link"   target="_blank" rel="noopener" href="https://sunpma.com/178.html" >宝塔面板Nginx环境搭建h5ai DPlayer版详细教程<i class="fas fa-external-link-alt"></i></a></p>
-</li>
-<li><p><a class="link"   target="_blank" rel="noopener" href="https://moe.best/yoimono/h5ai.html" >[h5ai] 轻便但强大的 PHP 文件目录列表程序<i class="fas fa-external-link-alt"></i></a></p>
-</li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://sunpma.com/178.html" >宝塔面板Nginx环境搭建h5ai DPlayer版详细教程<i class="fas fa-external-link-alt"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://moe.best/yoimono/h5ai.html" >[h5ai] 轻便但强大的 PHP 文件目录列表程序<i class="fas fa-external-link-alt"></i></a></li>
 </ul>
 <br/>
 
@@ -291,7 +289,7 @@
             <div class="post-copyright-info">
                 <div class="article-copyright-info-container">
     <ul>
-        <li>本文标题：搭建h5ai</li>
+        <li>本文标题：h5ai</li>
         <li>本文作者：sunshj</li>
         <li>创建时间：2021-04-04 08:55:38</li>
         <li>

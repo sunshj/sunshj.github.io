@@ -9,7 +9,7 @@
     
     <title>
         
-            甲骨文云VPS利用 |
+            oracle-v2ray |
         
         sunshj的博客
     </title>
@@ -153,7 +153,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">甲骨文云VPS利用</span>
+            <span class="title-hover-animation">oracle-v2ray</span>
         </div>
 
         
@@ -203,7 +203,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>216 字</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>219 字</span>
         </span>
     
     
@@ -226,7 +226,7 @@
         <div class="article-content markdown-body">
             <h2 id="V2ray搭建教程"><a href="#V2ray搭建教程" class="headerlink" title="V2ray搭建教程"></a>V2ray搭建教程</h2></br>
 
-<p><strong>以Oracle Cloud为例</strong><br></br></p>
+<p><strong>以Oracle Cloud为例</strong><br><code>&lt;/br&gt;</code></p>
 <p><code>Oracle 的云主机自带了不少的监控进程，有时会造成主机卡顿的情况，我们可以通过以下方法卸载它们</code></p>
 <h3 id="Centos7"><a href="#Centos7" class="headerlink" title="Centos7"></a>Centos7</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop oracle-cloud-agent</span><br><span class="line">systemctl disable oracle-cloud-agent</span><br><span class="line">systemctl stop oracle-cloud-agent-updater</span><br><span class="line">systemctl disable oracle-cloud-agent-updater</span><br></pre></td></tr></table></figure>
 
@@ -239,11 +239,10 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">iptables -P INPUT ACCEPT</span><br><span class="line">iptables -P FORWARD ACCEPT</span><br><span class="line">iptables -P OUTPUT ACCEPT</span><br><span class="line">iptables -F</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt-get purge netfilter-persistent</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+
 </br>
 
-
 <h3 id="一键安装脚本"><a href="#一键安装脚本" class="headerlink" title="一键安装脚本"></a>一键安装脚本</h3></br>
-
 
 <p><strong>一键安装Vless&#x2F;Vmess</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -sL https://s.hijk.art/v2ray.sh)</span><br></pre></td></tr></table></figure>
@@ -263,7 +262,7 @@
             <div class="post-copyright-info">
                 <div class="article-copyright-info-container">
     <ul>
-        <li>本文标题：甲骨文云VPS利用</li>
+        <li>本文标题：oracle-v2ray</li>
         <li>本文作者：sunshj</li>
         <li>创建时间：2021-03-21 08:25:46</li>
         <li>
@@ -300,7 +299,7 @@
                               <i class="fas fa-chevron-left"></i>
                             </span>
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">一键搭建电报MTProto代理</span>
+                                <span class="post-nav-title-item">tg-mtproto</span>
                                 <span class="post-nav-item">上一篇</span>
                             </span>
                         </a>
@@ -313,7 +312,7 @@
                            href="/2021/03/19/%E5%AE%89%E8%A3%85Typecho%E5%8D%9A%E5%AE%A2-typecho-install/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">安装Typecho博客</span>
+                                <span class="post-nav-title-item">typecho-install</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                             <span class="right arrow-icon flex-center">

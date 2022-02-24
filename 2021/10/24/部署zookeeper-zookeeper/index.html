@@ -9,7 +9,7 @@
     
     <title>
         
-            部署zookeeper |
+            zookeeper |
         
         sunshj的博客
     </title>
@@ -153,7 +153,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">部署zookeeper</span>
+            <span class="title-hover-animation">zookeeper</span>
         </div>
 
         
@@ -233,8 +233,6 @@
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source .bashrc</span><br></pre></td></tr></table></figure>
 
-
-
 <h2 id="二、配置zookeeper-配置文件"><a href="#二、配置zookeeper-配置文件" class="headerlink" title="二、配置zookeeper 配置文件"></a>二、配置zookeeper 配置文件</h2><h4 id="1、进入-zookeeper-配置文件目录（conf）"><a href="#1、进入-zookeeper-配置文件目录（conf）" class="headerlink" title="1、进入 zookeeper 配置文件目录（conf）"></a>1、进入 zookeeper 配置文件目录（conf）</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd zookeeper-3.7.0/conf/</span><br></pre></td></tr></table></figure>
 
 <h4 id="2、复制zoo-sample-cfg-文件为-zoo-cfg"><a href="#2、复制zoo-sample-cfg-文件为-zoo-cfg" class="headerlink" title="2、复制zoo_sample.cfg 文件为 zoo.cfg"></a>2、复制zoo_sample.cfg 文件为 zoo.cfg</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp zoo_sample.cfg zoo.cfg</span><br></pre></td></tr></table></figure>
@@ -246,7 +244,7 @@
 <h4 id="4、创建-myid-文件"><a href="#4、创建-myid-文件" class="headerlink" title="4、创建 myid 文件"></a>4、创建 myid 文件</h4><p>并加入数字 0 （主节点为 0，从节点分别为 1,2）</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vi /home/sunshj/zookeeper-3.7.0/data/myid</span><br><span class="line"># 或者使用</span><br><span class="line">echo 0 &gt;&gt; myid</span><br></pre></td></tr></table></figure>
 
-<h4 id="5、修改-zoo-cfg-配置文件"><a href="#5、修改-zoo-cfg-配置文件" class="headerlink" title="5、修改 zoo.cfg 配置文件"></a>5、修改 zoo.cfg 配置文件</h4><p>将配置文件中dataDir 的路径改为<code>/home/sunshj/zookeeper-3.7.0/data</code></p>
+<h4 id="5、修改-zoo-cfg-配置文件"><a href="#5、修改-zoo-cfg-配置文件" class="headerlink" title="5、修改 zoo.cfg 配置文件"></a>5、修改 zoo.cfg 配置文件</h4><p>将配置文件中dataDir 的路径改为 <code>/home/sunshj/zookeeper-3.7.0/data</code></p>
 <p>添加dataLogDir</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataLogDir=/home/sunshj/zookeeper-3.7.0/dataLog</span><br></pre></td></tr></table></figure>
 
@@ -281,7 +279,7 @@
             <div class="post-copyright-info">
                 <div class="article-copyright-info-container">
     <ul>
-        <li>本文标题：部署zookeeper</li>
+        <li>本文标题：zookeeper</li>
         <li>本文作者：sunshj</li>
         <li>创建时间：2021-10-24 20:34:34</li>
         <li>
