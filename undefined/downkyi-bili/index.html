@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="sunshj">
+    
+    <title>
+        
+            批量下载b站视频工具 |
+        
+        sunshj的博客
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/sunshj.jpg","favicon":"/images/favicon.png","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":true},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"用心写点没用的东西~"},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                sunshj的博客
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/links"
+                            >
+                                友链
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/links">友链</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">批量下载b站视频工具</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/sunshj.jpg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">sunshj</span>
+                        
+                            <span class="author-label">Lv4</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2021-05-12 13:57:49</span>
+        <span class="mobile">2021-05-12 13:57</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E5%88%86%E4%BA%AB/">分享</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/">资源分享</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>590 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>2 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <table>
+<thead>
+<tr>
+<th align="center">项目开源</th>
+<th align="center">本地下载</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a class="link"   target="_blank" rel="noopener" href="https://github.com/FlySelfLog/downkyi" >github<i class="fas fa-external-link-alt"></i></a></td>
+<td align="center"><a class="link"   target="_blank" rel="noopener" href="https://cdn.sunshj.top/Software/DownKyi-1.3.8.zip" >点击下载<i class="fas fa-external-link-alt"></i></a></td>
+</tr>
+</tbody></table>
+<h2 id="哔哩下载姬"><a href="#哔哩下载姬" class="headerlink" title="哔哩下载姬"></a>哔哩下载姬</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.sunshj.top/Pic/images/article/bilidownload.jpg"
+                      alt="示例"
+                ></p>
+<h2 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h2><p>哔哩下载姬（downkyi）是一个简单易用的哔哩哔哩视频下载工具，具有简洁的界面，流畅的操作逻辑。哔哩下载姬可以下载几乎所有的B站视频，并输出mp4格式的文件；采用Aria下载器多线程下载，采用FFmpeg对视频进行混流、提取音视频等操作。</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 支持二维码登录</li>
+<li><input checked="" disabled="" type="checkbox"> 支持4K下载</li>
+<li><input checked="" disabled="" type="checkbox"> 支持视频、番剧、剧集、电影、课程下载</li>
+<li><input checked="" disabled="" type="checkbox"> <strong>支持用户收藏夹、订阅、稍后再看、历史记录下载</strong></li>
+<li><input checked="" disabled="" type="checkbox"> <del><strong>支持港澳台番剧下载，解除地区限制</strong></del></li>
+<li><input checked="" disabled="" type="checkbox"> 支持封面下载</li>
+<li><input checked="" disabled="" type="checkbox"> 支持断点续传</li>
+<li><input checked="" disabled="" type="checkbox"> 支持Aria2c</li>
+<li><input checked="" disabled="" type="checkbox"> 支持下载历史记录保存</li>
+<li><input checked="" disabled="" type="checkbox"> 支持av、BV互转</li>
+<li><input checked="" disabled="" type="checkbox"> 支持弹幕发送者查询</li>
+<li><input checked="" disabled="" type="checkbox"> 支持音视频分离</li>
+<li><input checked="" disabled="" type="checkbox"> 支持去水印</li>
+<li><input checked="" disabled="" type="checkbox"> 支持检查更新</li>
+</ul>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><h3 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h3><p>要求 .NET Framework &gt;&#x3D; 4.7.2</p>
+<ul>
+<li><p>安装 <a class="link"   target="_blank" rel="noopener" href="https://dotnet.microsoft.com/download/dotnet-framework/net472" >.NET Framework 4.7.2<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p><a class="link"   target="_blank" rel="noopener" href="https://download.microsoft.com/download/0/5/C/05C1EC0E-D5EE-463B-BFE3-9311376A6809/NDP472-KB4054531-Web.exe" >.NET Framework 4.7.2 在线安装程序<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p><a class="link"   target="_blank" rel="noopener" href="https://download.microsoft.com/download/6/E/4/6E48E8AB-DC00-419E-9704-06DD46E5F81D/NDP472-KB4054530-x86-x64-AllOS-ENU.exe" >.NET Framework 4.7.2 离线安装程序<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>也可以安装 <a class="link"   target="_blank" rel="noopener" href="https://dotnet.microsoft.com/download/dotnet-framework/net48" >.NET Framework 4.8<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+</ul>
+<h3 id="检索"><a href="#检索" class="headerlink" title="检索"></a>检索</h3><p>哔哩下载姬支持多种复制于浏览器或APP的网址格式，在程序主页输入并按回车键即可开始检索。</p>
+<ul>
+<li>检索只获取视频的基本信息，视频下载链接需点击解析。（v1.3.5）</li>
+<li>监听剪贴板，复制即可开始检索。（v1.3.6）</li>
+<li>视频详情页中，先选中视频再下载，如果该视频已经在下载队列或者已下载列表中，则不会被添加。</li>
+<li>用户收藏夹、订阅、稍后再看、历史记录中，点击下载后，会默认下载选中视频的所有分P。</li>
+</ul>
+<p>目前已支持的有：</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> av号：av170001，<a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/video/av170001" >https://www.bilibili.com/video/av170001<i class="fas fa-external-link-alt"></i></a></li>
+<li><input checked="" disabled="" type="checkbox"> BV号：BV17x411w7KC，<a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV17x411w7KC" >https://www.bilibili.com/video/BV17x411w7KC<i class="fas fa-external-link-alt"></i></a></li>
+<li><input checked="" disabled="" type="checkbox"> 番剧（电影、电视剧）ss号：<a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/bangumi/play/ss32982" >https://www.bilibili.com/bangumi/play/ss32982<i class="fas fa-external-link-alt"></i></a></li>
+<li><input checked="" disabled="" type="checkbox"> 番剧（电影、电视剧）ep号：<a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/bangumi/play/ep317925" >https://www.bilibili.com/bangumi/play/ep317925<i class="fas fa-external-link-alt"></i></a></li>
+<li><input checked="" disabled="" type="checkbox"> 番剧（电影、电视剧）md号：<a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/bangumi/media/md28228367" >https://www.bilibili.com/bangumi/media/md28228367<i class="fas fa-external-link-alt"></i></a></li>
+<li><input checked="" disabled="" type="checkbox"> 课程ss号：<a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/cheese/play/ss205" >https://www.bilibili.com/cheese/play/ss205<i class="fas fa-external-link-alt"></i></a></li>
+<li><input checked="" disabled="" type="checkbox"> 课程ep号：<a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/cheese/play/ep3489" >https://www.bilibili.com/cheese/play/ep3489<i class="fas fa-external-link-alt"></i></a></li>
+<li><input checked="" disabled="" type="checkbox"> 用户空间：uid928123，UID:928123，<a class="link"   target="_blank" rel="noopener" href="https://space.bilibili.com/928123" >https://space.bilibili.com/928123<i class="fas fa-external-link-alt"></i></a></li>
+</ul>
+<p><code>注：因为番剧和课程都有ss号和ep号，因此暂时不能直接输入ss号和ep号。</code></p>
+<p><em>以上内容转载自<a class="link"   target="_blank" rel="noopener" href="https://github.com/FlySelfLog/downkyi/blob/main/README.md" >该软件MD<i class="fas fa-external-link-alt"></i></a></em></p>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>本文标题：批量下载b站视频工具</li>
+        <li>本文作者：sunshj</li>
+        <li>创建时间：2021-05-12 13:57:49</li>
+        <li>
+            本文链接：https://sunshj.github.io/undefined/downkyi-bili/
+        </li>
+        <li>
+            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/">#资源分享</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/undefined/navicat-activate/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Navicat激活教程</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/undefined/mousukoshidake-yoasobi/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">もう少しだけ</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">sunshj</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%93%94%E5%93%A9%E4%B8%8B%E8%BD%BD%E5%A7%AC"><span class="nav-number">1.</span> <span class="nav-text">哔哩下载姬</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E"><span class="nav-number">2.</span> <span class="nav-text">关于</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">使用方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83"><span class="nav-number">3.1.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A3%80%E7%B4%A2"><span class="nav-number">3.2.</span> <span class="nav-text">检索</span></a></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/code-copy.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/lazyload.js"></script>
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/toc.js"></script>
+    
+</div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>
