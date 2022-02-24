@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="sunshj">
+    
+    <title>
+        
+            もう少しだけ |
+        
+        sunshj的博客
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/sunshj.jpg","favicon":"/images/favicon.png","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":true},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"用心写点没用的东西~"},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                sunshj的博客
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class="active"
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/links"
+                            >
+                                友链
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class="active"
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/links">友链</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">もう少しだけ</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/sunshj.jpg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">sunshj</span>
+                        
+                            <span class="author-label">Lv5</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2021-05-11 09:09:53</span>
+        <span class="mobile">2021-05-11 09:09</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E9%9F%B3%E4%B9%90/">音乐</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E6%AD%8C%E8%AF%8D/">歌词</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>391 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>2 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <div 
+     id="aplayer" 
+     style="z-index: 100;" 
+     class="aplayer" 
+     data-id="6752805505" 
+     data-server="netease" 
+     data-type="playlist" 
+     data-fixed="false" 
+     data-preload="auto" 
+     data-order="list"
+     data-autoplay="false"
+     data-theme="orange">
+</div>
+
+</br>
+
+<h4 id="もう少しだけ"><a href="#もう少しだけ" class="headerlink" title="もう少しだけ"></a>もう少しだけ</h4><p> <strong>作詞：Ayase</strong></p>
+<p> <strong>作曲：Ayase</strong></p>
+</br>
+
+
+<p>もう<ruby>少<rp>(</rp><rt>すこ</rt><rp>)</rp></ruby>しだけ　もう<ruby>少<rp>(</rp><rt>すこ</rt><rp>)</rp></ruby>しだけ</p>
+<p> <ruby>踏<rp>(</rp><rt>ふ</rt><rp>)</rp></ruby>み<ruby>出<rp>(</rp><rt>だ</rt><rp>)</rp></ruby>せたのなら</p>
+<p> そう<ruby>小<rp>(</rp><rt>ちい</rt><rp>)</rp></ruby>さな<ruby>優<rp>(</rp><rt>やさ</rt><rp>)</rp></ruby>しさを</p>
+<p> <ruby>分<rp>(</rp><rt>わ</rt><rp>)</rp></ruby>け<ruby>合<rp>(</rp><rt>あ</rt><rp>)</rp></ruby>えたのなら</p>
+<p> ありふれた<ruby>一日<rp>(</rp><rt>いちにち</rt><rp>)</rp></ruby>が</p>
+<p> <ruby>素敵<rp>(</rp><rt>すてき</rt><rp>)</rp></ruby>な<ruby>日<rp>(</rp><rt>ひ</rt><rp>)</rp></ruby>になっていくほら</p>
+<p> そうやって<ruby>何度<rp>(</rp><rt>なんど</rt><rp>)</rp></ruby>でも</p>
+<p> <ruby>喜<rp>(</rp><rt>よろこ</rt><rp>)</rp></ruby>びはめぐる</p>
+<p> <ruby>慌<rp>(</rp><rt>あわ</rt><rp>)</rp></ruby>ただしく<ruby>過<rp>(</rp><rt>す</rt><rp>)</rp></ruby>ぎる<ruby>朝<rp>(</rp><rt>あさ</rt><rp>)</rp></ruby>に</p>
+<p> いつも<ruby>通<rp>(</rp><rt>どお</rt><rp>)</rp></ruby>り<ruby>過<rp>(</rp><rt>す</rt><rp>)</rp></ruby>ぎる<ruby>朝<rp>(</rp><rt>あさ</rt><rp>)</rp></ruby>に</p>
+<p> <ruby>頼<rp>(</rp><rt>たの</rt><rp>)</rp></ruby>まれたお<ruby>使<rp>(</rp><rt>つか</rt><rp>)</rp></ruby>いと<ruby>予定<rp>(</rp><rt>よてい</rt><rp>)</rp></ruby>を<ruby>照<rp>(</rp><rt>て</rt><rp>)</rp></ruby>らす</p>
+<p> <ruby>君<rp>(</rp><rt>きみ</rt><rp>)</rp></ruby>が<ruby>教<rp>(</rp><rt>おし</rt><rp>)</rp></ruby>えてくれた</p>
+<p> あてにしてない<ruby>占<rp>(</rp><rt>うらな</rt><rp>)</rp></ruby>いの<ruby>言葉<rp>(</rp><rt>ことば</rt><rp>)</rp></ruby></p>
+<p> 「いつもしないことを」だって</p>
+<p> そんなことを<ruby>頭<rp>(</rp><rt>あたま</rt><rp>)</rp></ruby>の<ruby>隅<rp>(</rp><rt>すみ</rt><rp>)</rp></ruby>に<ruby>置<rp>(</rp><rt>お</rt><rp>)</rp></ruby>いたまま</p>
+<p> いつもの<ruby>今日<rp>(</rp><rt>きょう</rt><rp>)</rp></ruby>へ</p>
+<p> もう<ruby>少<rp>(</rp><rt>すこ</rt><rp>)</rp></ruby>しだけ　もう<ruby>少<rp>(</rp><rt>すこ</rt><rp>)</rp></ruby>しだけ</p>
+<p> <ruby>踏<rp>(</rp><rt>ふ</rt><rp>)</rp></ruby>み<ruby>出<rp>(</rp><rt>だ</rt><rp>)</rp></ruby>せたのなら</p>
+<p> もう<ruby>少<rp>(</rp><rt>すこ</rt><rp>)</rp></ruby>しだけ　あと<ruby>少<rp>(</rp><rt>すこ</rt><rp>)</rp></ruby>しだけ</p>
+<p> <ruby>優<rp>(</rp><rt>やさ</rt><rp>)</rp></ruby>しくなれたのなら</p>
+<p> ありふれた<ruby>一日<rp>(</rp><rt>いちにち</rt><rp>)</rp></ruby>も</p>
+<p> <ruby>素敵<rp>(</rp><rt>すてき</rt><rp>)</rp></ruby>な<ruby>日<rp>(</rp><rt>ひ</rt><rp>)</rp></ruby>になっていくような</p>
+<p> そんな<ruby>気<rp>(</rp><rt>き</rt><rp>)</rp></ruby>がしたんだ</p>
+<p> <ruby>今喜<rp>(</rp><rt>いまよろこ</rt><rp>)</rp></ruby>びはめぐる</p>
+<p> <ruby>暗<rp>(</rp><rt>くら</rt><rp>)</rp></ruby>いニュースが<ruby>流<rp>(</rp><rt>なが</rt><rp>)</rp></ruby>れる<ruby>朝<rp>(</rp><rt>あさ</rt><rp>)</rp></ruby>に</p>
+<p> <ruby>気持<rp>(</rp><rt>きも</rt><rp>)</rp></ruby>ちが<ruby>沈<rp>(</rp><rt>しず</rt><rp>)</rp></ruby>んでいく<ruby>朝<rp>(</rp><rt>あさ</rt><rp>)</rp></ruby>に</p>
+<p> <ruby>自分<rp>(</rp><rt>じぶん</rt><rp>)</rp></ruby>は「いらない」<ruby>存在<rp>(</rp><rt>そんざい</rt><rp>)</rp></ruby>？</p>
+<p> なんて<ruby>考<rp>(</rp><rt>かんが</rt><rp>)</rp></ruby>える<ruby>朝<rp>(</rp><rt>あさ</rt><rp>)</rp></ruby>に</p>
+<p> あなたのことを<ruby>思<rp>(</rp><rt>おも</rt><rp>)</rp></ruby>い<ruby>出<rp>(</rp><rt>だ</rt><rp>)</rp></ruby>したんだ</p>
+<p> あなたに<ruby>会<rp>(</rp><rt>あ</rt><rp>)</rp></ruby>いたくなったんだ</p>
+<p> <ruby>久<rp>(</rp><rt>ひさ</rt><rp>)</rp></ruby>しぶりに<ruby>会<rp>(</rp><rt>あ</rt><rp>)</rp></ruby>いに<ruby>行<rp>(</rp><rt>い</rt><rp>)</rp></ruby>くよ</p>
+<p> <ruby>今<rp>(</rp><rt>いま</rt><rp>)</rp></ruby>すぐに</p>
+<p> <ruby>待<rp>(</rp><rt>ま</rt><rp>)</rp></ruby>ちに<ruby>待<rp>(</rp><rt>ま</rt><rp>)</rp></ruby>ったそんな<ruby>朝<rp>(</rp><rt>あさ</rt><rp>)</rp></ruby>に</p>
+<p> <ruby>想<rp>(</rp><rt>おも</rt><rp>)</rp></ruby>いを<ruby>馳<rp>(</rp><rt>は</rt><rp>)</rp></ruby>せる<ruby>日<rp>(</rp><rt>ひ</rt><rp>)</rp></ruby>の<ruby>朝<rp>(</rp><rt>あさ</rt><rp>)</rp></ruby>に</p>
+<p> いつもよりも<ruby>早<rp>(</rp><rt>はや</rt><rp>)</rp></ruby>く<ruby>家<rp>(</rp><rt>いえ</rt><rp>)</rp></ruby>を<ruby>出<rp>(</rp><rt>で</rt><rp>)</rp></ruby>る</p>
+<p> <ruby>不意<rp>(</rp><rt>ふい</rt><rp>)</rp></ruby>に<ruby>触<rp>(</rp><rt>ふ</rt><rp>)</rp></ruby>れた<ruby>誰<rp>(</rp><rt>だれ</rt><rp>)</rp></ruby>かの<ruby>優<rp>(</rp><rt>やさ</rt><rp>)</rp></ruby>しさが</p>
+<p> <ruby>私<rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>の<ruby>優<rp>(</rp><rt>やさ</rt><rp>)</rp></ruby>しさに<ruby>変<rp>(</rp><rt>か</rt><rp>)</rp></ruby>わったんだ</p>
+<p> ほら<ruby>喜<rp>(</rp><rt>よろこ</rt><rp>)</rp></ruby>びはめぐる</p>
+<p> もう<ruby>少<rp>(</rp><rt>すこ</rt><rp>)</rp></ruby>しだけ　もう<ruby>少<rp>(</rp><rt>すこ</rt><rp>)</rp></ruby>しだけ</p>
+<p> <ruby>踏<rp>(</rp><rt>ふ</rt><rp>)</rp></ruby>み<ruby>出<rp>(</rp><rt>だ</rt><rp>)</rp></ruby>せたことが</p>
+<p> もう<ruby>少<rp>(</rp><rt>すこ</rt><rp>)</rp></ruby>しだけ　ほんの<ruby>少<rp>(</rp><rt>すこ</rt><rp>)</rp></ruby>しだけ</p>
+<p> <ruby>優<rp>(</rp><rt>やさ</rt><rp>)</rp></ruby>しくなれたことが</p>
+<p> ありふれた<ruby>一日<rp>(</rp><rt>いちにち</rt><rp>)</rp></ruby>を</p>
+<p> <ruby>特別<rp>(</rp><rt>とくべつ</rt><rp>)</rp></ruby>な<ruby>一日<rp>(</rp><rt>いちにち</rt><rp>)</rp></ruby>にほら</p>
+<p> <ruby>変<rp>(</rp><rt>か</rt><rp>)</rp></ruby>えてくれたんだきっと</p>
+<p> <ruby>今日<rp>(</rp><rt>きょう</rt><rp>)</rp></ruby>も</p>
+<p> あなたから<ruby>私<rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>へと</p>
+<p> <ruby>想<rp>(</rp><rt>おも</rt><rp>)</rp></ruby>いが<ruby>伝<rp>(</rp><rt>つた</rt><rp>)</rp></ruby>わる</p>
+<p> そう<ruby>僕<rp>(</rp><rt>ぼく</rt><rp>)</rp></ruby>から<ruby>君<rp>(</rp><rt>きみ</rt><rp>)</rp></ruby>にほら</p>
+<p> <ruby>喜<rp>(</rp><rt>よろこ</rt><rp>)</rp></ruby>びが<ruby>広<rp>(</rp><rt>ひろ</rt><rp>)</rp></ruby>がる</p>
+<p> ありふれた<ruby>毎日<rp>(</rp><rt>まいにち</rt><rp>)</rp></ruby>から</p>
+<p> <ruby>踏<rp>(</rp><rt>ふ</rt><rp>)</rp></ruby>み<ruby>出<rp>(</rp><rt>だ</rt><rp>)</rp></ruby>した<ruby>優<rp>(</rp><rt>やさ</rt><rp>)</rp></ruby>しさが<ruby>今<rp>(</rp><rt>いま</rt><rp>)</rp></ruby></p>
+<p> <ruby>誰<rp>(</rp><rt>だれ</rt><rp>)</rp></ruby>かに<ruby>届<rp>(</rp><rt>とど</rt><rp>)</rp></ruby>いてきっと</p>
+<p> めぐり<ruby>続<rp>(</rp><rt>つづ</rt><rp>)</rp></ruby>けるんだずっと</p>
+<p> どこまでも</p>
+<p> <ruby>今日<rp>(</rp><rt>きょう</rt><rp>)</rp></ruby>もどこかであなたが</p>
+<p> <ruby>今<rp>(</rp><rt>いま</rt><rp>)</rp></ruby>を<ruby>生<rp>(</rp><rt>い</rt><rp>)</rp></ruby>きるあなたがただ</p>
+<p> <ruby>小<rp>(</rp><rt>ちい</rt><rp>)</rp></ruby>さな<ruby>幸<rp>(</rp><rt>しあわ</rt><rp>)</rp></ruby>せを</p>
+<p> <ruby>見<rp>(</rp><rt>み</rt><rp>)</rp></ruby>つけられますように</p>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>本文标题：もう少しだけ</li>
+        <li>本文作者：sunshj</li>
+        <li>创建时间：2021-05-11 09:09:53</li>
+        <li>
+            本文链接：https://sunshj.github.io/archives/mousukoshidake-yoasobi
+        </li>
+        <li>
+            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E6%AD%8C%E8%AF%8D/">#歌词</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/archives/downkyi-bili"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">批量下载b站视频工具</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/archives/use-adb-shell"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">使用ADB命令冻结与卸载系统应用</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">sunshj</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E3%82%82%E3%81%86%E5%B0%91%E3%81%97%E3%81%A0%E3%81%91"><span class="nav-number">1.</span> <span class="nav-text">もう少しだけ</span></a></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/code-copy.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/lazyload.js"></script>
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/toc.js"></script>
+    
+</div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>
