@@ -9,7 +9,7 @@
     
     <title>
         
-            PUBGM日韩服限制 |
+            Github+Nodejs搭建Hexo |
         
         sunshj的博客
     </title>
@@ -153,7 +153,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">PUBGM日韩服限制</span>
+            <span class="title-hover-animation">Github+Nodejs搭建Hexo</span>
         </div>
 
         
@@ -165,15 +165,15 @@
                     <div class="author">
                         <span class="name">sunshj</span>
                         
-                            <span class="author-label">Lv5</span>
+                            <span class="author-label">Lv4</span>
                         
                     </div>
                     <div class="meta-info">
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fas fa-edit"></i>&nbsp;
-        <span class="pc">2021-03-31 09:48:53</span>
-        <span class="mobile">2021-03-31 09:48</span>
+        <span class="pc">2022-02-24 13:28:48</span>
+        <span class="mobile">2022-02-24 13:28</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -193,7 +193,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/%E5%85%AC%E5%91%8A/">公告</a>&nbsp;
+                        <a href="/tags/%E6%95%99%E7%A8%8B-%E8%AE%B0%E5%BD%95-%E6%80%BB%E7%BB%93/">教程 | 记录 | 总结</a>&nbsp;
                     </li>
                 
             </ul>
@@ -203,12 +203,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>850 字</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>309 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fas fa-clock"></i>&nbsp;<span>3 分钟</span>
+            <i class="fas fa-clock"></i>&nbsp;<span>1 分钟</span>
         </span>
     
     
@@ -224,78 +224,33 @@
         
 
         <div class="article-content markdown-body">
-            <h1 id="日本-x2F-韩国以外的其他地区用户的服务限制信息"><a href="#日本-x2F-韩国以外的其他地区用户的服务限制信息" class="headerlink" title="日本&#x2F;韩国以外的其他地区用户的服务限制信息"></a>日本&#x2F;韩国以外的其他地区用户的服务限制信息</h1><p><a target="_blank" rel="noopener" href="https://pubgmobile.jp/guide-of-limitations-of-service-20210331/"><strong>原文链接</strong></a><br> <br/></p>
-<h2 id="原文内容"><a href="#原文内容" class="headerlink" title="原文内容"></a>原文内容</h2> <br/>
+            <h1 id="Github-Nodejs搭建Hexo"><a href="#Github-Nodejs搭建Hexo" class="headerlink" title="Github+Nodejs搭建Hexo"></a>Github+Nodejs搭建Hexo</h1><h2 id="一、使用Github-Pages"><a href="#一、使用Github-Pages" class="headerlink" title="一、使用Github Pages"></a>一、使用Github Pages</h2><p>只需要新建一个以<code>&lt;username&gt;.github.io</code>为名的repository。</p>
+<h2 id="二、安装Git-Bash"><a href="#二、安装Git-Bash" class="headerlink" title="二、安装Git Bash"></a>二、安装Git Bash</h2><p>官网下载<a class="link"   target="_blank" rel="noopener" href="https://gitforwindows.org/" >Git Bash<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="三、安装Node-js"><a href="#三、安装Node-js" class="headerlink" title="三、安装Node.js"></a>三、安装Node.js</h2><p>最新版的Node.js请从<a class="link"   target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/" >官网<i class="fas fa-external-link-alt"></i></a>下载。</p>
+<p>设置镜像源</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
 
-<p>プレイヤーの皆さま、こんにちは。</p>
-  <br/>
+<h2 id="四、安装Hexo"><a href="#四、安装Hexo" class="headerlink" title="四、安装Hexo"></a>四、安装Hexo</h2><p>命令行执行安装，会有一些报错，但可以无视。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 
-<p>今回は、日本&#x2F;大韓民国を除く海外地域からご利用されている皆さまへ、今後実施予定のサービスの利用制限ついてご案内いたします。</p>
-  <br/>
+<p>使用<code>hexo -v</code>查看版本号</p>
+<h3 id="1、初始化"><a href="#1、初始化" class="headerlink" title="1、初始化"></a>1、初始化</h3><p>新建目录如Hexo，目录中执行<code>hexo init</code>，注意，目录必须为空，否则会报错</p>
+<p>接着执行<code>npm install</code>，安装依赖。</p>
+<h3 id="2、预览网页"><a href="#2、预览网页" class="headerlink" title="2、预览网页"></a>2、预览网页</h3><p><code>hexo g</code>会将md文件编译为public下的html文本，<code>hexo s</code>会将网页发布到<code>localhost:4000</code>。</p>
+<p>至此，本地Hexo的部署基本完成。按<code>Ctrl+C</code>以可以关闭部署。</p>
+<h3 id="3、-修改主题"><a href="#3、-修改主题" class="headerlink" title="3、 修改主题"></a>3、 修改主题</h3><p>这里使用keep主题。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd hexo-site</span><br><span class="line">npm install hexo-theme-keep</span><br></pre></td></tr></table></figure>
 
-<p>日韓バージョンは、日本及び大韓民国地域のプレイヤーを対象に正式サービスを行っているバージョンでございますが、現在は海外地域の多くのプレイヤーが日韓バージョンをご利用されている状況を把握しております。</p>
-<p>運営チームとしては、『PUBG MOBILE』をご利用されている全てのプレイヤーの皆さまに、各地域に適した文化や習慣などを考慮した高品質のサービスをご提供するため、今後以下のようにサービス利用の変更を実施することをご案内いたします。</p>
-  <br/>
+<p>安装完成后，在 Hexo 配置文件<code>_config.yml</code>中将 <code>theme</code> 设置为 <code>keep</code>。</p>
+<h3 id="4、部署到Github上"><a href="#4、部署到Github上" class="headerlink" title="4、部署到Github上"></a>4、部署到Github上</h3><p>在 Hexo 配置文件<code>_config.yml</code>中添加deploy参数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/sunshj/sunshj.github.io</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
 
-<p>本変更内容は、地域別に最適化されたサービスをご提供するためのものであることを予めご了承いただければ幸いです。<br><br/></p>
-<p><strong>[日韓バージョンでのサービス利用の変更事項]</strong><br> <br/></p>
-<ol>
-<li>2021年05月01日(土)<ul>
-<li>日本&#x2F;大韓民国以外の海外地域から接続するアカウントのアプリ内課金の利用制限</li>
-<li>日本&#x2F;大韓民国以外の海外地域から接続するアカウントの場合、ゲームプレイ時のネットワーク環境が不安定化します。</li>
-</ul>
-</li>
-<li>2021年06月30日(水)<ul>
-<li>日本&#x2F;大韓民国以外の海外地域から接続するアカウントの日韓バージョンのログイン制限</li>
-</ul>
-</li>
-</ol>
-<p>※インド地域の場合は、2021年6月30日(水)に上記の1,2が一括適用されます。<br> <br/></p>
-<p>上記対応に合わせ、2021年6月30日(水)に利用規約の一部(第19条第14項を追加)を改定いたします。</p>
-<p>改定後の日本の利用規約内容は<a target="_blank" rel="noopener" href="https://pubgmobile.jp/terms-of-service-renewer/"><strong>こちら</strong></a>よりご確認いただけます。<br> <br/></p>
-<p>また、海外地域のプレイヤーの皆さまにおきましては、グローバルバージョン、または各地域でサービスされているバージョンより、快適なゲーム利用環境と適切なサービスを提供させていただいておりますことも合わせてご案内いたします。</p>
-  <br/>
+<p>部署</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
 
-<p>今後、追加で実施されるサービス変更については別途告知を通じてお知らせする予定です。</p>
-<p>引き続き、『PUBG MOBILE』をどうぞよろしくお願いいたします。<br><br/><br> <br/></p>
-<h2 id="谷歌翻译"><a href="#谷歌翻译" class="headerlink" title="谷歌翻译"></a>谷歌翻译</h2><br/>
+<h3 id="5、永久链接"><a href="#5、永久链接" class="headerlink" title="5、永久链接"></a>5、永久链接</h3><p>修改博客根目录配置文件 <code>_config.yml</code> 的 <code>permalink</code>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># permalink: :year/:month/:day/:title/</span><br><span class="line"># archives是自定义字段</span><br><span class="line">permalink: archives/:title</span><br></pre></td></tr></table></figure>
 
-<p>各位玩家你们好。</p>
-<p>这次，我们想通知您将来将为来自日本&#x2F;韩国以外的海外地区的用户使用服务的限制。</p>
-<p>日韩版是正式提供给日本和大韩民国玩家的版本，但我们目前知道海外地区许多玩家正在使用日韩版的情况。</p>
-<p>作为管理团队，为了向所有使用“ PUBG MOBILE”的玩家提供高质量的服务，同时考虑到适合每个地区的文化和习俗，我们将来会提供以下服务。会改变用法。<br><br/></p>
-<p>我们预先感谢您的理解，此更改旨在为每个区域提供优化的服务。</p>
- <br/>
-
-<p><strong>[日文和韩文版本中服务使用的更改]</strong></p>
-<ol>
-<li>2021年5月1日，星期六<ul>
-<li>从日本&#x2F;韩国以外的其他海外地区连接的帐户对应用程序内购买的限制</li>
-<li>对于从日本&#x2F;韩国以外的其他地区连接的帐户，游戏过程中的网络环境将变得不稳定。</li>
-</ul>
-</li>
-<li>2021年6月30日，星期三<ul>
-<li>从日本&#x2F;韩国以外的其他地区连接的日韩版帐户的登录限制</li>
-</ul>
-</li>
-</ol>
-<p>*对于印度，上述1和2将在2021年6月30日（星期三）统一适用。</p>
- <br/>
-
-<p>根据上述措施，我们将于2021年6月30日（星期三）修订部分使用条款（增加了第19条第14款）。</p>
-<p>您可以在<a target="_blank" rel="noopener" href="https://pubgmobile.jp/terms-of-service-renewer/"><strong>此处</strong></a>查看修订的《日本服务条款》。<br><br/></p>
-<p>此外，对于海外地区的玩家，我们还将通知您，与全球版本或每个地区提供的版本相比，我们提供了更舒适的游戏使用环境和适当的服务。</p>
- <br/>
-
-<p>将来，我们计划通过单独的公告将其他服务更改通知您。</p>
-<p>感谢您一直以来对“ PUBG MOBILE”的支持。<br><br/></p>
-<h2 id="相关信息"><a href="#相关信息" class="headerlink" title="相关信息"></a>相关信息</h2><p>（谷歌翻译）</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="http://cdn.sunshj.top/Pic/images/article/pubgm-krjp-limited.png"
-                      alt="免责条款"
-                ></p>
 
         </div>
 
@@ -303,11 +258,11 @@
             <div class="post-copyright-info">
                 <div class="article-copyright-info-container">
     <ul>
-        <li>本文标题：PUBGM日韩服限制</li>
+        <li>本文标题：Github+Nodejs搭建Hexo</li>
         <li>本文作者：sunshj</li>
-        <li>创建时间：2021-03-31 09:48:53</li>
+        <li>创建时间：2022-02-24 13:28:48</li>
         <li>
-            本文链接：https://sunshj.github.io/archives/pubgm-kr-jp-limitations
+            本文链接：https://sunshj.github.io/archives/hexo
         </li>
         <li>
             版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -322,7 +277,7 @@
             <ul class="post-tags-box">
                 
                     <li class="tag-item">
-                        <a href="/tags/%E5%85%AC%E5%91%8A/">#公告</a>&nbsp;
+                        <a href="/tags/%E6%95%99%E7%A8%8B-%E8%AE%B0%E5%BD%95-%E6%80%BB%E7%BB%93/">#教程 | 记录 | 总结</a>&nbsp;
                     </li>
                 
             </ul>
@@ -331,29 +286,14 @@
         
             <div class="article-nav">
                 
-                    <div class="article-prev">
-                        <a class="prev"
-                           rel="prev"
-                           href="/archives/seishunprologue"
-                        >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">青春プロローグ</span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                        </a>
-                    </div>
-                
                 
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/archives/aplayer-setting"
+                           href="/archives/vscode-java8"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">Aplayer设置</span>
+                                <span class="post-nav-title-item">VSCode&amp;Java8开发环境配置</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -475,7 +415,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%97%A5%E6%9C%AC-x2F-%E9%9F%A9%E5%9B%BD%E4%BB%A5%E5%A4%96%E7%9A%84%E5%85%B6%E4%BB%96%E5%9C%B0%E5%8C%BA%E7%94%A8%E6%88%B7%E7%9A%84%E6%9C%8D%E5%8A%A1%E9%99%90%E5%88%B6%E4%BF%A1%E6%81%AF"><span class="nav-number">1.</span> <span class="nav-text">日本&#x2F;韩国以外的其他地区用户的服务限制信息</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E6%96%87%E5%86%85%E5%AE%B9"><span class="nav-number">1.1.</span> <span class="nav-text">原文内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B0%B7%E6%AD%8C%E7%BF%BB%E8%AF%91"><span class="nav-number">1.2.</span> <span class="nav-text">谷歌翻译</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E4%BF%A1%E6%81%AF"><span class="nav-number">1.3.</span> <span class="nav-text">相关信息</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Github-Nodejs%E6%90%AD%E5%BB%BAHexo"><span class="nav-number">1.</span> <span class="nav-text">Github+Nodejs搭建Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%BD%BF%E7%94%A8Github-Pages"><span class="nav-number">1.1.</span> <span class="nav-text">一、使用Github Pages</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%AE%89%E8%A3%85Git-Bash"><span class="nav-number">1.2.</span> <span class="nav-text">二、安装Git Bash</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%AE%89%E8%A3%85Node-js"><span class="nav-number">1.3.</span> <span class="nav-text">三、安装Node.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E5%AE%89%E8%A3%85Hexo"><span class="nav-number">1.4.</span> <span class="nav-text">四、安装Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">1.4.1.</span> <span class="nav-text">1、初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E9%A2%84%E8%A7%88%E7%BD%91%E9%A1%B5"><span class="nav-number">1.4.2.</span> <span class="nav-text">2、预览网页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81-%E4%BF%AE%E6%94%B9%E4%B8%BB%E9%A2%98"><span class="nav-number">1.4.3.</span> <span class="nav-text">3、 修改主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4%E3%80%81%E9%83%A8%E7%BD%B2%E5%88%B0Github%E4%B8%8A"><span class="nav-number">1.4.4.</span> <span class="nav-text">4、部署到Github上</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5%E3%80%81%E6%B0%B8%E4%B9%85%E9%93%BE%E6%8E%A5"><span class="nav-number">1.4.5.</span> <span class="nav-text">5、永久链接</span></a></li></ol></li></ol></li></ol>
     </div>
 </div>
         </aside>

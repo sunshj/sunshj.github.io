@@ -165,7 +165,7 @@
                     <div class="author">
                         <span class="name">sunshj</span>
                         
-                            <span class="author-label">Lv5</span>
+                            <span class="author-label">Lv4</span>
                         
                     </div>
                     <div class="meta-info">
@@ -344,13 +344,13 @@
                     <div class="article-prev">
                         <a class="prev"
                            rel="prev"
-                           href="/archives/hg-koe"
+                           href="/archives/typecho-install"
                         >
                             <span class="left arrow-icon flex-center">
                               <i class="fas fa-chevron-left"></i>
                             </span>
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">H△G – 『声』专辑资源分享</span>
+                                <span class="post-nav-title-item">安装Typecho博客</span>
                                 <span class="post-nav-item">上一篇</span>
                             </span>
                         </a>

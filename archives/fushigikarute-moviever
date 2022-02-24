@@ -165,7 +165,7 @@
                     <div class="author">
                         <span class="name">sunshj</span>
                         
-                            <span class="author-label">Lv5</span>
+                            <span class="author-label">Lv4</span>
                         
                     </div>
                     <div class="meta-info">
@@ -338,10 +338,10 @@
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/archives/excel-duo-txt"
+                           href="/archives/filerun"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">Excel奇偶分行对照</span>
+                                <span class="post-nav-title-item">FileRun的搭建与配置</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                             <span class="right arrow-icon flex-center">
