@@ -9,7 +9,7 @@
     
     <title>
         
-            搭建h5ai |
+            jsDelivr CDN的使用及缓存刷新 |
         
         sunshj&#39;s Blog
     </title>
@@ -163,7 +163,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">搭建h5ai</span>
+            <span class="title-hover-animation">jsDelivr CDN的使用及缓存刷新</span>
         </div>
 
         
@@ -182,8 +182,8 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fas fa-edit"></i>&nbsp;
-        <span class="pc">2021-04-04 08:55:38</span>
-        <span class="mobile">2021-04-04 08:55</span>
+        <span class="pc">2022-02-25 19:00:52</span>
+        <span class="mobile">2022-02-25 19:00</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -191,11 +191,7 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/%E5%88%86%E4%BA%AB/">分享</a>&nbsp;
-                    </li>
-                
-                    <li>
-                        &gt; <a href="/categories/%E6%96%87%E7%AB%A0/">文章</a>&nbsp;
+                        <a href="/categories/%E6%96%87%E7%AB%A0/">文章</a>&nbsp;
                     </li>
                 
             </ul>
@@ -225,7 +221,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>435 字</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>467 字</span>
         </span>
     
     
@@ -246,66 +242,30 @@
         
 
         <div class="article-content markdown-body">
-            <h2 id="利用宝塔搭建h5ai"><a href="#利用宝塔搭建h5ai" class="headerlink" title="利用宝塔搭建h5ai"></a>利用宝塔搭建h5ai</h2><br/>
+            <h1 id="jsDelivr-CDN的使用及缓存刷新"><a href="#jsDelivr-CDN的使用及缓存刷新" class="headerlink" title="jsDelivr CDN的使用及缓存刷新"></a>jsDelivr CDN的使用及缓存刷新</h1><p>jsDelivr 是一个免费、开源的加速CDN公共服务。</p>
+<h3 id="一、jsDelivr的使用"><a href="#一、jsDelivr的使用" class="headerlink" title="一、jsDelivr的使用"></a>一、jsDelivr的使用</h3><hr>
+<p> 首先，jsDelivr的使用<a class="link"   target="_blank" rel="noopener" href="https://www.jsdelivr.com/features" >官网<i class="fas fa-external-link-alt"></i></a>有很详细的介绍，包括npm、Github、Wordpress，下面主要介绍，我通常使用的Github。</p>
+<p>也就是说，你要引用一个Github文件，它的链接可以是：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://cdn.jsdelivr.net/gh/user/repo@version/file</span><br></pre></td></tr></table></figure>
+
+<p>换成中文也就是：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://cdn.jsdelivr.net/gh/您的Github用户名/项目仓库名@项目版本/文件路径</span><br></pre></td></tr></table></figure>
+
+<p>当然了，有些朋友的项目可能没有设置版本，那么可以写成：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://cdn.jsdelivr.net/gh/您的Github用户名/项目仓库名@master/文件路径</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>可以访问<a target="_blank" rel="noopener" href="https://www.jsdelivr.com/github"><strong>Migrating from GitHub to jsDelivr</strong></a>页面，自动进行转换</p>
+</blockquote>
+<p>值得注意的是，文件命名请尽量不要用中文，也不要有空格，这样可以解决大部分无法访问的问题。</p>
+<h3 id="二、jsDelivr的缓存刷新"><a href="#二、jsDelivr的缓存刷新" class="headerlink" title="二、jsDelivr的缓存刷新"></a>二、jsDelivr的缓存刷新</h3><hr>
+<p> jsDelivr对于我们这些<del>白嫖怪</del>来说，当然是体验很好啦，可惜还是存在一点点小毛病，比如说，CDN缓存刷新不及时，Github那边我已经修改文件好久了，通过CDN访问还是上一个版本，这就很难受。下面介绍一下如何正确刷新jsDelivr的缓存：</p>
+<h4 id="1、官方工具"><a href="#1、官方工具" class="headerlink" title="1、官方工具"></a>1、官方工具</h4><p>jsDelivr官方说，不久的将来将会推出用于清除CDN缓存的工具，各位可以期待一下。</p>
+<h4 id="2、简单方法"><a href="#2、简单方法" class="headerlink" title="2、简单方法"></a>2、简单方法</h4><p>对于 jsDelivr，缓存刷新的方式其实很简单，只需将想刷新的链接的开头的<strong>cdn</strong> 更改为 <strong>purge</strong>，访问这个接口，返回<strong>status: ok</strong>，就代表缓存刷新了。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//刷新前</span><br><span class="line">https://cdn.jsdelivr.net/gh/sunshj/Staticfile@master/js/SakuraPlus.js</span><br><span class="line"></span><br><span class="line">//仅用于刷新返回status: ok，即可</span><br><span class="line">https://purge.jsdelivr.net/gh/sunshj/Staticfile@master/js/SakuraPlus.js</span><br><span class="line"></span><br><span class="line">//重新访问即可</span><br><span class="line">https://cdn.jsdelivr.net/gh/sunshj/Staticfile@master/js/SakuraPlus.js</span><br></pre></td></tr></table></figure>
 
 
-<h3 id="一、下载H5ai"><a href="#一、下载H5ai" class="headerlink" title="一、下载H5ai"></a>一、下载H5ai</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 官方版</span><br><span class="line">https://release.larsjung.de/h5ai/h5ai-0.30.0.zip</span><br><span class="line"># Dplayer版</span><br><span class="line">https://github.com/Pearlulu/h5ai_dplayer</span><br></pre></td></tr></table></figure>
 
-<p><a class="link"   target="_blank" rel="noopener" href="https://release.larsjung.de/h5ai/" >RELEASE<i class="fas fa-external-link-alt"></i></a><br><br/></p>
-<h3 id="二、配置"><a href="#二、配置" class="headerlink" title="二、配置"></a>二、配置</h3><br/>
-
-<h4 id="1、解压"><a href="#1、解压" class="headerlink" title="1、解压"></a>1、解压</h4><p>注意：将要展示的文件及文件夹请放在<code>_h5ai</code>同一目录下</p>
-<br/>
-
-<h4 id="2、修改默认文档及配置文件"><a href="#2、修改默认文档及配置文件" class="headerlink" title="2、修改默认文档及配置文件"></a>2、修改默认文档及配置文件</h4><br/>
-
-<p><strong>默认文档替换为</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">index</span><br><span class="line">index.html</span><br><span class="line">index.php</span><br><span class="line">/_h5ai/public/index.php</span><br></pre></td></tr></table></figure>
-
-<br/>
-
-<p><strong>配置文件添加</strong></p>
-<p>禁止<code>/_h5ai/private</code>中的内容被访问</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">location ~ ^/_h5ai/private/ &#123;</span><br><span class="line">   return 404;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-
-<br/>
-
-<p><strong>如果打开网页出现以下错误：</strong></p>
-<p><code>Warning: putenv() has been disabled for security reasons in</code></p>
-<p>原因：禁用了部分存在危险的PHP函数</p>
-<p>解决方法： </p>
-<p><strong>php禁用函数删去<code>putenv</code></strong></p>
-<br/>
-
-<h4 id="3、修改网站配置"><a href="#3、修改网站配置" class="headerlink" title="3、修改网站配置"></a>3、修改网站配置</h4><p>根据个人需求，在<code>/_h5ai/private/conf/options.json</code>中修改配置</p>
-<p><strong>如设置默认语言为中文</strong></p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;l10n&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="comment">//用户是否可以自行选择语言</span></span><br><span class="line">    <span class="attr">&quot;enabled&quot;</span><span class="punctuation">:</span> <span class="keyword">true</span><span class="punctuation">,</span></span><br><span class="line">    <span class="comment">//默认语言，&quot;zh-cn&quot;为简体中文，其他支持的语言可以到&quot;/_h5ai/conf/l10n&quot;中查看</span></span><br><span class="line">    <span class="attr">&quot;lang&quot;</span><span class="punctuation">:</span> <span class="string">&quot;zh-cn&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="comment">//根据浏览器自动判断语言</span></span><br><span class="line">    <span class="attr">&quot;useBrowserLang&quot;</span><span class="punctuation">:</span> <span class="keyword">true</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
-<br/>
-
-<h2 id="h5ai修改美化"><a href="#h5ai修改美化" class="headerlink" title="h5ai修改美化"></a>h5ai修改美化</h2><h3 id="一、修改默认显示域名"><a href="#一、修改默认显示域名" class="headerlink" title="一、修改默认显示域名"></a>一、修改默认显示域名</h3><p>h5ai默认首页和主目录用域名显示，不够美观。</p>
-<p>打开 <code>_h5ai/public/js/scripts.js</code> ，找到</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">===e?f.getDomain():n.name</span><br></pre></td></tr></table></figure>
-
-<p>修改为</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">===e?&#x27;你想显示的内容&#x27;:n.name</span><br></pre></td></tr></table></figure>
-
-<h3 id="二、修改网页标题"><a href="#二、修改网页标题" class="headerlink" title="二、修改网页标题"></a>二、修改网页标题</h3><p>修改<code>_h5ai/private/php/pages/index.php</code> 中的内容</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;title&gt;index - powered by h5ai v0.29.2 (https://larsjung.de/h5ai/)&lt;/title&gt;</span><br></pre></td></tr></table></figure>
-
-<p>替换为</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;title&gt;你想显示的内容&lt;/title&gt;</span><br></pre></td></tr></table></figure>
-
-<p>建议保留网站右上角的版权信息。</p>
-<p>参照：</p>
-<ul>
-<li><p><a class="link"   target="_blank" rel="noopener" href="https://sunpma.com/178.html" >宝塔面板Nginx环境搭建h5ai DPlayer版详细教程<i class="fas fa-external-link-alt"></i></a></p>
-</li>
-<li><p><a class="link"   target="_blank" rel="noopener" href="https://moe.best/yoimono/h5ai.html" >[h5ai] 轻便但强大的 PHP 文件目录列表程序<i class="fas fa-external-link-alt"></i></a></p>
-</li>
-</ul>
-<br/>
-
-<p>示例：<a class="link"   target="_blank" rel="noopener" href="http://cdn.sunshj.top/" >我的站点<i class="fas fa-external-link-alt"></i></a></p>
 
         </div>
 
@@ -313,11 +273,11 @@
             <div class="post-copyright-info">
                 <div class="article-copyright-info-container">
     <ul>
-        <li>本文标题：搭建h5ai</li>
+        <li>本文标题：jsDelivr CDN的使用及缓存刷新</li>
         <li>本文作者：sunshj</li>
-        <li>创建时间：2021-04-04 08:55:38</li>
+        <li>创建时间：2022-02-25 19:00:52</li>
         <li>
-            本文链接：https://me.sunshj.top/archives/h5ai/
+            本文链接：https://me.sunshj.top/archives/jsDelivrCDN/
         </li>
         <li>
             版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -349,29 +309,14 @@
         
             <div class="article-nav">
                 
-                    <div class="article-prev">
-                        <a class="prev"
-                           rel="prev"
-                           href="/archives/filerun/"
-                        >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">FileRun的搭建与配置</span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                        </a>
-                    </div>
-                
                 
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/archives/halzion-yoasobi/"
+                           href="/archives/deeplearning-env/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">ハルジオン</span>
+                                <span class="post-nav-title-item">深度学习环境配置</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -557,7 +502,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A9%E7%94%A8%E5%AE%9D%E5%A1%94%E6%90%AD%E5%BB%BAh5ai"><span class="nav-number">1.</span> <span class="nav-text">利用宝塔搭建h5ai</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%B8%8B%E8%BD%BDH5ai"><span class="nav-number">1.1.</span> <span class="nav-text">一、下载H5ai</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E9%85%8D%E7%BD%AE"><span class="nav-number">1.2.</span> <span class="nav-text">二、配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1%E3%80%81%E8%A7%A3%E5%8E%8B"><span class="nav-number">1.2.1.</span> <span class="nav-text">1、解压</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2%E3%80%81%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E6%96%87%E6%A1%A3%E5%8F%8A%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">1.2.2.</span> <span class="nav-text">2、修改默认文档及配置文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3%E3%80%81%E4%BF%AE%E6%94%B9%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AE"><span class="nav-number">1.2.3.</span> <span class="nav-text">3、修改网站配置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#h5ai%E4%BF%AE%E6%94%B9%E7%BE%8E%E5%8C%96"><span class="nav-number">2.</span> <span class="nav-text">h5ai修改美化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E6%98%BE%E7%A4%BA%E5%9F%9F%E5%90%8D"><span class="nav-number">2.1.</span> <span class="nav-text">一、修改默认显示域名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E4%BF%AE%E6%94%B9%E7%BD%91%E9%A1%B5%E6%A0%87%E9%A2%98"><span class="nav-number">2.2.</span> <span class="nav-text">二、修改网页标题</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#jsDelivr-CDN%E7%9A%84%E4%BD%BF%E7%94%A8%E5%8F%8A%E7%BC%93%E5%AD%98%E5%88%B7%E6%96%B0"><span class="nav-number">1.</span> <span class="nav-text">jsDelivr CDN的使用及缓存刷新</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81jsDelivr%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-number">1.0.1.</span> <span class="nav-text">一、jsDelivr的使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81jsDelivr%E7%9A%84%E7%BC%93%E5%AD%98%E5%88%B7%E6%96%B0"><span class="nav-number">1.0.2.</span> <span class="nav-text">二、jsDelivr的缓存刷新</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1%E3%80%81%E5%AE%98%E6%96%B9%E5%B7%A5%E5%85%B7"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">1、官方工具</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2%E3%80%81%E7%AE%80%E5%8D%95%E6%96%B9%E6%B3%95"><span class="nav-number">1.0.2.2.</span> <span class="nav-text">2、简单方法</span></a></li></ol></li></ol></li></ol></li></ol>
     </div>
 </div>
         </aside>
