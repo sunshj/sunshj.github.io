@@ -197,8 +197,27 @@
                             
                         </div>
                         <div class="info">
+                            <div class="name ellipsis">首页-目光微暖爱倾</div>
+                            <div class="description ellipsis">风雨阴晴，皆是景~</div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        
+            <li class="friends-link-item">
+                <a target="_blank" rel="noopener" href="http://blog.cao-xian.online">
+                    <div class="content">
+                        <div class="avatar radius">
+                            
+                                <img class="radius"
+                                     src="https://cao-xian.online/img/tx.jpg"
+                                     onerror="this.style.display='none'"
+                                >
+                            
+                        </div>
+                        <div class="info">
                             <div class="name ellipsis">目光微暖爱倾</div>
-                            <div class="description ellipsis">目光微暖爱倾个人主页</div>
+                            <div class="description ellipsis">目光微暖爱倾的博客站</div>
                         </div>
                     </div>
                 </a>
@@ -230,10 +249,76 @@
         
         <div class="page-template-content markdown-body">
             
-                
+                <br/>
+
+
+
+<hr>
+<h3 id="申请格式"><a href="#申请格式" class="headerlink" title="申请格式"></a>申请格式</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">name: [名称]</span><br><span class="line">link: [站点链接]</span><br><span class="line">description: [描述]</span><br><span class="line">avatar: [头像链接]</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="本站信息"><a href="#本站信息" class="headerlink" title="本站信息"></a>本站信息</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">name: sunshj&#x27;s Blog</span><br><span class="line">link: https://me.sunshj.top</span><br><span class="line">description: 用心写点没用的东西~</span><br><span class="line">avatar: https://me.sunshj.top/images/favicon.png</span><br></pre></td></tr></table></figure>
+
+
             
         </div>
         <div class="page-template-comments">
+            
+                <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments">&nbsp;评论</i>
+    </div>
+    
+
+        
+            
+    <div id="gitalk-container"></div>
+    <script data-pjax
+            src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+    <script data-pjax>
+
+        function loadGitalk() {
+            let __gitalk__pathname = decodeURI(location.pathname);
+            const __gitalk__pathnameLength = __gitalk__pathname.length;
+            const __gitalk__pathnameMaxLength = 50;
+            if (__gitalk__pathnameLength > __gitalk__pathnameMaxLength) {
+                __gitalk__pathname = __gitalk__pathname.substring(0, __gitalk__pathnameMaxLength - 3) + '...';
+            }
+
+            try {
+                Gitalk && new Gitalk({
+                    clientID: 'fae3f7a8885d891e7855',
+                    clientSecret: 'd714980af20fbb12564a55f85003ccd793b4565d',
+                    repo: 'MyGitalkComment',
+                    owner: 'sunshj',
+                    admin: ['sunshj'],
+                    id: __gitalk__pathname,
+                    language: 'zh-CN'
+                }).render('gitalk-container');
+
+            } catch (e) {
+                window.Gitalk = null;
+            }
+        }
+
+        if ('true') {
+            const loadGitalkTimeout = setTimeout(() => {
+                loadGitalk();
+                clearTimeout(loadGitalkTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadGitalk);
+        }
+    </script>
+
+
+
+        
+    
+</div>
+
             
         </div>
     </div>
