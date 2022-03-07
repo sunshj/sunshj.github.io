@@ -2905,7 +2905,7 @@ pre .javascript .function {
   margin-bottom: 0;
 }
 .home-content-container {
-  background: var(--background-color);
+  background: rgba(255,255,255,0);
 }
 .home-content-container .home-article-list .home-article-item {
   position: relative;
