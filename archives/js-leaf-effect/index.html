@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="sunshj blog website">
+    <meta name="description" content="用心写点没用的东西~">
+    <meta name="author" content="sunshj">
+    
+    <title>
+        
+            js落叶动态效果 |
+        
+        sunshj&#39;s Blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"me.sunshj.top","root":"/","language":"zh-CN","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.png","favicon":"/images/favicon.png","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":true},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"用心写点没用的东西~"},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+
+<!-- 引用依赖 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sunshj/Staticfile@master/aplayer/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/gh/sunshj/Staticfile@master/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/sunshj/Staticfile@master/meting/Meting.min.js"></script>
+<!-- data-lrcType="none"可以设置默认关闭歌词 -->
+<div class="aplayer" data-id="7196241123" data-server="netease" data-type="playlist" data-fixed="true"
+  data-autoplay="false" data-order="random" data-volume="0.2" data-theme="#cc543a" data-preload="auto"
+  data-lrcType="none">
+</div>
+
+<body>
+  <div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                sunshj&#39;s Blog
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class="active"
+                               href="/archives/"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/links/"
+                            >
+                                友链
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about/"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class="active"
+                       href="/archives/">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/links/">友链</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about/">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">js落叶动态效果</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.png">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">sunshj</span>
+                        
+                            <span class="author-label">Lv5</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-03-07 12:27:18</span>
+        <span class="mobile">2022-03-07 12:27</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E6%96%87%E7%AB%A0/">文章</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E8%AE%B0%E5%BD%95/">记录</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E6%80%BB%E7%BB%93/">总结</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E6%95%99%E7%A8%8B/">教程</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>882 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>5 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <p>更换漂浮物样式，换掉千篇一律的樱花🌸动效</p>
+<span id="more"></span>
+
+<h1 id="js落叶特效"><a href="#js落叶特效" class="headerlink" title="js落叶特效"></a>js落叶特效</h1><blockquote>
+<p>本文转载自<a class="link"   target="_blank" rel="noopener" href="https://kainote.top/2022/01/08/hexo%E9%A3%98%E9%9B%AA%E9%A3%98%E8%90%BD%E5%8F%B6%E7%89%B9%E6%95%88/" >hexo飘雪飘落叶特效 | KAI’S NOTE<i class="fas fa-external-link-alt"></i></a></p>
+</blockquote>
+<h2 id="一、代码"><a href="#一、代码" class="headerlink" title="一、代码"></a>一、代码</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> stop, staticx;</span><br><span class="line"><span class="keyword">var</span> img = <span class="keyword">new</span> <span class="title class_">Image</span>();</span><br><span class="line">img.<span class="property">src</span> = <span class="string">&quot;https://cdn.jsdelivr.net/gh/kaix2301/pictures/img202201081103397.png&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Sakura</span>(<span class="params">x, y, s, r, fn</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">x</span> = x;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">y</span> = y;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">s</span> = s;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">r</span> = r;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">fn</span> = fn;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title class_">Sakura</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">draw</span> = <span class="keyword">function</span> (<span class="params">cxt</span>) &#123;</span><br><span class="line">    cxt.<span class="title function_">save</span>();</span><br><span class="line">    <span class="keyword">var</span> xc = <span class="number">40</span> * <span class="variable language_">this</span>.<span class="property">s</span> / <span class="number">4</span>;</span><br><span class="line">    cxt.<span class="title function_">translate</span>(<span class="variable language_">this</span>.<span class="property">x</span>, <span class="variable language_">this</span>.<span class="property">y</span>);</span><br><span class="line">    cxt.<span class="title function_">rotate</span>(<span class="variable language_">this</span>.<span class="property">r</span>);</span><br><span class="line">    cxt.<span class="title function_">drawImage</span>(img, <span class="number">0</span>, <span class="number">0</span>, <span class="number">40</span> * <span class="variable language_">this</span>.<span class="property">s</span>, <span class="number">40</span> * <span class="variable language_">this</span>.<span class="property">s</span>)</span><br><span class="line">    cxt.<span class="title function_">restore</span>();</span><br><span class="line">&#125;</span><br><span class="line"><span class="title class_">Sakura</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">update</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">x</span> = <span class="variable language_">this</span>.<span class="property">fn</span>.<span class="title function_">x</span>(<span class="variable language_">this</span>.<span class="property">x</span>, <span class="variable language_">this</span>.<span class="property">y</span>);</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">y</span> = <span class="variable language_">this</span>.<span class="property">fn</span>.<span class="title function_">y</span>(<span class="variable language_">this</span>.<span class="property">y</span>, <span class="variable language_">this</span>.<span class="property">y</span>);</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">r</span> = <span class="variable language_">this</span>.<span class="property">fn</span>.<span class="title function_">r</span>(<span class="variable language_">this</span>.<span class="property">r</span>);</span><br><span class="line">    <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">x</span> &gt; <span class="variable language_">window</span>.<span class="property">innerWidth</span> || <span class="variable language_">this</span>.<span class="property">x</span> &lt; <span class="number">0</span> || <span class="variable language_">this</span>.<span class="property">y</span> &gt; <span class="variable language_">window</span>.<span class="property">innerHeight</span> || <span class="variable language_">this</span>.<span class="property">y</span> &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">r</span> = <span class="title function_">getRandom</span>(<span class="string">&#x27;fnr&#x27;</span>);</span><br><span class="line">        <span class="keyword">if</span> (<span class="title class_">Math</span>.<span class="title function_">random</span>() &gt; <span class="number">0.4</span>) &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">x</span> = <span class="title function_">getRandom</span>(<span class="string">&#x27;x&#x27;</span>);</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">y</span> = <span class="number">0</span>;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">s</span> = <span class="title function_">getRandom</span>(<span class="string">&#x27;s&#x27;</span>);</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">r</span> = <span class="title function_">getRandom</span>(<span class="string">&#x27;r&#x27;</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">x</span> = <span class="variable language_">window</span>.<span class="property">innerWidth</span>;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">y</span> = <span class="title function_">getRandom</span>(<span class="string">&#x27;y&#x27;</span>);</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">s</span> = <span class="title function_">getRandom</span>(<span class="string">&#x27;s&#x27;</span>);</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">r</span> = <span class="title function_">getRandom</span>(<span class="string">&#x27;r&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title class_">SakuraList</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">list</span> = [];</span><br><span class="line">&#125;</span><br><span class="line"><span class="title class_">SakuraList</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">push</span> = <span class="keyword">function</span> (<span class="params">sakura</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">list</span>.<span class="title function_">push</span>(sakura);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title class_">SakuraList</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">update</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>, len = <span class="variable language_">this</span>.<span class="property">list</span>.<span class="property">length</span>; i &lt; len; i++) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">list</span>[i].<span class="title function_">update</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title class_">SakuraList</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">draw</span> = <span class="keyword">function</span> (<span class="params">cxt</span>) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>, len = <span class="variable language_">this</span>.<span class="property">list</span>.<span class="property">length</span>; i &lt; len; i++) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">list</span>[i].<span class="title function_">draw</span>(cxt);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title class_">SakuraList</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">get</span> = <span class="keyword">function</span> (<span class="params">i</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">list</span>[i];</span><br><span class="line">&#125;</span><br><span class="line"><span class="title class_">SakuraList</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">size</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">list</span>.<span class="property">length</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">getRandom</span>(<span class="params">option</span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> ret, random;</span><br><span class="line">    <span class="keyword">switch</span> (option) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;x&#x27;</span>:</span><br><span class="line">            ret = <span class="title class_">Math</span>.<span class="title function_">random</span>() * <span class="variable language_">window</span>.<span class="property">innerWidth</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;y&#x27;</span>:</span><br><span class="line">            ret = <span class="title class_">Math</span>.<span class="title function_">random</span>() * <span class="variable language_">window</span>.<span class="property">innerHeight</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;s&#x27;</span>:</span><br><span class="line">            ret = <span class="title class_">Math</span>.<span class="title function_">random</span>();</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;r&#x27;</span>:</span><br><span class="line">            ret = <span class="title class_">Math</span>.<span class="title function_">random</span>() * <span class="number">6</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;fnx&#x27;</span>:</span><br><span class="line">            random = -<span class="number">0.5</span> + <span class="title class_">Math</span>.<span class="title function_">random</span>() * <span class="number">1</span>;</span><br><span class="line">            ret = <span class="keyword">function</span> (<span class="params">x, y</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> x + <span class="number">0.5</span> * random - <span class="number">1.7</span>;</span><br><span class="line">            &#125;;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;fny&#x27;</span>:</span><br><span class="line">            random = <span class="number">1.5</span> + <span class="title class_">Math</span>.<span class="title function_">random</span>() * <span class="number">0.7</span></span><br><span class="line">            ret = <span class="keyword">function</span> (<span class="params">x, y</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> y + random;</span><br><span class="line">            &#125;;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;fnr&#x27;</span>:</span><br><span class="line">            random = <span class="title class_">Math</span>.<span class="title function_">random</span>() * <span class="number">0.03</span>;</span><br><span class="line">            ret = <span class="keyword">function</span> (<span class="params">r</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> r + random;</span><br><span class="line">            &#125;;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">startSakura</span>(<span class="params"></span>) &#123;</span><br><span class="line">    requestAnimationFrame = <span class="variable language_">window</span>.<span class="property">requestAnimationFrame</span> || <span class="variable language_">window</span>.<span class="property">mozRequestAnimationFrame</span> || <span class="variable language_">window</span>.<span class="property">webkitRequestAnimationFrame</span> || <span class="variable language_">window</span>.<span class="property">msRequestAnimationFrame</span> || <span class="variable language_">window</span>.<span class="property">oRequestAnimationFrame</span>;</span><br><span class="line">    <span class="keyword">var</span> canvas = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&#x27;canvas&#x27;</span>),</span><br><span class="line">        cxt;</span><br><span class="line">    staticx = <span class="literal">true</span>;</span><br><span class="line">    canvas.<span class="property">height</span> = <span class="variable language_">window</span>.<span class="property">innerHeight</span>;</span><br><span class="line">    canvas.<span class="property">width</span> = <span class="variable language_">window</span>.<span class="property">innerWidth</span>;</span><br><span class="line">    canvas.<span class="title function_">setAttribute</span>(<span class="string">&#x27;style&#x27;</span>, <span class="string">&#x27;position: fixed;left: 0;top: 0;pointer-events: none;&#x27;</span>);</span><br><span class="line">    canvas.<span class="title function_">setAttribute</span>(<span class="string">&#x27;id&#x27;</span>, <span class="string">&#x27;canvas_sakura&#x27;</span>);</span><br><span class="line">    <span class="variable language_">document</span>.<span class="title function_">getElementsByTagName</span>(<span class="string">&#x27;body&#x27;</span>)[<span class="number">0</span>].<span class="title function_">appendChild</span>(canvas);</span><br><span class="line">    cxt = canvas.<span class="title function_">getContext</span>(<span class="string">&#x27;2d&#x27;</span>);</span><br><span class="line">    <span class="keyword">var</span> sakuraList = <span class="keyword">new</span> <span class="title class_">SakuraList</span>();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">50</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">var</span> sakura, randomX, randomY, randomS, randomR, randomFnx, randomFny;</span><br><span class="line">        randomX = <span class="title function_">getRandom</span>(<span class="string">&#x27;x&#x27;</span>);</span><br><span class="line">        randomY = <span class="title function_">getRandom</span>(<span class="string">&#x27;y&#x27;</span>);</span><br><span class="line">        randomR = <span class="title function_">getRandom</span>(<span class="string">&#x27;r&#x27;</span>);</span><br><span class="line">        randomS = <span class="title function_">getRandom</span>(<span class="string">&#x27;s&#x27;</span>);</span><br><span class="line">        randomFnx = <span class="title function_">getRandom</span>(<span class="string">&#x27;fnx&#x27;</span>);</span><br><span class="line">        randomFny = <span class="title function_">getRandom</span>(<span class="string">&#x27;fny&#x27;</span>);</span><br><span class="line">        randomFnR = <span class="title function_">getRandom</span>(<span class="string">&#x27;fnr&#x27;</span>);</span><br><span class="line">        sakura = <span class="keyword">new</span> <span class="title class_">Sakura</span>(randomX, randomY, randomS, randomR, &#123;</span><br><span class="line">            <span class="attr">x</span>: randomFnx,</span><br><span class="line">            <span class="attr">y</span>: randomFny,</span><br><span class="line">            <span class="attr">r</span>: randomFnR</span><br><span class="line">        &#125;);</span><br><span class="line">        sakura.<span class="title function_">draw</span>(cxt);</span><br><span class="line">        sakuraList.<span class="title function_">push</span>(sakura);</span><br><span class="line">    &#125;</span><br><span class="line">    stop = <span class="title function_">requestAnimationFrame</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        cxt.<span class="title function_">clearRect</span>(<span class="number">0</span>, <span class="number">0</span>, canvas.<span class="property">width</span>, canvas.<span class="property">height</span>);</span><br><span class="line">        sakuraList.<span class="title function_">update</span>();</span><br><span class="line">        sakuraList.<span class="title function_">draw</span>(cxt);</span><br><span class="line">        stop = <span class="title function_">requestAnimationFrame</span>(<span class="variable language_">arguments</span>.<span class="property">callee</span>);</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">window</span>.<span class="property">onresize</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> canvasSnow = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;canvas_snow&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line">img.<span class="property">onload</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="title function_">startSakura</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">stopp</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (staticx) &#123;</span><br><span class="line">        <span class="keyword">var</span> child = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;canvas_sakura&quot;</span>);</span><br><span class="line">        child.<span class="property">parentNode</span>.<span class="title function_">removeChild</span>(child);</span><br><span class="line">        <span class="variable language_">window</span>.<span class="title function_">cancelAnimationFrame</span>(stop);</span><br><span class="line">        staticx = <span class="literal">false</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="title function_">startSakura</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、更换飘浮物"><a href="#二、更换飘浮物" class="headerlink" title="二、更换飘浮物"></a>二、更换飘浮物</h2><p>上述代码第三行，<code>img.src</code>等于什么图片的地址，就飘什么，可自行更换。</p>
+<h2 id="三、调整密集程度"><a href="#三、调整密集程度" class="headerlink" title="三、调整密集程度"></a>三、调整密集程度</h2><p>上述代码中间位置找到以下内容：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">SakuraList</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">draw</span> = <span class="keyword">function</span> (<span class="params">cxt</span>) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>, len = <span class="variable language_">this</span>.<span class="property">list</span>.<span class="property">length</span>; i &lt; len; i++) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">list</span>[i].<span class="title function_">draw</span>(cxt);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>第二行默认是<code>i &lt; len</code>，<code>len</code>可以更换为数字，数字越大越密集，数字越小越稀疏。</p>
+<h2 id="四、引用文件"><a href="#四、引用文件" class="headerlink" title="四、引用文件"></a>四、引用文件</h2><p>各主题可能不同，大部分是在<code>Hexo\themes\keep\layout\layout.ejs</code>中的body标签里面的最后位置。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span> = <span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;/js/snow.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>keep主题添加后：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;&lt;%= config.language %&gt;&quot;</span>&gt;</span></span><br><span class="line">&lt;%- partial(&#x27;_partial/head&#x27;) %&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">&lt;%- body %&gt;</span><br><span class="line">&lt;%- partial(&#x27;_partial/scripts&#x27;) %&gt;</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span> = <span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;/js/snow.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>本文标题：js落叶动态效果</li>
+        <li>本文作者：sunshj</li>
+        <li>创建时间：2022-03-07 12:27:18</li>
+        <li>
+            本文链接：https://me.sunshj.top/archives/js-leaf-effect/
+        </li>
+        <li>
+            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E8%AE%B0%E5%BD%95/">#记录</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E6%80%BB%E7%BB%93/">#总结</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E6%95%99%E7%A8%8B/">#教程</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/archives/javaBubbleSort/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Java冒泡排序</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+            <div class="comment-container">
+                <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments">&nbsp;评论</i>
+    </div>
+    
+
+        
+            
+    <div id="gitalk-container"></div>
+    <script data-pjax
+            src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+    <script data-pjax>
+
+        function loadGitalk() {
+            let __gitalk__pathname = decodeURI(location.pathname);
+            const __gitalk__pathnameLength = __gitalk__pathname.length;
+            const __gitalk__pathnameMaxLength = 50;
+            if (__gitalk__pathnameLength > __gitalk__pathnameMaxLength) {
+                __gitalk__pathname = __gitalk__pathname.substring(0, __gitalk__pathnameMaxLength - 3) + '...';
+            }
+
+            try {
+                Gitalk && new Gitalk({
+                    clientID: 'fae3f7a8885d891e7855',
+                    clientSecret: 'd714980af20fbb12564a55f85003ccd793b4565d',
+                    repo: 'MyGitalkComment',
+                    owner: 'sunshj',
+                    admin: ['sunshj'],
+                    id: __gitalk__pathname,
+                    language: 'zh-CN'
+                }).render('gitalk-container');
+
+            } catch (e) {
+                window.Gitalk = null;
+            }
+        }
+
+        if ('true') {
+            const loadGitalkTimeout = setTimeout(() => {
+                loadGitalk();
+                clearTimeout(loadGitalkTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadGitalk);
+        }
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+  <div class="info-container">
+    <div class="copyright-info info-item">
+      &copy;
+      
+      <span>2021</span>
+      -
+      
+      2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a
+        href="/">sunshj</a>
+    </div>
+    
+    <script async data-pjax
+      src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <div class="website-count info-item">
+      
+      <span id="busuanzi_container_site_uv">
+        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+      </span>
+      
+      
+      <span id="busuanzi_container_site_pv">
+        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+      </span>
+      
+    </div>
+    
+    <div class="theme-info info-item">
+      由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a
+        class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep
+        v3.4.5</a>
+    </div>
+    
+    
+
+    <!-- 在线通讯Tidio -->
+    
+    <script src="//code.tidio.co/2f7jiqaxzwamo4jsypbhfv8cbgqwrnpf.js"></script>
+    
+
+  </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#js%E8%90%BD%E5%8F%B6%E7%89%B9%E6%95%88"><span class="nav-text">js落叶特效</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%BB%A3%E7%A0%81"><span class="nav-text">一、代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E6%9B%B4%E6%8D%A2%E9%A3%98%E6%B5%AE%E7%89%A9"><span class="nav-text">二、更换飘浮物</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E8%B0%83%E6%95%B4%E5%AF%86%E9%9B%86%E7%A8%8B%E5%BA%A6"><span class="nav-text">三、调整密集程度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E5%BC%95%E7%94%A8%E6%96%87%E4%BB%B6"><span class="nav-text">四、引用文件</span></a></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+
+  <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/code-copy.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/lazyload.js"></script>
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/toc.js"></script>
+    
+</div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+
+</body>
+
+</html>
