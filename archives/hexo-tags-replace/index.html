@@ -9,7 +9,7 @@
     
     <title>
         
-            Aplayer设置 |
+            批量替换 Front Matter中的tags |
         
         sunshj&#39;s Blog
     </title>
@@ -163,7 +163,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">Aplayer设置</span>
+            <span class="title-hover-animation">批量替换 Front Matter中的tags</span>
         </div>
 
         
@@ -182,8 +182,8 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fas fa-edit"></i>&nbsp;
-        <span class="pc">2021-03-28 09:37:57</span>
-        <span class="mobile">2021-03-28 09:37</span>
+        <span class="pc">2022-03-09 12:51:03</span>
+        <span class="mobile">2022-03-09 12:51</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -203,7 +203,15 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/%E6%80%BB%E7%BB%93/">总结</a>&nbsp;
+                        <a href="/tags/Python/">Python</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E5%88%86%E4%BA%AB/">分享</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/">网站建设</a>&nbsp;
                     </li>
                 
             </ul>
@@ -213,7 +221,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>366 字</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>415 字</span>
         </span>
     
     
@@ -234,17 +242,25 @@
         
 
         <div class="article-content markdown-body">
-            <p>如果需要查看更多功能，还是得去aplayer官网</p>
-<span id="more"></span>
+            <p>在Markdown文档中可以通过Front Matter中的tags来设置hexo文章中的标签属性，但当想把一个标签改名，要批量替换为另一种标签时却很麻烦。<span id="more"></span>所以可以使用下面的方法来批量替换tags。</p>
+<h1 id="批量替换-Front-Matter中的tags标签值"><a href="#批量替换-Front-Matter中的tags标签值" class="headerlink" title="批量替换 Front Matter中的tags标签值"></a>批量替换 Front Matter中的tags标签值</h1><blockquote>
+<p>使用python实现</p>
+</blockquote>
+<p>需要下载<code>python-frontmatter</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install python-frontmatter</span><br></pre></td></tr></table></figure>
 
-<h2 id="Aplayer设置"><a href="#Aplayer设置" class="headerlink" title="Aplayer设置"></a>Aplayer设置</h2><h3 id="原生Audio"><a href="#原生Audio" class="headerlink" title="原生Audio"></a>原生Audio</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">&quot;https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;APlayer.min.css&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;aplayer&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;APlayer.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;color-thief.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">const</span> ap = <span class="keyword">new</span> <span class="title class_">APlayer</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">container</span>: <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;aplayer&#x27;</span>),</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">theme</span>: <span class="string">&#x27;#333333&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">volume</span>:<span class="string">&#x27;0.6&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">lrcType</span>: <span class="number">3</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">audio</span>: [&#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">name</span>: <span class="string">&#x27;ハルジオン&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">artist</span>: <span class="string">&#x27;YOASOBI&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">url</span>: <span class="string">&#x27;audio/harujion/music01.mp3&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">cover</span>: <span class="string">&#x27;audio/harujion/cover01.jpg&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">lrc</span>: <span class="string">&#x27;audio/harujion/lrc01.lrc&#x27;</span></span></span><br><span class="line"><span class="language-javascript">            </span></span><br><span class="line"><span class="language-javascript">        &#125;, &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">name</span>: <span class="string">&#x27;優しい彗星&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">artist</span>: <span class="string">&#x27;YOASOBI&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">url</span>: <span class="string">&#x27;audio/yasashiisuise/music02.mp3&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">cover</span>: <span class="string">&#x27;audio/yasashiisuise/cover02.jpg&#x27;</span></span></span><br><span class="line"><span class="language-javascript">        &#125;]</span></span><br><span class="line"><span class="language-javascript">    &#125;);</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>实现脚本</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> frontmatter</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">update_front_matter</span>(<span class="params">file</span>):</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(file, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        post = frontmatter.loads(f.read())</span><br><span class="line">    is_write = <span class="literal">False</span></span><br><span class="line">    tags = post.get(<span class="string">&quot;tags&quot;</span>, [])</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;FrontMatter中的tags: &#x27;</span>, tags)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 将&#x27;教程&#x27;替换为&#x27;tutorial&#x27;，&#x27;总结&#x27;替换为&#x27;Summarize&#x27;。。。</span></span><br><span class="line">    new_tags = <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="keyword">lambda</span> x: x.replace(<span class="string">&#x27;教程&#x27;</span>, <span class="string">&#x27;tutorial&#x27;</span>).replace(<span class="string">&#x27;总结&#x27;</span>, <span class="string">&#x27;summary&#x27;</span>).replace(</span><br><span class="line">        <span class="string">&#x27;分享&#x27;</span>, <span class="string">&#x27;share&#x27;</span>).replace(<span class="string">&#x27;网站建设&#x27;</span>, <span class="string">&#x27;Web-building&#x27;</span>).replace(<span class="string">&#x27;大数据&#x27;</span>, <span class="string">&#x27;bigdata&#x27;</span>), tags))</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;替换之后的tags&#x27;</span><span class="string">&#x27;: &#x27;</span>, new_tags)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> post.get(<span class="string">&quot;tags&quot;</span>, <span class="literal">None</span>) != new_tags:</span><br><span class="line">        post[<span class="string">&quot;tags&quot;</span>] = new_tags</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> is_write:</span><br><span class="line">            is_write = <span class="literal">True</span></span><br><span class="line">    <span class="keyword">if</span> is_write:</span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(file, <span class="string">&#x27;w&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">            f.write(frontmatter.dumps(post))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 递归获取目录下所有文件</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">list_all_files</span>(<span class="params">root_path, ignore_dirs=[]</span>):</span><br><span class="line">    files = []</span><br><span class="line">    default_dirs = [<span class="string">&quot;.git&quot;</span>, <span class="string">&quot;.config&quot;</span>]</span><br><span class="line">    ignore_dirs.extend(default_dirs)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> parent, dirs, filenames <span class="keyword">in</span> os.walk(root_path):</span><br><span class="line">        dirs[:] = [d <span class="keyword">for</span> d <span class="keyword">in</span> dirs <span class="keyword">if</span> <span class="keyword">not</span> d <span class="keyword">in</span> ignore_dirs]</span><br><span class="line">        filenames = [f <span class="keyword">for</span> f <span class="keyword">in</span> filenames <span class="keyword">if</span> <span class="keyword">not</span> f[<span class="number">0</span>] == <span class="string">&#x27;.&#x27;</span>]</span><br><span class="line">        <span class="keyword">for</span> file <span class="keyword">in</span> filenames:</span><br><span class="line">            <span class="keyword">if</span> file.endswith(<span class="string">&quot;.md&quot;</span>):</span><br><span class="line">                files.append(os.path.join(parent, file))</span><br><span class="line">    <span class="keyword">return</span> files</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    files = list_all_files(<span class="string">&#x27;md/&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;当前目录: &quot;</span>, os.path.dirname(os.path.abspath(__file__)))</span><br><span class="line">    <span class="keyword">for</span> file <span class="keyword">in</span> files:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;---------------------------------------------------------------&quot;</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;当前文件: &#x27;</span>, file)</span><br><span class="line">        update_front_matter(file)</span><br></pre></td></tr></table></figure>
 
-<h3 id="吸底模式-网易云"><a href="#吸底模式-网易云" class="headerlink" title="吸底模式+网易云"></a>吸底模式+网易云</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;APlayer\dist\APlayer.min.css&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;APlayer\dist\APlayer.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;aplayer&quot;</span> </span></span><br><span class="line"><span class="tag">     <span class="attr">data-global</span>=<span class="string">&quot;true&quot;</span> </span></span><br><span class="line"><span class="tag">     <span class="attr">data-id</span>=<span class="string">&quot;5464313037&quot;</span> </span></span><br><span class="line"><span class="tag">     <span class="attr">data-server</span>=<span class="string">&quot;netease&quot;</span> </span></span><br><span class="line"><span class="tag">     <span class="attr">data-type</span>=<span class="string">&quot;playlist&quot;</span></span></span><br><span class="line"><span class="tag">     <span class="attr">data-fixed</span>=<span class="string">&quot;true&quot;</span> </span></span><br><span class="line"><span class="tag">     <span class="attr">data-listFolded</span>=<span class="string">&quot;true&quot;</span> </span></span><br><span class="line"><span class="tag">     <span class="attr">data-autoplay</span>=<span class="string">&quot;true&quot;</span> </span></span><br><span class="line"><span class="tag">     <span class="attr">data-order</span>=<span class="string">&quot;list&quot;</span> </span></span><br><span class="line"><span class="tag">     <span class="attr">data-volume</span>=<span class="string">&quot;0.5&quot;</span> </span></span><br><span class="line"><span class="tag">     <span class="attr">data-theme</span>=<span class="string">&quot;#cc543a&quot;</span></span></span><br><span class="line"><span class="tag">     <span class="attr">data-preload</span>=<span class="string">&quot;auto&quot;</span> &gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="吸底隐藏为箭头"><a href="#吸底隐藏为箭头" class="headerlink" title="吸底隐藏为箭头"></a>吸底隐藏为箭头</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">    <span class="selector-class">.aplayer</span><span class="selector-class">.aplayer-fixed</span><span class="selector-class">.aplayer-narrow</span> <span class="selector-class">.aplayer-body</span> &#123;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">left</span>: -<span class="number">66px</span> <span class="meta">!important</span></span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">    <span class="selector-class">.aplayer</span><span class="selector-class">.aplayer-fixed</span><span class="selector-class">.aplayer-narrow</span> <span class="selector-class">.aplayer-body</span><span class="selector-pseudo">:hover</span> &#123;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">left</span>: <span class="number">0</span> <span class="meta">!important</span></span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
+<p>使用方法：</p>
+<ul>
+<li><code> files = list_all_files(&#39;md/&#39;)</code>指定目录</li>
+<li><code>new_tags</code>里设置需要更换的规则</li>
+</ul>
+<p><strong>注意：</strong></p>
+<blockquote>
+<p>文章的tag必须是<code>- XX</code>格式的才可进行转换</p>
+</blockquote>
 
         </div>
 
@@ -252,11 +268,11 @@
             <div class="post-copyright-info">
                 <div class="article-copyright-info-container">
     <ul>
-        <li>本文标题：Aplayer设置</li>
+        <li>本文标题：批量替换 Front Matter中的tags</li>
         <li>本文作者：sunshj</li>
-        <li>创建时间：2021-03-28 09:37:57</li>
+        <li>创建时间：2022-03-09 12:51:03</li>
         <li>
-            本文链接：https://me.sunshj.top/archives/aplayer-setting/
+            本文链接：https://me.sunshj.top/archives/hexo-tags-replace/
         </li>
         <li>
             版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -271,7 +287,15 @@
             <ul class="post-tags-box">
                 
                     <li class="tag-item">
-                        <a href="/tags/%E6%80%BB%E7%BB%93/">#总结</a>&nbsp;
+                        <a href="/tags/Python/">#Python</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E5%88%86%E4%BA%AB/">#分享</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/">#网站建设</a>&nbsp;
                     </li>
                 
             </ul>
@@ -280,29 +304,14 @@
         
             <div class="article-nav">
                 
-                    <div class="article-prev">
-                        <a class="prev"
-                           rel="prev"
-                           href="/archives/seishunprologue/"
-                        >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">青春プロローグ</span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                        </a>
-                    </div>
-                
                 
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/archives/tg-mtproto/"
+                           href="/archives/css-specificity/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">一键搭建电报MTProto代理</span>
+                                <span class="post-nav-title-item">CSS的层叠权重值</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -498,7 +507,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Aplayer%E8%AE%BE%E7%BD%AE"><span class="nav-text">Aplayer设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8E%9F%E7%94%9FAudio"><span class="nav-text">原生Audio</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%B8%E5%BA%95%E6%A8%A1%E5%BC%8F-%E7%BD%91%E6%98%93%E4%BA%91"><span class="nav-text">吸底模式+网易云</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%B8%E5%BA%95%E9%9A%90%E8%97%8F%E4%B8%BA%E7%AE%AD%E5%A4%B4"><span class="nav-text">吸底隐藏为箭头</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%89%B9%E9%87%8F%E6%9B%BF%E6%8D%A2-Front-Matter%E4%B8%AD%E7%9A%84tags%E6%A0%87%E7%AD%BE%E5%80%BC"><span class="nav-text">批量替换 Front Matter中的tags标签值</span></a></li></ol>
     </div>
 </div>
         </aside>
