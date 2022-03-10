@@ -9,7 +9,7 @@
     
     <title>
         
-            批量替换 Front Matter中的tags |
+            Docker运行京东签到脚本 |
         
         sunshj&#39;s Blog
     </title>
@@ -163,7 +163,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">批量替换 Front Matter中的tags</span>
+            <span class="title-hover-animation">Docker运行京东签到脚本</span>
         </div>
 
         
@@ -182,8 +182,8 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fas fa-edit"></i>&nbsp;
-        <span class="pc">2022-03-09 12:51:03</span>
-        <span class="mobile">2022-03-09 12:51</span>
+        <span class="pc">2022-03-10 11:15:53</span>
+        <span class="mobile">2022-03-10 11:15</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -192,6 +192,10 @@
                 
                     <li>
                         <a href="/categories/%E6%96%87%E7%AB%A0/">文章</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/%E5%88%86%E4%BA%AB/">分享</a>&nbsp;
                     </li>
                 
             </ul>
@@ -203,15 +207,11 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/%E5%88%86%E4%BA%AB/">分享</a>&nbsp;
+                        <a href="/tags/%E6%95%99%E7%A8%8B/">教程</a>&nbsp;
                     </li>
                 
                     <li>
-                        | <a href="/tags/Python/">Python</a>&nbsp;
-                    </li>
-                
-                    <li>
-                        | <a href="/tags/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/">网站建设</a>&nbsp;
+                        | <a href="/tags/Linux/">Linux</a>&nbsp;
                     </li>
                 
             </ul>
@@ -221,7 +221,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>415 字</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>434 字</span>
         </span>
     
     
@@ -242,25 +242,51 @@
         
 
         <div class="article-content markdown-body">
-            <p>在Markdown文档中可以通过Front Matter中的tags来设置hexo文章中的标签属性，但当想把一个标签改名，要批量替换为另一种标签时却很麻烦。<span id="more"></span>所以可以使用下面的方法来批量替换tags。</p>
-<h1 id="批量替换-Front-Matter中的tags标签值"><a href="#批量替换-Front-Matter中的tags标签值" class="headerlink" title="批量替换 Front Matter中的tags标签值"></a>批量替换 Front Matter中的tags标签值</h1><blockquote>
-<p>使用python实现</p>
-</blockquote>
-<p>需要下载<code>python-frontmatter</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install python-frontmatter</span><br></pre></td></tr></table></figure>
+            <p>此篇使用docker-compose运行京东签到脚本，使用的是Oracle VPS</p>
+<span id="more"></span>
 
-<p>实现脚本</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> frontmatter</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">update_front_matter</span>(<span class="params">file</span>):</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(file, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        post = frontmatter.loads(f.read())</span><br><span class="line">    is_write = <span class="literal">False</span></span><br><span class="line">    tags = post.get(<span class="string">&quot;tags&quot;</span>, [])</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;FrontMatter中的tags: &#x27;</span>, tags)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 将&#x27;教程&#x27;替换为&#x27;tutorial&#x27;，&#x27;总结&#x27;替换为&#x27;Summarize&#x27;。。。</span></span><br><span class="line">    new_tags = <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="keyword">lambda</span> x: x.replace(<span class="string">&#x27;教程&#x27;</span>, <span class="string">&#x27;tutorial&#x27;</span>).replace(<span class="string">&#x27;总结&#x27;</span>, <span class="string">&#x27;summary&#x27;</span>).replace(</span><br><span class="line">        <span class="string">&#x27;分享&#x27;</span>, <span class="string">&#x27;share&#x27;</span>).replace(<span class="string">&#x27;网站建设&#x27;</span>, <span class="string">&#x27;Web-building&#x27;</span>).replace(<span class="string">&#x27;大数据&#x27;</span>, <span class="string">&#x27;bigdata&#x27;</span>), tags))</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;替换之后的tags&#x27;</span><span class="string">&#x27;: &#x27;</span>, new_tags)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> post.get(<span class="string">&quot;tags&quot;</span>, <span class="literal">None</span>) != new_tags:</span><br><span class="line">        post[<span class="string">&quot;tags&quot;</span>] = new_tags</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> is_write:</span><br><span class="line">            is_write = <span class="literal">True</span></span><br><span class="line">    <span class="keyword">if</span> is_write:</span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(file, <span class="string">&#x27;w&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">            f.write(frontmatter.dumps(post))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 递归获取目录下所有文件</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">list_all_files</span>(<span class="params">root_path, ignore_dirs=[]</span>):</span><br><span class="line">    files = []</span><br><span class="line">    default_dirs = [<span class="string">&quot;.git&quot;</span>, <span class="string">&quot;.config&quot;</span>]</span><br><span class="line">    ignore_dirs.extend(default_dirs)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> parent, dirs, filenames <span class="keyword">in</span> os.walk(root_path):</span><br><span class="line">        dirs[:] = [d <span class="keyword">for</span> d <span class="keyword">in</span> dirs <span class="keyword">if</span> <span class="keyword">not</span> d <span class="keyword">in</span> ignore_dirs]</span><br><span class="line">        filenames = [f <span class="keyword">for</span> f <span class="keyword">in</span> filenames <span class="keyword">if</span> <span class="keyword">not</span> f[<span class="number">0</span>] == <span class="string">&#x27;.&#x27;</span>]</span><br><span class="line">        <span class="keyword">for</span> file <span class="keyword">in</span> filenames:</span><br><span class="line">            <span class="keyword">if</span> file.endswith(<span class="string">&quot;.md&quot;</span>):</span><br><span class="line">                files.append(os.path.join(parent, file))</span><br><span class="line">    <span class="keyword">return</span> files</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    files = list_all_files(<span class="string">&#x27;md/&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;当前目录: &quot;</span>, os.path.dirname(os.path.abspath(__file__)))</span><br><span class="line">    <span class="keyword">for</span> file <span class="keyword">in</span> files:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;---------------------------------------------------------------&quot;</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;当前文件: &#x27;</span>, file)</span><br><span class="line">        update_front_matter(file)</span><br></pre></td></tr></table></figure>
+<h1 id="Docker运行京东签到脚本"><a href="#Docker运行京东签到脚本" class="headerlink" title="Docker运行京东签到脚本"></a>Docker运行京东签到脚本</h1><p>甲骨文云VPS需要进行以下步骤：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#卸载旧版本</span></span><br><span class="line">yum remove docker docker-common docker-selinux docker-engine</span><br><span class="line"></span><br><span class="line"><span class="comment">#安装需要的软件包， yum-util 提供yum-config-manager功能，另外两个是devicemapper驱动依赖的</span></span><br><span class="line">yum install -y yum-utils device-mapper-persistent-data lvm2</span><br></pre></td></tr></table></figure>
 
-<p>使用方法：</p>
+<h2 id="一、安装"><a href="#一、安装" class="headerlink" title="一、安装"></a>一、安装</h2><h3 id="1、更新"><a href="#1、更新" class="headerlink" title="1、更新"></a>1、更新</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y update</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、安装依赖"><a href="#2、安装依赖" class="headerlink" title="2、安装依赖"></a>2、安装依赖</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel</span><br><span class="line">yum -y install git-core</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、安装docker"><a href="#3、安装docker" class="headerlink" title="3、安装docker"></a>3、安装docker</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo yum check-update</span><br><span class="line">curl -fsSL https://get.docker.com/ | sh</span><br><span class="line">sudo systemctl start docker</span><br><span class="line">sudo systemctl status docker</span><br><span class="line">sudo systemctl <span class="built_in">enable</span> docker</span><br><span class="line">docker --version</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、安装docker-compose"><a href="#4、安装docker-compose" class="headerlink" title="4、安装docker-compose"></a>4、安装docker-compose</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo curl -L <span class="string">&quot;https://github.com/docker/compose/releases/download/1.24.1/docker-compose-<span class="subst">$(uname -s)</span>-<span class="subst">$(uname -m)</span>&quot;</span> -o /usr/local/bin/docker-compose</span><br><span class="line"></span><br><span class="line">sudo <span class="built_in">chmod</span> +x /usr/local/bin/docker-compose</span><br><span class="line"></span><br><span class="line"><span class="built_in">ln</span> -s /usr/local/bin/docker-compose /usr/bin/docker-compose</span><br><span class="line"></span><br><span class="line">docker-compose --version</span><br></pre></td></tr></table></figure>
+
+<h3 id="5、下载脚本"><a href="#5、下载脚本" class="headerlink" title="5、下载脚本"></a>5、下载脚本</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/chinnkarahoi/jd-scripts-docker</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="二、配置"><a href="#二、配置" class="headerlink" title="二、配置"></a>二、配置</h2><h3 id="1、获取京东cookie"><a href="#1、获取京东cookie" class="headerlink" title="1、获取京东cookie"></a>1、获取京东cookie</h3><p>访问 <a class="link"   target="_blank" rel="noopener" href="https://plogin.m.jd.com/login/login" >https://plogin.m.jd.com/login/login<i class="fas fa-external-link-alt"></i></a> 手机号登录获取cookie中的 <code>pt_key</code>, <code>pt_pin</code>填入项目目录下的 <code>./env/env1</code>文件,<br>(此方式cookie有效时长大概31天，其他登录方式比较短)。</p>
+<p><code>pt_key</code>&amp;<code>pt_pin</code></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">pt_key=AAJh4lNdADDJPziNPP****************************************aiKSO8</span><br><span class="line">pt_pin=jd_4f*********</span><br><span class="line">JD_COOKIE=<span class="string">&quot;pt_key=<span class="variable">$pt_key</span>;pt_pin=<span class="variable">$pt_pin</span>;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2、TG-BOT推送"><a href="#2、TG-BOT推送" class="headerlink" title="2、TG-BOT推送"></a>2、TG-BOT推送</h3><p>需要能访问TG的机器</p>
+<p>需要你的用户ID（不是用户名）和BOT-TOKEN（向@botfather申请）</p>
+<p>申请后需要和BOT对话一次才能正确接收消息</p>
+<p><code>tg_bot-api</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1946302469:AAFUrnerzivOmgkEvJfIYCMVSty4mVy6Qxs</span><br><span class="line"></span><br><span class="line">822946706</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="三、运行"><a href="#三、运行" class="headerlink" title="三、运行"></a>三、运行</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose up --build --force-recreate --detach jd1</span><br></pre></td></tr></table></figure>
+
+<p> 手动运行所有脚本</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> jd1 bash -c <span class="string">&#x27;set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; ls jd_*.js | xargs -i node &#123;&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
+
 <ul>
-<li><code> files = list_all_files(&#39;md/&#39;)</code>指定目录</li>
-<li><code>new_tags</code>里设置需要更换的规则</li>
+<li>查看log</li>
 </ul>
-<p><strong>注意：</strong></p>
-<blockquote>
-<p>文章的tag必须是<code>- XX</code>格式的才可进行转换</p>
-</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose logs</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>停止</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose down</span><br></pre></td></tr></table></figure>
+
+<p>其他额外操作请参考Github介绍</p>
+<p>出现bug，<code>UnhandledPromiseRejectionWarning: Error: Cannot find module &#39;got&#39;</code>之类错误，重新运行。</p>
 
         </div>
 
@@ -268,11 +294,11 @@
             <div class="post-copyright-info">
                 <div class="article-copyright-info-container">
     <ul>
-        <li>本文标题：批量替换 Front Matter中的tags</li>
+        <li>本文标题：Docker运行京东签到脚本</li>
         <li>本文作者：sunshj</li>
-        <li>创建时间：2022-03-09 12:51:03</li>
+        <li>创建时间：2022-03-10 11:15:53</li>
         <li>
-            本文链接：https://me.sunshj.top/archives/hexo-tags-replace/
+            本文链接：https://me.sunshj.top/archives/jdscript-docker/
         </li>
         <li>
             版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -287,15 +313,11 @@
             <ul class="post-tags-box">
                 
                     <li class="tag-item">
-                        <a href="/tags/%E5%88%86%E4%BA%AB/">#分享</a>&nbsp;
+                        <a href="/tags/%E6%95%99%E7%A8%8B/">#教程</a>&nbsp;
                     </li>
                 
                     <li class="tag-item">
-                        <a href="/tags/Python/">#Python</a>&nbsp;
-                    </li>
-                
-                    <li class="tag-item">
-                        <a href="/tags/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/">#网站建设</a>&nbsp;
+                        <a href="/tags/Linux/">#Linux</a>&nbsp;
                     </li>
                 
             </ul>
@@ -304,29 +326,14 @@
         
             <div class="article-nav">
                 
-                    <div class="article-prev">
-                        <a class="prev"
-                           rel="prev"
-                           href="/archives/jdscript-docker/"
-                        >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">Docker运行京东签到脚本</span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                        </a>
-                    </div>
-                
                 
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/archives/css-specificity/"
+                           href="/archives/hexo-tags-replace/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">CSS的层叠权重值</span>
+                                <span class="post-nav-title-item">批量替换 Front Matter中的tags</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -522,7 +529,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%89%B9%E9%87%8F%E6%9B%BF%E6%8D%A2-Front-Matter%E4%B8%AD%E7%9A%84tags%E6%A0%87%E7%AD%BE%E5%80%BC"><span class="nav-text">批量替换 Front Matter中的tags标签值</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Docker%E8%BF%90%E8%A1%8C%E4%BA%AC%E4%B8%9C%E7%AD%BE%E5%88%B0%E8%84%9A%E6%9C%AC"><span class="nav-text">Docker运行京东签到脚本</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%AE%89%E8%A3%85"><span class="nav-text">一、安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E6%9B%B4%E6%96%B0"><span class="nav-text">1、更新</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96"><span class="nav-text">2、安装依赖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81%E5%AE%89%E8%A3%85docker"><span class="nav-text">3、安装docker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4%E3%80%81%E5%AE%89%E8%A3%85docker-compose"><span class="nav-text">4、安装docker-compose</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5%E3%80%81%E4%B8%8B%E8%BD%BD%E8%84%9A%E6%9C%AC"><span class="nav-text">5、下载脚本</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E9%85%8D%E7%BD%AE"><span class="nav-text">二、配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E8%8E%B7%E5%8F%96%E4%BA%AC%E4%B8%9Ccookie"><span class="nav-text">1、获取京东cookie</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81TG-BOT%E6%8E%A8%E9%80%81"><span class="nav-text">2、TG-BOT推送</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E8%BF%90%E8%A1%8C"><span class="nav-text">三、运行</span></a></li></ol></li></ol>
     </div>
 </div>
         </aside>
