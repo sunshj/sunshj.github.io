@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="sunshj blog website">
+    <meta name="description" content="用心写点没用的东西~">
+    <meta name="author" content="sunshj">
+    
+    <title>
+        
+            计算机二级公共基础知识笔记 |
+        
+        sunshj&#39;s Blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"me.sunshj.top","root":"/","language":"zh-CN","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.png","favicon":"/images/favicon.png","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":true},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"用心写点没用的东西~"},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+
+<!-- 引用依赖 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sunshj/Staticfile@master/aplayer/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/gh/sunshj/Staticfile@master/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/sunshj/Staticfile@master/meting/Meting.min.js"></script>
+<!-- data-lrcType="none"可以设置默认关闭歌词 -->
+<div class="aplayer" data-id="7196241123" data-server="netease" data-type="playlist" data-fixed="true"
+  data-autoplay="false" data-order="random" data-volume="0.2" data-theme="#cc543a" data-preload="auto"
+  data-lrcType="none">
+</div>
+
+<body>
+  <div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                sunshj&#39;s Blog
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class="active"
+                               href="/archives/"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/links/"
+                            >
+                                友链
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about/"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class="active"
+                       href="/archives/">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/links/">友链</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about/">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">计算机二级公共基础知识笔记</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.png">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">sunshj</span>
+                        
+                            <span class="author-label">Lv5</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-03-13 15:28:07</span>
+        <span class="mobile">2022-03-13 15:28</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E6%96%87%E7%AB%A0/">文章</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/%E5%88%86%E4%BA%AB/">分享</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E6%80%BB%E7%BB%93/">总结</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E5%88%86%E4%BA%AB/">分享</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>6.6k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>22 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <blockquote>
+<p>转载自<a class="link"   target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/100698395" >知乎<i class="fas fa-external-link-alt"></i></a></p>
+</blockquote>
+<h2 id="一、数据结构与算法"><a href="#一、数据结构与算法" class="headerlink" title="一、数据结构与算法"></a>一、数据结构与算法</h2><ol>
+<li><p>算法的基本运算和操作：算术运算，逻辑运算，<strong>关系运算</strong>，<strong>数据传输</strong>。</p>
+</li>
+<li><p>算法基本设计方法：列举法、归纳法、递推、递归、减半递推技术。</p>
+</li>
+<li><p><strong>数据元素</strong>：数据元素是<strong>数据的基本单位</strong>。</p>
+</li>
+<li><p><strong>数据对象</strong>：数据对象是<strong>性质相同的数据元素的集合</strong>。</p>
+</li>
+<li><p><strong>数据结构</strong>：是指由某一<strong>数据对象中所有数据成员之间的关系组成的集合</strong>。</p>
+</li>
+<li><p>数据的逻辑结构包括数据对象和数据对象之间的关系。</p>
+</li>
+<li><p>数据的存储结构包括数据元素的存储方式和关系的存储方式。</p>
+</li>
+<li><p><strong>一种数据的逻辑结构</strong>可以表示成<strong>多种存储结构。</strong></p>
+</li>
+<li><p><strong>线性结构</strong>的条件（一个非空数据结构)：<br>（1）有且只有一个根结点；<br>（2）每一个结点最多有一个前件，也最多有一个后件。</p>
+</li>
+<li><p>栈、队列、<strong>双向链表</strong>是线性结构；树、二叉树为非线性结构。</p>
+</li>
+<li><p><strong>线性表</strong>是由一组数据元素构成，数据元素的位置只取决于自己的序号，元素之间的相对位置是线性的。具有“<strong>一对一</strong>”逻辑关系的数据，最佳的存储方式是使用线性表。除根结点与终端结点外，其他所有结点有且只有一个前件，也有且只有一个后件。</p>
+</li>
+<li><p>线性表的存储结构：<strong>顺序存储结构</strong>和<strong>链式存储结构</strong>。</p>
+</li>
+<li><p><strong>线性表的顺序存储结构</strong>有两个特点：<br>（1）线性表中所有元素所占的存储空间连续；<br>（2）线性表中各数据元素在存储空间中是按逻辑顺序依次存放的。</p>
+</li>
+<li><p>线性表的链式存储结构存储数据结构的存储空间可以不连续，各数据结点的存储顺序与数据元素之间的逻辑关系可以不一致。结点包含：<strong>数据域</strong>、<strong>指针域</strong>。（注：链式存储方式既可用于表示线性结构，也可用于表示非线性结构）。</p>
+</li>
+<li><p><strong>栈</strong>和<strong>队列</strong>隶属于线性表，是特殊的线性表，因为它们对线性表中元素的进出做了明确的要求。</p>
+</li>
+<li><p><strong>栈</strong>具有<strong>记忆功能</strong>，队列没有记忆功能。栈的特点是先进后出,后进先出,所以对一个栈进行出栈操作,出来的元素肯定是最后存入栈中的元素,所以栈有记忆功能。而队列是先进先出,取队列的第一个元素,得到的是最先存入队列的元素,而不是上一个存入队列的元素,所以没有记忆功能。</p>
+</li>
+<li><p>栈、队列的存储结构：<br>（1）顺序存储结构：用一组地址连续的存储单元即一维数组来存储；<br>（2）链式存储：线性链表。</p>
+</li>
+<li><p>计算循环队列的元素个数：“尾指针减头指针”，若为负数，再加其容量即可。</p>
+</li>
+<li><p>树是 n(n&gt;0) 个结点的有限集合，是一种非线性结构。</p>
+</li>
+<li><p>结点的度：结点所拥有的子树的个数。</p>
+</li>
+<li><p><strong>叶子结点</strong>：<strong>度为0</strong>的结点。</p>
+</li>
+<li><p>分支结点：除叶子结点以外的结点。</p>
+</li>
+<li><p>结点的层次：<strong>根结点在第一层</strong>。</p>
+</li>
+<li><p>树的深度：所处层次最大的那个结点的层次。</p>
+</li>
+<li><p><strong>树的度</strong>：树中<strong>所有结点的度的最大值</strong>。</p>
+</li>
+<li><p>二叉树每个结点最多只有两棵子树，且有左右之分，不能互换，二叉树有<strong>五种不同的形态</strong>。</p>
+</li>
+<li><p>在二叉树的第 k 层上，最多有 $2^{k-1}(k \geq 1)$ 个结点。</p>
+</li>
+<li><p>深度为 m 的二叉树最多有 $2^{m}-1$ 个结点。</p>
+</li>
+<li><p><strong>在任意一棵二叉树中，度为 0 的结点（叶子结点）总是比度为 2 的结点多一个。</strong></p>
+</li>
+<li><p>具有 $n$ 个结点的二叉树，其深度不小于 $\left[\log _{2} n\right]+1$ ，其中 $\left[\log _{2} n\right]$ 表示为 $\log _{2} n$ 的整数部分。</p>
+</li>
+<li><p><strong>满二叉树</strong>：每一层上的结点数都达到最大值，即在满二叉树的第 k 层上有 <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://www.zhihu.com/equation?tex=2%5E%7Bk-1%7D"
+                      alt="[公式]"
+                > 个结点。</p>
+</li>
+<li><p><strong>完全二叉树</strong>：除最后一层外，每一层上的结点数均达到最大值；在最后一层上只缺少右边的若干结点。</p>
+</li>
+<li><p>具有  $n$ 个结点的完全二叉树的深度为  $\left[\log _{2} n\right]+1$ 。</p>
+</li>
+<li><p>完全二叉树中度为 1 的结点数为 0 或 1 。</p>
+</li>
+<li><p><strong>前序遍历</strong>：<strong>先访问根结点</strong>、然后遍历左子树，最后遍历右子树；并且，在遍历左、右子树时，仍然先访问根结点，然后遍历左子树，最后遍历右子树。</p>
+</li>
+<li><p><strong>中序遍历</strong>：先遍历左子树、<strong>然后访问根结点</strong>，最后遍历右子树；并且，在遍历左、右子树时，仍然先遍历左子树，然后访问根结点，最后遍历右子树。</p>
+</li>
+<li><p><strong>后序遍历</strong>：先遍历左子树、然后遍历右子树，<strong>最后访问根结点</strong>；并且，在遍历左、右子树时，仍然先遍历左子树，然后遍历右子树，最后访问根结点。</p>
+</li>
+<li><p><strong>顺序查找</strong>是从表的一端开始，依次扫描表中的各个元素，并与所要查找的数进行比较。</p>
+</li>
+<li><p>只能采用顺序查找：<br>（1）线性表为无序表，则不管是顺序存储结构还是链式存储结构，只能用顺序查找。</p>
+<p>（2）有序线性表，如果采用链式存储结构，也只能用顺序查找。</p>
+</li>
+<li><p><strong>二分查找</strong>的条件：<br>（1）用<strong>顺序存储结构</strong>，<br>（2）线性表是<strong>有序表</strong>。</p>
+</li>
+<li><p>对于长度为 $n$ 的有序线性表，在最坏情况下，二分法查找只需比较  $\log _{2} n$ 次，而顺序查找需要比较 $n$ 次。</p>
+</li>
+<li><p><strong>排序算法</strong><br>1、<strong>交换类排序</strong><br>（1）冒泡排序法，在最坏的情况下，冒泡排序需要比较次数为 $\frac{n(n-1)}{2}$ 。</p>
+<p>（2）<strong>快速排序</strong>法 ，在最坏的情况下，快速排序需要比较次数为  $\frac{n(n-1)}{2}$。</p>
+<p>2、<strong>插入类排序</strong>：<br>（1）简单插入排序法，最坏情况需要 $\frac{n(n-1)}{2}$ 次比较；</p>
+<p>（2）<strong>希尔排序</strong>法，最坏情况需要 $O\left(n^{1.5}\right)$ 次比较。</p>
+<p>3、<strong>选择类排序</strong>：<br>（1）简单选择排序法，最坏情况需要 $\frac{n(n-1)}{2}$ 次比较；</p>
+<p>（2）<strong>堆排序法</strong>，最坏情况需要 $O\left(n \log _{2} n\right)$ 次比较。 相比以上几种(除希尔排序法外)，堆排序法的时间复杂度最小。</p>
+</li>
+</ol>
+<h2 id="二、程序设计基础"><a href="#二、程序设计基础" class="headerlink" title="二、程序设计基础"></a>二、程序设计基础</h2><ol>
+<li>形成良好的程序设计风格需注意：<br>①源程序文档化；<br>②数据说明的方法；<br>③语句的结构；<br>④输入和输出。<br>⑤模块设计要保证低耦合、高内聚。<br>(内聚：每个模块尽可能独立完成自己的功能，不依赖于模块外部的代码。<br>耦合：模块与模块之间接口的复杂程度，模块之间联系越复杂耦合度越高，牵一发而动全身。)</li>
+<li>结构化程序设计方法的四条原则：<br>①自顶向下；<br>②逐步求精；<br>③模块化；<br>④限制使用 goto 语句。</li>
+<li>两类循环语句：先判断后执行的循环体称为<strong>当型循环</strong>结构；先执行循环体后判断的称为<strong>直到型循环</strong>结构。</li>
+<li>面向对象的程序设计以对象为核心，强调对象的<strong>抽象性</strong>，<strong>封装性</strong>，<strong>继承性</strong>、<strong>多态性</strong>、（依赖性）。</li>
+<li>对象的基本特点：<br>（1）标识惟一性；<br>（2）分类性；<br>（3）多态性；<br>（4）封装性；<br>（5）模块独立性好。</li>
+<li><strong>属性</strong>：即对象所包含的信息，它在设计对象时确定，一般只能通过执行对象的操作来改变。<strong>类</strong>：是具有相似属性与操作的一组对象。类是关于对象性质的描述。类是对象的抽象，对象是其对应类的一个实例。</li>
+<li><strong>消息</strong>：是一个实例与另一个实例之间传递的信息。对象间的通信靠消息传递。它请求对象执行某一处理或回答某一要求的信息，它统一了数据流和控制流。消息的<strong>组成</strong>包括：<br>（1）接收消息的对象的名称；<br>（2）消息标识符，也称消息名；<br>（3）零个或多个参数。</li>
+<li><strong>多态性</strong>：是指同样的消息被不同的对象接受时可导致完全不同的行动的现象。</li>
+<li>在<strong>软件设计</strong>过程中，必须遵循软件工程的基本原则：这些原则包括<strong>抽象</strong>、<strong>信息隐蔽</strong>、<strong>模块化</strong>、<strong>局部化</strong>、<strong>确定性</strong>、<strong>一致性</strong>、<strong>完备性</strong>和<strong>可靠性</strong>。</li>
+<li><strong>面向对象</strong>的设计方法与传统的的面向过程的方法有本质不同，它的<strong>基本原理是，使用现实世界的概念抽象地思考问题从而自然地解决问题。</strong>它强调模拟现实世界中的概念而不强调算法，它鼓励开发者在软件开发的绝大部分中都用应用领域的概念去思考。</li>
+<li>字符常量是单引号括起来的一个字符，例如 <code>&#39;a&#39;</code>，也可以通过转义序列表示方法表示一些不可显示字符或无法通过键盘输入的字符，例如<code>\n</code>的含义是换行。</li>
+</ol>
+<h2 id="三、软件工程基础"><a href="#三、软件工程基础" class="headerlink" title="三、软件工程基础"></a>三、软件工程基础</h2><ol>
+<li><p><strong>软件</strong>是包括<strong>程序</strong>、<strong>数据</strong>和<strong>相关文档</strong>的完整集合。分为应用软件和系统软件。</p>
+</li>
+<li><p><strong>软件生命周期</strong>是指软件产品从提出、实现、使用维护到停止使用退役的整个过程。可分为软件定义，软件开发及软件维护3个阶段。</p>
+</li>
+<li><p><strong>软件危机</strong>泛指在计算机软件的开发和维护过程中遇到的一系列严重的问题，集中表现在成本、质量、生产效率等几个方面。</p>
+</li>
+<li><p><strong>软件工程</strong>是指采用工程的概念、原理、技术和方法指导软件的开发与维护。软件工程的主要思想强调在软件开发过程中需要应用工程化原则。软件工程的核心思想是把软件当作一个工程产品来处理。</p>
+</li>
+<li><p><strong>软件工程3要素</strong>：方法，工具和过程。</p>
+</li>
+<li><p><strong>软件工程过程</strong>是把软件转化为输出的一组彼此相关的资源活动，包含4种基本活动：<br>（1）<strong>P</strong>(plan) — 软件规格说明；<br>（2）<strong>D</strong>(do) — 软件开发；<br>（3）<strong>C</strong>(check) — 软件确认；<br>（4）<strong>A</strong>(action) — 软件演进。</p>
+</li>
+<li><p>软件工程的理论和技术性研究的内容主要包括<strong>软件开发技术</strong>和<strong>软件工程管理</strong>。</p>
+</li>
+<li><p><strong>软件工程的原则</strong>：抽象，信息隐蔽，模块化，局部化，确定性，一致性，完备性，可验证性。</p>
+</li>
+<li><p>需求分析阶段的工作：需求获取，需求分析，编写需求规格说明书，需求评审。</p>
+</li>
+<li><p><strong>需求分析方法</strong>：<br>（1）<strong>结构化需求分析</strong>方法：<br>①面向数据结构的Jackson方法（JSD）；<br>②面向数据流的结构化分析方法（SA）；<br>③面向数据结构的结构化数据系统开发方法（DSSD）；<br>（2）<strong>面向对象需求分析</strong>方法（OOA）：<br>①静态分析方法<br>②动态分析 方法。</p>
+</li>
+<li><p>结构化方法包括结构化分析方法，结构化设计方法，结构化编程方法。结构化方法中，<strong>软件功能分解</strong>属于<strong>总体设计</strong>阶段。</p>
+</li>
+<li><p><strong>结构化分析</strong>的<strong>常用工具</strong>： </p>
+<p><strong>（1）数据流图</strong>（<strong>DFD</strong>-Data Flow Diagram）：<br>是结构化分析方法中用于系统逻辑模型的一种工具。它以图形的方式描绘在系统中流动和处理的过程。数据流图中四种基本的符号：<br><strong>①【箭头】</strong>：表示【<strong>数据流】</strong>，数据流是数据在系统中传播的路径。</p>
+<p><strong>②圆或椭圆</strong>：表示加工，加工又称为数据处理，是对数据流进行某些操作或变换。<br><strong>③双横</strong>：表示数据存储（数据源）。数据存储又称为文件，指暂时保存的数据，它可以是数据库文件或任何形式的数据组织。<br><strong>④方框</strong>：数据的源点或终点。它是软件系统外部环境中的实体，统称外部实体。</p>
+<p><strong>（2）数据字典（DD）</strong>：<br>它是结构分析方法的<strong>核心</strong>，是用来描述系统中所用到的全部数据和文件的文档,作用是对DFD中出现的被命名的图形元素进行确切解释。<br>数据字典由以下4类元素组成：<br><strong>①数据流</strong><br><strong>②数据流分量</strong><br><strong>③数据存储</strong><br><strong>④处理</strong></p>
+<p><strong>（3）判定树（决策树）</strong>：<br>是一种<strong>描述加工</strong>的图形工具，适合描述时候处理中具有多个判断，而且每个决策与若干条件有关。</p>
+<p><strong>（4）判定表</strong>：<br>与判定树类似，也是一种<strong>描述加工</strong>的图形工具。如果一个加工逻辑有多个条件、多个操作，并且在不同的条件组合下执行不同的操作，那么可以使用判定表来描述。</p>
+</li>
+<li><p><strong>软件需求规格说明书</strong>（<strong>SRS</strong>，Software Requirement Specification）是需求分析阶段得出的最主要的文档。软件需求规格说明书的特点：正确性、<strong>无歧义性</strong>、完整性、可验证性、一致性、可理解性、可修改性和可追踪性。<br>软件需求规格说明书的<strong>作用</strong>：<br>①<strong>便于用户和开发人员进行理解和交流</strong>。<br>②反映出用户问题的结构，可以作为软件开发工作的基础和依据。<br>③作为确认测试和验收的依据。</p>
+</li>
+<li><p><strong>软件设计</strong>是确定系统的物理模型。软件设计是开发阶段最重要的步骤，是将需求准确地转化为完整的软件产品或系统的唯一途径。<br>从技术观点上看，软件设计包括软件结构设计、数据设计、接口设计、过程设计。<br>从工程管理角度来看，软件设计分两步完成：<br>（1）<strong>概要设计</strong>将软件需求转化为软件体系结构、确定系统级接口、全局数据结构或数据库模式；<br>（2）<strong>详细设计</strong>确立每个模块的实现算法和局部数据结构，用适当方法表示算法和数据结构的细节。</p>
+</li>
+<li><p><strong>软件设计的基本原理</strong> ：<br>模块化、抽象化、信息隐藏和局部化（实现信息隐蔽依靠对象的封装）、模块独立性。</p>
+</li>
+<li><p><strong>耦合性</strong>和<strong>内聚性</strong><br>衡量软件的模块独立性的两个定性的度量标准。<br><strong>耦合性</strong>：是对一个软件结构内不同模块之间互联程度的度量。耦合性的强弱取决于模块间接口的复杂程度。<br><strong>内聚性</strong>：是一个模块内部各个元素间彼此结合的紧密程度的度量。<br>一个模块的内聚性越强则该模块的模块独立性越强。一个模块与其他模块的耦合性越强则该模块的模块独立性越弱。<br>在结构程序设计中，模块划分的<strong>原则</strong>是模块内具有<strong>高内聚</strong>度，模块间具有<strong>低耦合</strong>度。<br>耦合度由低到高：<strong>非直接耦合</strong>，数据耦合，标记耦合，控制耦合，外部耦合，公共耦合，内容耦合。<br>内聚性由强到弱：<strong>功能内聚</strong>，顺序内聚，通信内聚，过程内聚，时间内聚，逻辑内聚，偶然内聚。</p>
+</li>
+<li><p><strong>概要设计</strong>的<strong>工具</strong>：<strong>结构图</strong>（<strong>SC</strong>-Structure Chart）也称<strong>程序结构图。</strong><br>在结构图中：<br><strong>矩形</strong>表示模块；<br>【<strong>箭头</strong>表示<strong>模块间的调用关系】</strong>；<br>带注释的箭头表示模块调用过程中来回传递的信息；<br><strong>实心圆箭头</strong>表示传递<strong>控制</strong>信息;<br>空心<strong>圆箭心</strong>表示传递数据。</p>
+<p>结构图的基本形式：基本形式、顺序形式、重复形式、选择形式。<br>结构图有四种模块类型：传入模块、传出模块、变换模块和协调模块。</p>
+</li>
+<li><p>任何软件系统都可以用数据流图表示，典型的<strong>数据流类型</strong>有两种：<strong>变换型</strong>和<strong>事务型</strong>。</p>
+</li>
+<li><p><strong>设计的准则</strong><br>（1）提高模块独立性。<br>（2）模块规模适中。<br>（3）深度，宽度，扇出和扇入适当。<br>如果深度过大，则说明有的控制模块可能简单了，如果宽度过大，则说明系统的控制过于集中，扇出过大说明模块过分复杂，需要控制和协调过多的下级模块，应适当加中间层次，扇出过小可以把模块进一步分解成若干小模块，或合并到上级模块中，扇入越大则共享该模块的上级数目越多。好的软件设计结构通常<strong>顶层高扇出，中间扇出较少，底层高扇入。</strong><br>（4）使模块的作用域在该模块的控制域内。<br>（5）减少模块的接口和界面的复杂性。<br>（6）设计成单入口，单出口的模块。<br>（7）设计功能可预测的模块。</p>
+</li>
+<li><p><strong>详细设计</strong>常用的设计<strong>工具</strong>（工程设计工具）：图形工具，表格工具和语言工具。<br>图形工具：<br><strong>程序流程图</strong>：【<strong>箭头</strong>表示<strong>控制流】</strong>，方框表示加工步骤，菱形表示逻辑条件。<br><strong>N-S图</strong>（盒图）：有五种基本图形。<br><strong>PAD</strong>图（Problem Analysis Diagram）：问题分析图，有五种基本图型。<br>表格工具：判定表。<br>语言工具：PDL—过程设计语言（结构化的英语和伪码）。</p>
+</li>
+<li><p><strong>软件测试</strong>的目标：<strong>发现</strong>程序中的错误。</p>
+</li>
+<li><p><strong>软件测试方法</strong><br>1、静态测试和动态测试<br>①<strong>静态测试</strong><br>包括代码检查、静态结构分析、代码质量度量。<strong>不实际运行软件</strong>，主要通过人工进行。<br>②<strong>动态测试</strong><br>通过<strong>运行软件</strong>来检验软件中的动态行为和运行结果的正确性。<br>2、白盒测试和黑盒测试<br>①<strong>白盒测试</strong><br>也称为结构测试或逻辑测试，是把程序看成装在一只透明的白盒子里，测试者完全了解程序的结构和处理过程。它根据程序的内部逻辑来设计测试用例，检查程序中的逻辑通路是否都按预定的要求正确地工作。<br>白盒测试的方法：逻辑覆盖，基本路经测试。<br>②<strong>黑盒测试</strong><br>也称功能测试或数据驱动测试，是把程序看成一只黑盒子，测试者完全不了解，或不考虑程序的结构和处理过程。它根据规格说明书的功能来设计测试用例，检查程序的功能是否符合规格说明的要求。<br>黑盒测试的方法：等价划分法，边界值分析法，错误推测法。</p>
+</li>
+<li><p>软件测试过程分4个步骤，即<strong>单元测试—&gt;集成测试</strong>—&gt;<strong>验收测试（确认测试）</strong>—&gt;<strong>系统测试</strong>。<br><strong>确认测试：检查软件产品是否符合需求定义。</strong></p>
+</li>
+<li><p><strong>程序调试</strong>是<strong>诊断（而非发现）</strong>和<strong>改正</strong>程序中的错误。</p>
+</li>
+<li><p>主要的调试方法有：<br>（1）强行排错法； （2）回溯法； （3）原因排除法，包括演绎法，归纳法和二分法。</p>
+</li>
+<li><p><strong>结构化分析（属于需求分析方法）</strong>的常用工具：<br>①数据流图（DFD）<br>②数据字典（DD）<br>③判定树<br>④判定表<br><strong>概要设计（开发阶段）</strong>的常用工具：<br>①系统结构图<br><strong>详细设计（开发阶段）</strong>的常用工具：<br>①程序流程图<br>②N-S图（盒图）<br>③PAD图<br>④HIPO图</p>
+</li>
+</ol>
+<h2 id="四、数据库设计基础"><a href="#四、数据库设计基础" class="headerlink" title="四、数据库设计基础"></a>四、数据库设计基础</h2><ol>
+<li><strong>数据（Data）</strong>是数据库存储的基本对象，是描述事物的符号记录。</li>
+<li><strong>数据库（DB）</strong>是长期储存在计算机内、有组织的、可共享的大量数据的集合。<br>它具有统一的结构形式并存放于统一的存储介质内，是多种应用数据的集成，并可被各个应用程序所共享，所以数据库技术的根本目标是解决数据共享问题。</li>
+<li><strong>数据库管理系统（DBMS）</strong>是数据库的管理机构，负责数据库中的数据组织、数据操纵、数据维护、控制及保护和数据服务等。数据库管理系统是数据库系统的<strong>核心</strong>。<strong>数据库系统</strong>包含<strong>数据库</strong>和<strong>数据库管理系统</strong>。<br>数据库管理系统提供相应的数据语言：<br>数据<strong>定义</strong>语言（D<strong>D</strong>L）：负责数据模式定义和数据物理存取构建。<br>数据<strong>操纵</strong>语言（D<strong>M</strong>L）：负责数据的操纵。<br>数据<strong>控制</strong>语言（D<strong>C</strong>L）：负责数据完整性，安全性的定义与检查以及并发控制，故障恢复等功能。</li>
+<li><strong>数据库系统（DBS）</strong>是指在计算机系统中引入数据库后的系统，一般由数据库、数据库管理系统、应用系统、数据库管理员和用户构成。</li>
+<li>文件系统阶段的缺陷：<br>（1）数据冗余<br>（2）不一致性<br>（3）数据联系弱。</li>
+<li>数据库系统的基本特点：<br>（1）数据的高集成性<br>（2）数据的高共享性和低冗余性<br>（3）数据高独立性<br>（4）数据统一管理与控制。</li>
+<li><strong>数据独立性</strong>是<strong>数据与程序间的互不依赖性</strong>，即数据库中的数据独立于应用程序而不依赖于应用程序。 数据的独立性一般分为物理独立性与逻辑独立性两种。<br>（1）<strong>物理独立性</strong>：<br>当数据的物理结构（包括存储结构、存取方式等）改变时，其逻辑结构，应用程序都不用改变。<br>（2）<strong>逻辑独立性</strong>：<br>数据的逻辑结构改变了，如修改数据模式、增加新的数据类型、改变数据间联系等，用户的应用程序可以不变。</li>
+<li>数据库系统的三级模式<br>（1）<strong>外模式</strong>，外模式也称子模式，它是数据库用户能够看见和使用的局部数据的逻辑结构和特征的描述，一个概念模式可以有若干个外模式。<br>（2）<strong>概念模式</strong>，也称逻辑模式，是对数据库系统中全局数据逻辑结构的描述，是全体用户公共数据视图。一个数据库只有一个概念模式。<br>（3）<strong>内模式</strong>，内模式又称物理模式，它给出了数据库物理存储结构与物理存取方法。一个数据库只有一个内模式。<br>内模式处于最底层，它反映了数据在计算机物理结构中的实际存储形式，概念模式处于中间层，它反映了设计者的数据全局逻辑要求，而外模式处于最外层，它反映了用户对数据的要求。</li>
+<li>两级映射保证了数据库系统中数据的独立性。</li>
+<li>E-R模型<br>（1）<strong>实体</strong>的表示：用<strong>矩形</strong>表示实体集，在矩形内写上该实体集的名字。<br>（2）<strong>属性</strong>的表示：用<strong>椭圆</strong>形表示属性，在椭圆形内写上该属性的名称。<br>（3）<strong>联系</strong>的表示：用<strong>菱形</strong>表示联系，菱形内写上联系名。</li>
+<li>关系模式采用二维表来表示，(数据模式）由关系<strong>数据结构</strong>，关系<strong>操纵</strong>和关系<strong>完整性约束</strong>3部分组成，在关系数据库中，用来表示实体间联系的是关系。</li>
+<li>在二维表中惟一标识元组的最小属性值称为该表的键或<strong>码</strong>。</li>
+<li>三类数据约束，它们是<strong>实体完整性约束</strong>、<strong>参照完整性约束</strong>以及<strong>用户定义的完整性约束</strong>。其中实体完整性约束、参照完整性约束必须满足的完整性约束条件。参照完整性约束不允许关系应用不存在的元组。实体完整性约束要求关系的主键中属性值不能为空，这是数据库完整性的最基本要求。</li>
+<li>投影：一元运算，对一个关系进行垂直切割，消去某些列。</li>
+<li>除：给定关系R（X，Y）和S（Y，Z），其中X，Y，Z是属性组，R中的Y和S中Y可以有不同的属性名，但必须出自相同的域集。</li>
+<li>自然连接满足的条件是<br>（1）两关系间有公共域<br>（2）通过公共域的相等值进行连接。</li>
+<li><strong>数据库设计</strong><br>①<strong>面向数据</strong>的方法是以信息需求为主，兼顾处理需求；<br>②<strong>面向过程</strong>的方法是以处理需求为主，兼顾信息需求。<br>由于数据在系统中稳定性高，数据已成为系统的核心，故面向数据的设计方法已成为主流。</li>
+<li>数据库设计生命周期：需求分析阶段、概念设计阶段、逻辑设计阶段、物理设计阶段。</li>
+<li>规范化：一个低一级范式的关系模式，通过模式分解转化为若干个高一级范式的关系模式的集合。</li>
+<li><strong>概念结构设计</strong>是将需求分析阶段得到的用户需求抽象为信息结构即概念模型的过程，它是整个数据库设计的<strong>关键</strong>。</li>
+<li>逻辑结构设计的任务是将E—R图转换成关系数据模型的过程。</li>
+<li>常用的存取方法：索引方法，聚簇方法和HASH方法。</li>
+<li>数据库概念设计的过程中，视图设计一般有三种设计次序：<br>①<strong>自顶向下</strong>。这种方法是先从抽象级别高且普遍性强的对象开始逐步细化、具体化与特殊化。<br>②<strong>由底向上</strong>。这种设计方法是先从具体的对象开始，逐步抽象，普遍化与一般化，最后形成一个完整的视图设计。<br>③<strong>由内向外</strong>。这种设计方法是先从最基本与最明显的对象着手逐步扩充至非基本、不明显的其它对象。</li>
+<li><strong>分布式数据库系统</strong>具有<strong>数据分布性</strong>、<strong>逻辑整体性</strong>、<strong>位置透明性</strong>和<strong>复制透明性</strong>的特点。</li>
+</ol>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>本文标题：计算机二级公共基础知识笔记</li>
+        <li>本文作者：sunshj</li>
+        <li>创建时间：2022-03-13 15:28:07</li>
+        <li>
+            本文链接：https://me.sunshj.top/archives/ncre-notes/
+        </li>
+        <li>
+            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E6%80%BB%E7%BB%93/">#总结</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E5%88%86%E4%BA%AB/">#分享</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/archives/jdscript-docker/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Docker运行京东签到脚本</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+            <div class="comment-container">
+                <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments">&nbsp;评论</i>
+    </div>
+    
+
+        
+            
+    <div id="gitalk-container"></div>
+    <script data-pjax
+            src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+    <script data-pjax>
+
+        function loadGitalk() {
+            let __gitalk__pathname = decodeURI(location.pathname);
+            const __gitalk__pathnameLength = __gitalk__pathname.length;
+            const __gitalk__pathnameMaxLength = 50;
+            if (__gitalk__pathnameLength > __gitalk__pathnameMaxLength) {
+                __gitalk__pathname = __gitalk__pathname.substring(0, __gitalk__pathnameMaxLength - 3) + '...';
+            }
+
+            try {
+                Gitalk && new Gitalk({
+                    clientID: 'fae3f7a8885d891e7855',
+                    clientSecret: 'd714980af20fbb12564a55f85003ccd793b4565d',
+                    repo: 'MyGitalkComment',
+                    owner: 'sunshj',
+                    admin: ['sunshj'],
+                    id: __gitalk__pathname,
+                    language: 'zh-CN'
+                }).render('gitalk-container');
+
+            } catch (e) {
+                window.Gitalk = null;
+            }
+        }
+
+        if ('true') {
+            const loadGitalkTimeout = setTimeout(() => {
+                loadGitalk();
+                clearTimeout(loadGitalkTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadGitalk);
+        }
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+  <div class="info-container">
+    <div class="copyright-info info-item">
+      &copy;
+      
+      <span>2021</span>
+      -
+      
+      2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a
+        href="/">sunshj</a>
+    </div>
+    
+    <script async data-pjax
+      src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <div class="website-count info-item">
+      
+      <span id="busuanzi_container_site_uv">
+        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+      </span>
+      
+      
+      <span id="busuanzi_container_site_pv">
+        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+      </span>
+      
+    </div>
+    
+    <div class="theme-info info-item">
+      由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a
+        class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep
+        v3.4.5</a>
+    </div>
+    
+    
+
+    <!-- 在线通讯Tidio -->
+    
+    <script src="//code.tidio.co/2f7jiqaxzwamo4jsypbhfv8cbgqwrnpf.js"></script>
+    
+
+  </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95"><span class="nav-text">一、数据结构与算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80"><span class="nav-text">二、程序设计基础</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%9F%BA%E7%A1%80"><span class="nav-text">三、软件工程基础</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80"><span class="nav-text">四、数据库设计基础</span></a></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+
+  <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/code-copy.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/lazyload.js"></script>
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/toc.js"></script>
+    
+</div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+
+</body>
+
+</html>
