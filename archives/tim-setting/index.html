@@ -9,7 +9,7 @@
     
     <title>
         
-            使用ADB命令冻结与卸载系统应用 |
+            TIM修改个人文件夹位置 |
         
         sunshj&#39;s Blog
     </title>
@@ -163,7 +163,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">使用ADB命令冻结与卸载系统应用</span>
+            <span class="title-hover-animation">TIM修改个人文件夹位置</span>
         </div>
 
         
@@ -182,8 +182,8 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fas fa-edit"></i>&nbsp;
-        <span class="pc">2021-05-06 13:32:52</span>
-        <span class="mobile">2021-05-06 13:32</span>
+        <span class="pc">2022-04-11 11:16:34</span>
+        <span class="mobile">2022-04-11 11:16</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -192,10 +192,6 @@
                 
                     <li>
                         <a href="/categories/%E6%96%87%E7%AB%A0/">文章</a>&nbsp;
-                    </li>
-                
-                    <li>
-                        &gt; <a href="/categories/%E5%88%86%E4%BA%AB/">分享</a>&nbsp;
                     </li>
                 
             </ul>
@@ -211,10 +207,6 @@
                     </li>
                 
                     <li>
-                        | <a href="/tags/Windows/">Windows</a>&nbsp;
-                    </li>
-                
-                    <li>
                         | <a href="/tags/%E6%80%BB%E7%BB%93/">总结</a>&nbsp;
                     </li>
                 
@@ -225,7 +217,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>273 字</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>263 字</span>
         </span>
     
     
@@ -246,48 +238,35 @@
         
 
         <div class="article-content markdown-body">
-            <h2 id="如何使用ADB"><a href="#如何使用ADB" class="headerlink" title="如何使用ADB"></a>如何使用ADB</h2><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><table>
-<thead>
-<tr>
-<th align="center">本地下载</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a class="link"   target="_blank" rel="noopener" href="https://cdn.sunshj.top/Software/ADB.rar" >点击下载<i class="fas fa-external-link-alt"></i></a></td>
-</tr>
-</tbody></table>
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>手机要打开开发者模式，允许USB调试<br>adb压缩包解压之后，在解压文件夹地址栏输入<code>cmd</code>,回车进入命令控制行窗口页面</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.sunshj.top/Pic/images/article/adb_use.jpg"
-                      alt="adb"
-                ></p>
-<p><strong>想要用ADB卸载一个应用，首先要知道它的包名。</strong></p>
-<p>常用到的ADB命令列表：</p>
-<ul>
-<li>查看当前正在运行应用的包名：<br><code>adb shell dumpsys activity | findstr mFocusedActivity</code></li>
-<li>卸载应用：<br><code>adb shell pm uninstall --user 0 应用名</code></li>
-<li>将系统所有应用以txt文件列出在adb文件夹下：<br><code>adb shell pm list packages -s &gt;系统应用.txt</code></li>
-<li>将系统已启用的应用以txt文件列出在adb文件夹下：<br><code>adb shell pm list packages -s -e&gt;启用的应用.txt</code></li>
-<li>将系统已停用的应用以txt文件列出在adb文件夹下：<br><code>adb shell pm list packages -s -d&gt;停用的应用.txt</code></li>
-<li>停用应用：<br><code>adb shell pm disable-user 应用名</code></li>
-<li>启用应用：<br><code>adb shell pm enable 应用名</code></li>
-</ul>
-<p><strong>例如：</strong></p>
-<p>卸载隐藏小米自带的<em>服务与反馈</em>（com.miui.miservice）</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb shell pm uninstall --user 0 com.miui.miservice</span><br></pre></td></tr></table></figure>
+            <h1 id="TIM无法修改个人文件夹位置的解决方法"><a href="#TIM无法修改个人文件夹位置的解决方法" class="headerlink" title="TIM无法修改个人文件夹位置的解决方法"></a>TIM无法修改个人文件夹位置的解决方法</h1><ol>
+<li><p>打开TIM设置界面，找到个人文件夹设置的地方，点击“打开个人文件夹”按钮，会打开当前的个人文件夹。</p>
+</li>
+<li><p>完全退出TIM。</p>
+</li>
+<li><p>到个人文件夹的上一层目录，把里面的QQ号码文件夹和All Users文件夹移动或复制到新的个人文件夹位置，比如 <code>D:\TIM\Tencent Files</code> 目录下。</p>
+</li>
+<li><p>进入 <code>C:\Users\Public\Documents\Tencent\QQ</code> 目录（如果没有这个目录，请自行创建，Windows10中文版可能是<code>C盘&gt;用户&gt;公用&gt;公用文档</code>），在该目录下右键新建文本文件，并重命名为<code>UserDataInfo.ini</code></p>
+</li>
+<li><p>双击打开 <code>UserDataInfo.ini</code> 文件，将下列内容复制粘贴进去，<code>UserDataSavePath=D:\TIM\Tencent Files</code>  这里就是指定新的个人文件夹位置，保存并关闭。</p>
+</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[UserDataImportSet]</span><br><span class="line">NeedImport=0</span><br><span class="line">OldVersion=</span><br><span class="line">OldVerDataPathType=</span><br><span class="line">OldVerDataPath=</span><br><span class="line">OldQQInstallPath=C:\Program Files (x86)\Tencent\QQ</span><br><span class="line">[UserDataSet]</span><br><span class="line">UserDataSavePathType=2</span><br><span class="line">UserDataSavePath=D:\TIM\Tencent Files</span><br><span class="line">NewVersion=</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>重新启动TIM，打开配置界面，就可以看到修改已经生效了。</li>
+</ol>
+
         </div>
 
         
             <div class="post-copyright-info">
                 <div class="article-copyright-info-container">
     <ul>
-        <li>本文标题：使用ADB命令冻结与卸载系统应用</li>
+        <li>本文标题：TIM修改个人文件夹位置</li>
         <li>本文作者：sunshj</li>
-        <li>创建时间：2021-05-06 13:32:52</li>
+        <li>创建时间：2022-04-11 11:16:34</li>
         <li>
-            本文链接：https://me.sunshj.top/archives/use-adb-shell/
+            本文链接：https://me.sunshj.top/archives/tim-setting/
         </li>
         <li>
             版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -306,10 +285,6 @@
                     </li>
                 
                     <li class="tag-item">
-                        <a href="/tags/Windows/">#Windows</a>&nbsp;
-                    </li>
-                
-                    <li class="tag-item">
                         <a href="/tags/%E6%80%BB%E7%BB%93/">#总结</a>&nbsp;
                     </li>
                 
@@ -319,29 +294,14 @@
         
             <div class="article-nav">
                 
-                    <div class="article-prev">
-                        <a class="prev"
-                           rel="prev"
-                           href="/archives/mousukoshidake-yoasobi/"
-                        >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">もう少しだけ</span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                        </a>
-                    </div>
-                
                 
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/archives/fushigikarute-moviever/"
+                           href="/archives/html-footer/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">不可思議のカルテ</span>
+                                <span class="post-nav-title-item">HTML中使footer保持在页面底部</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -537,7 +497,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8ADB"><span class="nav-text">如何使用ADB</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD"><span class="nav-text">下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8"><span class="nav-text">使用</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TIM%E6%97%A0%E6%B3%95%E4%BF%AE%E6%94%B9%E4%B8%AA%E4%BA%BA%E6%96%87%E4%BB%B6%E5%A4%B9%E4%BD%8D%E7%BD%AE%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="nav-text">TIM无法修改个人文件夹位置的解决方法</span></a></li></ol>
     </div>
 </div>
         </aside>
