@@ -6,7 +6,7 @@
   <link href="https://me.sunshj.top/atom.xml" rel="self"/>
   
   <link href="https://me.sunshj.top/"/>
-  <updated>2022-04-14T05:22:58.171Z</updated>
+  <updated>2022-04-14T09:01:38.293Z</updated>
   <id>https://me.sunshj.top/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>本站音乐文章索引</title>
+    <link href="https://me.sunshj.top/archives/music-index/"/>
+    <id>https://me.sunshj.top/archives/music-index/</id>
+    <published>2022-04-14T08:47:41.811Z</published>
+    <updated>2022-04-14T09:01:38.293Z</updated>
+    
+    <content type="html"><![CDATA[<p>对本站所有音乐文章进行汇总<span id="more"></span></p><ul><li><a href="https://me.sunshj.top/archives/yorunikakeru-yoasobi/">夜に駆ける</a></li><li><a href="https://me.sunshj.top/archives/daisyblue/">Daisy Blue</a></li><li><a href="https://me.sunshj.top/archives/yasashiisuisei-yoasobi/">優しい彗星</a></li><li><a href="https://me.sunshj.top/archives/harunoyuki/">ハルノユキ</a></li><li><a href="https://me.sunshj.top/archives/koinouta/">恋のうた</a></li><li><a href="https://me.sunshj.top/archives/sekaiichihana-smap/">世界に一つだけの花</a></li><li><a href="https://me.sunshj.top/archives/hyouka-madoromi/">まどろみの約束</a></li><li><a href="https://me.sunshj.top/archives/honeyworks-daikirai/">大嫌いなはずだった</a></li><li><a href="https://me.sunshj.top/archives/gunjou-yoasobi/">群青</a></li><li><a href="https://me.sunshj.top/archives/tenkinoko-ed/">愛にできることはまだあるかい</a></li><li><a href="https://me.sunshj.top/archives/irony-claris/">Irony - ClariS</a></li><li><a href="https://me.sunshj.top/archives/grandescape/">グランドエスケープ</a></li><li><a href="https://me.sunshj.top/archives/seishunprologue/">青春プロローグ</a></li><li><a href="https://me.sunshj.top/archives/halzion-yoasobi/">ハルジオン</a></li><li><a href="https://me.sunshj.top/archives/fushigikarute-moviever/">不可思議のカルテ</a></li><li><a href="https://me.sunshj.top/archives/mousukoshidake-yoasobi/">もう少しだけ</a></li><li><a href="https://me.sunshj.top/archives/yellow-yohkamiyama/">YELLOW</a></li><li><a href="https://me.sunshj.top/archives/everyworld-yui-solo/">エブリデイワールド</a></li><li><a href="https://me.sunshj.top/archives/bokunokokorowotsukutteyo/">僕の心を作ってよ</a></li><li><a href="https://me.sunshj.top/archives/doraemon3d-ed/">ひまわりの約束</a></li><li><a href="https://me.sunshj.top/archives/doraemon-op/">夢をかなえてドラえもん</a></li><li><a href="https://me.sunshj.top/archives/negakoro/">願い ~ あの頃のキミへ ~</a></li><li><a href="https://me.sunshj.top/archives/sangenshoku/">三原色</a></li><li><a href="https://me.sunshj.top/archives/yoasobi-loveletter/">ラブレター</a></li><li><a href="https://me.sunshj.top/archives/refrain-aimer/">Ref:rain</a></li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;对本站所有音乐文章进行汇总</summary>
+    
+    
+    
+    <category term="音乐" scheme="https://me.sunshj.top/categories/%E9%9F%B3%E4%B9%90/"/>
+    
+    
+    <category term="总结" scheme="https://me.sunshj.top/tags/%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
   
   <entry>
     <title>Docker+青龙面板部署京东签到脚本</title>
@@ -235,31 +256,6 @@
     <category term="总结" scheme="https://me.sunshj.top/tags/%E6%80%BB%E7%BB%93/"/>
     
     <category term="Java" scheme="https://me.sunshj.top/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CentOS 7虚拟机网络连接图标消失解决方法</title>
-    <link href="https://me.sunshj.top/archives/centos7-internet-disappear/"/>
-    <id>https://me.sunshj.top/archives/centos7-internet-disappear/</id>
-    <published>2022-03-03T06:04:18.422Z</published>
-    <updated>2022-03-08T16:09:55.756Z</updated>
-    
-    <content type="html"><![CDATA[<p>此篇解决的是Centos7虚拟机（适用于有桌面的<em>Server</em> with <em>GUI</em> 版本）网络连接图标消失导致无法联网的解决方法</p><span id="more"></span><h1 id="CentOS-7虚拟机网络连接图标消失导致无法联网"><a href="#CentOS-7虚拟机网络连接图标消失导致无法联网" class="headerlink" title="CentOS 7虚拟机网络连接图标消失导致无法联网?"></a>CentOS 7虚拟机网络连接图标消失导致无法联网?</h1><p>最有效解决方法</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mv</span> /var/lib/NetworkManager /var/lib/NetworkManager.bak</span><br><span class="line"></span><br><span class="line">systemctl restart NetworkManager</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;此篇解决的是Centos7虚拟机（适用于有桌面的&lt;em&gt;Server&lt;/em&gt; with &lt;em&gt;GUI&lt;/em&gt; 版本）网络连接图标消失导致无法联网的解决方法&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="文章" scheme="https://me.sunshj.top/categories/%E6%96%87%E7%AB%A0/"/>
-    
-    
-    <category term="教程" scheme="https://me.sunshj.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="总结" scheme="https://me.sunshj.top/tags/%E6%80%BB%E7%BB%93/"/>
-    
-    <category term="Linux" scheme="https://me.sunshj.top/tags/Linux/"/>
     
   </entry>
   
