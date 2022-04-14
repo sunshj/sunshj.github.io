@@ -244,60 +244,94 @@
 
         <div class="article-content markdown-body">
             <h1 id="将应用添加在桌面右键"><a href="#将应用添加在桌面右键" class="headerlink" title="将应用添加在桌面右键"></a>将应用添加在桌面右键</h1><h2 id="一、注册表编辑器"><a href="#一、注册表编辑器" class="headerlink" title="一、注册表编辑器"></a>一、注册表编辑器</h2><p><code>win+R</code>输入<code>regedit</code>打开注册表编辑器</p>
-<p><img  
+<table>
+<thead>
+<tr>
+<th align="center"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.sunshj.top/Pic/images/article/rightclickexe/01.jpg"
+                     data-src="https://cdn.jsdelivr.net/gh/sunshj/Staticfile/img/rightclickexe01.jpg"
                       alt="01"
-                ></p>
+                ></th>
+</tr>
+</thead>
+</table>
 <br>
 
 <h2 id="二、操作步骤"><a href="#二、操作步骤" class="headerlink" title="二、操作步骤"></a>二、操作步骤</h2><p>1、地址栏输入<code>\HKEY_CLASSES_ROOT\Directory\Background\shell</code></p>
-<p>2、在该目录下新建<code>项</code>,命名为要添加的应用的名字，在此项内再创建一个项，命名为<code>command</code><br><img  
+<p>2、在该目录下新建<code>项</code>,命名为要添加的应用的名字，在此项内再创建一个项，命名为<code>command</code></p>
+<table>
+<thead>
+<tr>
+<th align="center"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.sunshj.top/Pic/images/article/rightclickexe/02.jpg"
+                     data-src="https://cdn.jsdelivr.net/gh/sunshj/Staticfile/img/rightclickexe02.jpg"
                       alt="02"
-                ><br><img  
+                ></th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th align="center"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.sunshj.top/Pic/images/article/rightclickexe/03.jpg"
-                      alt="03"
-                ></p>
-<br>
-
+                     data-src="https://cdn.jsdelivr.net/gh/sunshj/Staticfile/img/rightclickexe03.jpg"
+                     
+                ></th>
+</tr>
+</thead>
+</table>
 <p>3、在快捷键项新建添加<code>可扩充字符串值</code></p>
 <ul>
 <li><p>数值名称为<code>Icon</code></p>
 </li>
 <li><p>数值数据为<code>exe应用程序地址</code></p>
-<p><img  
+<table>
+<thead>
+<tr>
+<th align="center"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.sunshj.top/Pic/images/article/rightclickexe/04.jpg"
-                      alt="04"
-                ></p>
+                     data-src="https://cdn.jsdelivr.net/gh/sunshj/Staticfile/img/rightclickexe04.jpg"
+                     
+                ></th>
+</tr>
+</thead>
+</table>
 </li>
 </ul>
-<br>
-
 <p>4、在command项中添加数值数据</p>
    <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;exe应用程序地址&quot;&quot;%V&quot;</span><br></pre></td></tr></table></figure>
 
-<p>   <img  
+<table>
+<thead>
+<tr>
+<th align="center"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.sunshj.top/Pic/images/article/rightclickexe/05.jpg"
-                      alt="05"
-                ></p>
+                     data-src="https://cdn.jsdelivr.net/gh/sunshj/Staticfile/img/rightclickexe05.jpg"
+                     
+                ></th>
+</tr>
+</thead>
+</table>
 <p>5、现在桌面右键就可以显示出你添加的应用程序的快捷键了</p>
 <p>   示例：</p>
-<p>   <img  
+<table>
+<thead>
+<tr>
+<th align="center"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.sunshj.top/Pic/images/article/rightclickexe/06.jpg"
-                      alt="06"
-                ></p>
+                     data-src="https://cdn.jsdelivr.net/gh/sunshj/Staticfile/img/rightclickexe06.jpg"
+                     
+                ></th>
+</tr>
+</thead>
+</table>
 
         </div>
 

@@ -274,25 +274,44 @@
 <li>mariadb10</li>
 </ul>
 <h3 id="创建域名并上传FileRun"><a href="#创建域名并上传FileRun" class="headerlink" title="创建域名并上传FileRun"></a>创建域名并上传FileRun</h3><p>FileRun下载地址：<a class="link"   target="_blank" rel="noopener" href="https://filerun.com/download" >https://filerun.com/download<i class="fas fa-external-link-alt"></i></a></p>
-<p><img  
+<p>!</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.sunshj.top/Pic/images/article/filerun/01.png"
+                     data-src="https://cdn.jsdelivr.net/gh/sunshj/Staticfile/img/filerun001.png"
                      
-                ></p>
-<p><img  
+                ></th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th align="center"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.sunshj.top/Pic/images/article/filerun/02.png"
-                      alt="img"
-                ></p>
+                     data-src="https://cdn.jsdelivr.net/gh/sunshj/Staticfile/img/filerun002.png"
+                     
+                ></th>
+</tr>
+</thead>
+</table>
 <p>然后解压到根目录</p>
-<p><img  
+<table>
+<thead>
+<tr>
+<th align="center"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.sunshj.top/Pic/images/article/filerun/03.png"
-                      alt="img"
-                ></p>
+                     data-src="https://cdn.jsdelivr.net/gh/sunshj/Staticfile/img/filerun003.png"
+                     
+                ></th>
+</tr>
+</thead>
+</table>
 <h3 id="PHP扩展以及配置"><a href="#PHP扩展以及配置" class="headerlink" title="PHP扩展以及配置"></a>PHP扩展以及配置</h3><p>FileRun需要的扩展：</p>
 <ul>
 <li>ionCube</li>
@@ -300,115 +319,211 @@
 <li>Exif</li>
 </ul>
 <p>在软件管理里面选择PHP7.3的设置，开启扩展</p>
-<p><img  
+<table>
+<thead>
+<tr>
+<th align="center"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.sunshj.top/Pic/images/article/filerun/04.png"
-                      alt="img"
-                ></p>
+                     data-src="https://cdn.jsdelivr.net/gh/sunshj/Staticfile/img/filerun004.png"
+                     
+                ></th>
+</tr>
+</thead>
+</table>
 <p>同时还需要配置一下<code>exec</code>,在安装扩展下面的配置文件进行修改</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#找到open_basedir，大概在310行，记得替换成你的域名</span></span><br><span class="line">open_basedir = /www/wwwroot/yourdomain.com/:/tmp/:/proc/</span><br><span class="line"></span><br><span class="line"><span class="comment">#找到disable_functions，大概在315行</span></span><br><span class="line">删掉exec,代码即可。</span><br></pre></td></tr></table></figure>
 
-<p><img  
+<table>
+<thead>
+<tr>
+<th align="center"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.sunshj.top/Pic/images/article/filerun/05.png"
-                      alt="img"
-                ></p>
+                     data-src="https://cdn.jsdelivr.net/gh/sunshj/Staticfile/img/filerun005.png"
+                     
+                ></th>
+</tr>
+</thead>
+</table>
 <p>之后重启一下PHP</p>
-<p><img  
+<table>
+<thead>
+<tr>
+<th align="center"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.sunshj.top/Pic/images/article/filerun/06.png"
-                      alt="img"
-                ></p>
+                     data-src="https://cdn.jsdelivr.net/gh/sunshj/Staticfile/img/filerun006.png"
+                     
+                ></th>
+</tr>
+</thead>
+</table>
 <h3 id="安装FileRun"><a href="#安装FileRun" class="headerlink" title="安装FileRun"></a>安装FileRun</h3><p>以上都配置好之后，就可以访问你的域名进行安装，如果你安装时出现样式无法加载的情况，那么可能是因为你安装了宝塔nginx防火墙，关闭当前域名防火墙即可</p>
-<p><img  
+<table>
+<thead>
+<tr>
+<th align="center"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.sunshj.top/Pic/images/article/filerun/07.png"
-                      alt="img"
-                ></p>
-<p><img  
+                     data-src="https://cdn.jsdelivr.net/gh/sunshj/Staticfile/img/filerun007.png"
+                     
+                ></th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th align="center"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.sunshj.top/Pic/images/article/filerun/08.png"
-                      alt="img"
-                ></p>
+                     data-src="https://cdn.jsdelivr.net/gh/sunshj/Staticfile/img/filerun008.png"
+                     
+                ></th>
+</tr>
+</thead>
+</table>
 <p>然后刷新继续进行安装</p>
-<p><img  
+<table>
+<thead>
+<tr>
+<th align="center"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.sunshj.top/Pic/images/article/filerun/09.png"
-                      alt="img"
-                ></p>
+                     data-src="https://cdn.jsdelivr.net/gh/sunshj/Staticfile/img/filerun009.png"
+                     
+                ></th>
+</tr>
+</thead>
+</table>
 <p>检查配置是否通过，全部OK即可成功，如果提示<code>PHP configuration: open_basedir</code>的问题，只需要在域名设置取消防跨站攻击选项的勾选即可</p>
-<p><img  
+<table>
+<thead>
+<tr>
+<th align="center"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.sunshj.top/Pic/images/article/filerun/10.png"
-                      alt="img"
-                ></p>
+                     data-src="https://cdn.jsdelivr.net/gh/sunshj/Staticfile/img/filerun010.png"
+                     
+                ></th>
+</tr>
+</thead>
+</table>
 <p>全部检测通过，然后继续进行数据库的配置</p>
-<p><img  
+<table>
+<thead>
+<tr>
+<th align="center"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.sunshj.top/Pic/images/article/filerun/11.png"
-                      alt="img"
-                ></p>
+                     data-src="https://cdn.jsdelivr.net/gh/sunshj/Staticfile/img/filerun011.png"
+                     
+                ></th>
+</tr>
+</thead>
+</table>
 <p>安装完成之后会引导你进行用户的配置，修改管理员邮箱以及权限目录</p>
-<p><img  
+<table>
+<thead>
+<tr>
+<th align="center"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.sunshj.top/Pic/images/article/filerun/12.png"
-                      alt="img"
-                ></p>
-<p><img  
+                     data-src="https://cdn.jsdelivr.net/gh/sunshj/Staticfile/img/filerun012.png"
+                     
+                ></th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th align="center"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.sunshj.top/Pic/images/article/filerun/13.png"
-                      alt="img"
-                ></p>
+                     data-src="https://cdn.jsdelivr.net/gh/sunshj/Staticfile/img/filerun013.png"
+                     
+                ></th>
+</tr>
+</thead>
+</table>
 <p>如果只是个人用的话，建议关闭访客账户</p>
-<p><img  
+<table>
+<thead>
+<tr>
+<th align="center"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.sunshj.top/Pic/images/article/filerun/14.png"
-                      alt="img"
-                ></p>
+                     data-src="https://cdn.jsdelivr.net/gh/sunshj/Staticfile/img/filerun014.png"
+                     
+                ></th>
+</tr>
+</thead>
+</table>
 <h3 id="更改界面语言"><a href="#更改界面语言" class="headerlink" title="更改界面语言"></a>更改界面语言</h3><p>我的界面是中文的，是因为我安装了语言包，在Interface options中可以选择默认语言，最新版貌似只有英语，所以需要我们自己去安装语言包</p>
 <p>语言包地址：<a class="link"   target="_blank" rel="noopener" href="https://github.com/filerun/translations" >https://github.com/filerun/translations<i class="fas fa-external-link-alt"></i></a></p>
 <p>clone下来然后将chinese.php文件通过Filerun设置进行上传，之后刷新一下更换语言即可。</p>
-<p><img  
+<table>
+<thead>
+<tr>
+<th align="center"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.sunshj.top/Pic/images/article/filerun/15.png"
-                      alt="img"
-                ></p>
-<h2 id="界面截图"><a href="#界面截图" class="headerlink" title="界面截图"></a>界面截图</h2><p><img  
+                     data-src="https://cdn.jsdelivr.net/gh/sunshj/Staticfile/img/filerun015.png"
+                     
+                ></th>
+</tr>
+</thead>
+</table>
+<h2 id="界面截图"><a href="#界面截图" class="headerlink" title="界面截图"></a>界面截图</h2><table>
+<thead>
+<tr>
+<th align="center"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.sunshj.top/Pic/images/article/filerun/16.png"
-                      alt="img"
-                ></p>
-<p><img  
+                     data-src="https://cdn.jsdelivr.net/gh/sunshj/Staticfile/img/filerun016.png"
+                     
+                ></th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th align="center"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.sunshj.top/Pic/images/article/filerun/17.png"
-                      alt="img"
-                ></p>
-<p><img  
+                     data-src="https://cdn.jsdelivr.net/gh/sunshj/Staticfile/img/filerun017.png"
+                     
+                ></th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th align="center"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.sunshj.top/Pic/images/article/filerun/18.png"
-                      alt="img"
-                ></p>
-<p><img  
+                     data-src="https://cdn.jsdelivr.net/gh/sunshj/Staticfile/img/filerun018.png"
+                     
+                ></th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th align="center"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.sunshj.top/Pic/images/article/filerun/19.png"
-                      alt="img"
-                ></p>
+                     data-src="https://cdn.jsdelivr.net/gh/sunshj/Staticfile/img/filerun019.png"
+                     
+                ></th>
+</tr>
+</thead>
+</table>
 <h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>我个人认为它作为一个文件管理器是非常优秀的，如果你想自己搭建NAS，那么它是一个不错的选择。如果可以支持第三方云存储的外链下载就更好了。</p>
 <h3 id="版权"><a href="#版权" class="headerlink" title="版权"></a>版权</h3><p><strong>转载自<a class="link"   target="_blank" rel="noopener" href="https://blog.kaygb.com/109.html" >风也雨忆笙<i class="fas fa-external-link-alt"></i></a></strong></p>
 
