@@ -9,7 +9,7 @@
     
     <title>
         
-            标签: 总结 |
+            GitHub + jsDelivr + PicGo图床 |
         
         sunshj&#39;s Blog
     </title>
@@ -81,7 +81,7 @@
                         </li>
                     
                         <li class="menu-item">
-                            <a class=""
+                            <a class="active"
                                href="/archives/"
                             >
                                 归档
@@ -131,7 +131,7 @@
                 </li>
             
                 <li class="drawer-menu-item flex-center">
-                    <a class=""
+                    <a class="active"
                        href="/archives/">归档</a>
                 </li>
             
@@ -161,67 +161,243 @@
 
                 
                     <div class="fade-in-down-animation">
-    <div class="tag-container">
-        <div class="tag-name"><i class="fas fa-tag"></i>&nbsp;总结
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">GitHub + jsDelivr + PicGo图床</span>
         </div>
-        <div class="tag-post-list">
-            
-<div class="archive-list-container">
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.png">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">sunshj</span>
+                        
+                            <span class="author-label">Lv5</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-04-15 10:20:42</span>
+        <span class="mobile">2022-04-15 10:20</span>
+    </span>
     
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2021</span>
-                <span class="archive-year-post-count">[4]</span>
-            </div>
-            <ul class="article-list">
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
                 
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/archives/furigana-html/"
-                        >HTML振假名表示法</a>
-                        <span class="article-date">02-21</span>
+                    <li>
+                        <a href="/categories/%E6%96%87%E7%AB%A0/">文章</a>&nbsp;
                     </li>
                 
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/archives/halo-run/"
-                        >在服务器部署 Halo</a>
-                        <span class="article-date">02-21</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/archives/markdown/"
-                        >MarkDown语法</a>
-                        <span class="article-date">02-21</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/archives/ffmpeg-ass/"
-                        >FFMPEG压制ASS字幕</a>
-                        <span class="article-date">02-21</span>
+                    <li>
+                        &gt; <a href="/categories/%E5%88%86%E4%BA%AB/">分享</a>&nbsp;
                     </li>
                 
             </ul>
-        </section>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E6%80%BB%E7%BB%93/">总结</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E5%88%86%E4%BA%AB/">分享</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>300 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>1 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
     
 </div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <p>此篇介绍如何搭建 GitHub + jsDelivr + PicGo的免费图床<span id="more"></span></p>
+<h2 id="一、Github配置"><a href="#一、Github配置" class="headerlink" title="一、Github配置"></a>一、Github配置</h2><p>1、创建一个<code>公开(public)</code>的Github资料库(repository)：例如<code>staticfile</code></p>
+<p>2、点击个人账号头像，点击<code>settings</code>，点击<code>Developer settings</code>，点击<code>Personal access tokens</code>，点击<code>Generate New token</code>，输入自定义<code>Note</code>名 ，并勾选<code>repo</code>所有的选项。</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/sunshj/Staticfile/img/github-create-tokens.png"
+                     
+                ></th>
+</tr>
+</thead>
+</table>
+<p><strong>创建完成后会生成Token，只会出现一次，记得保存备用。</strong></p>
+<h2 id="二、PicGo上传图片工具下载配置"><a href="#二、PicGo上传图片工具下载配置" class="headerlink" title="二、PicGo上传图片工具下载配置"></a>二、PicGo上传图片工具下载配置</h2><p>1、下载地址：<a class="link"   target="_blank" rel="noopener" href="https://github.com/Molunerfinn/PicGo/releases" >https://github.com/Molunerfinn/PicGo/releases<i class="fas fa-external-link-alt"></i></a></p>
+<p>2、PicGo选择配置github图床</p>
+<ul>
+<li>设定仓库名：<code>github账号/图片仓库名</code></li>
+<li>设定分支名：<code>master</code></li>
+<li>设定Token：填写刚才我们生成的 Token</li>
+<li>指定存储路径：如果需要指定子目录可以填写例如 <code>img/</code>，不填则会上传至仓库根目录</li>
+<li>设定自定义域名：<code> https://cdn.jsdelivr.net/gh/github账号/仓库名</code></li>
+<li>最后设为默认图床，下次再上传图片就会自动上传到 github 图床了。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/sunshj/Staticfile/img/picgo-github-setting.png"
+                     
+                ></th>
+</tr>
+</thead>
+</table>
+<p>3、配置好之后，就可以切换到 “上传区” 选择 “图片上传 - GitHub图床” 后就可以上传图片了，支持拖拽、点击、剪贴板上传，上传后，图片链接会自动复制到剪贴板中。</p>
 
         </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>本文标题：GitHub + jsDelivr + PicGo图床</li>
+        <li>本文作者：sunshj</li>
+        <li>创建时间：2022-04-15 10:20:42</li>
+        <li>
+            本文链接：https://me.sunshj.top/archives/github-picgo/
+        </li>
+        <li>
+            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E6%80%BB%E7%BB%93/">#总结</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E5%88%86%E4%BA%AB/">#分享</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/archives/music-index/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">本站音乐文章索引</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+            <div class="comment-container">
+                <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments">&nbsp;评论</i>
     </div>
-
-    <div class="tag-paginator">
-        <div class="paginator">
-    
-        <a class="prev btn"
-           href="/tags/%E6%80%BB%E7%BB%93/page/4/"
-        >上一页</a>
     
 
+        
+            
+    <div id="gitalk-container"></div>
+    <script data-pjax
+            src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+    <script data-pjax>
+
+        function loadGitalk() {
+            let __gitalk__pathname = decodeURI(location.pathname);
+            const __gitalk__pathnameLength = __gitalk__pathname.length;
+            const __gitalk__pathnameMaxLength = 50;
+            if (__gitalk__pathnameLength > __gitalk__pathnameMaxLength) {
+                __gitalk__pathname = __gitalk__pathname.substring(0, __gitalk__pathnameMaxLength - 3) + '...';
+            }
+
+            try {
+                Gitalk && new Gitalk({
+                    clientID: 'fae3f7a8885d891e7855',
+                    clientSecret: 'd714980af20fbb12564a55f85003ccd793b4565d',
+                    repo: 'MyGitalkComment',
+                    owner: 'sunshj',
+                    admin: ['sunshj'],
+                    id: __gitalk__pathname,
+                    language: 'zh-CN'
+                }).render('gitalk-container');
+
+            } catch (e) {
+                window.Gitalk = null;
+            }
+        }
+
+        if ('true') {
+            const loadGitalkTimeout = setTimeout(() => {
+                loadGitalk();
+                clearTimeout(loadGitalkTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadGitalk);
+        }
+    </script>
+
+
+
+        
     
 </div>
 
+            </div>
+        
     </div>
 </div>
 
@@ -279,6 +455,27 @@
     </div>
 
     
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
 
     <div class="right-bottom-side-tools">
         <div class="side-tools-container">
@@ -323,6 +520,14 @@
 
     </div>
 
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81Github%E9%85%8D%E7%BD%AE"><span class="nav-text">一、Github配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81PicGo%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E5%B7%A5%E5%85%B7%E4%B8%8B%E8%BD%BD%E9%85%8D%E7%BD%AE"><span class="nav-text">二、PicGo上传图片工具下载配置</span></a></li></ol>
+    </div>
+</div>
+        </aside>
     
 
     <div class="image-viewer-container">
@@ -381,6 +586,8 @@
 
 
 <div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/toc.js"></script>
     
 </div>
 
