@@ -6,7 +6,7 @@
   <link href="https://me.sunshj.top/atom.xml" rel="self"/>
   
   <link href="https://me.sunshj.top/"/>
-  <updated>2022-04-21T06:15:46.386Z</updated>
+  <updated>2022-04-21T09:04:25.167Z</updated>
   <id>https://me.sunshj.top/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>IDEA配置Scala开发环境(sbt)</title>
-    <link href="https://me.sunshj.top/archives/scala-sbt/"/>
-    <id>https://me.sunshj.top/archives/scala-sbt/</id>
+    <title>IDEA配置Spark开发环境(sbt)</title>
+    <link href="https://me.sunshj.top/archives/spark-idea-sbt/"/>
+    <id>https://me.sunshj.top/archives/spark-idea-sbt/</id>
     <published>2022-04-21T06:15:57.457Z</published>
-    <updated>2022-04-21T06:15:46.386Z</updated>
+    <updated>2022-04-21T09:04:25.167Z</updated>
     
     <content type="html"><![CDATA[<p>与<a href="https://me.sunshj.top/archives/Spark/">Spark完全分布式安装及简单Scala编程</a>不同，此次使用sbt创建项目<span id="more"></span></p><h2 id="一、系统配置"><a href="#一、系统配置" class="headerlink" title="一、系统配置"></a>一、系统配置</h2><p>下载<a class="link"   href="https://github.com/cdarlint/winutils" >winutils<i class="fas fa-external-link-alt"></i></a>：下载<code>hadoop-2.7.7</code>，解压至hadoop文件夹</p><p>环境变量：</p><ul><li>新建<code>HADOOP_HOME</code>，写入hadoop路径；</li><li>在Path中添加<code>%HADOOP_HOME%\bin</code></li></ul><h2 id="二、新建项目"><a href="#二、新建项目" class="headerlink" title="二、新建项目"></a>二、新建项目</h2><ul><li>IDEA新建项目</li><li>选择Scala</li><li>选择sbt</li></ul><p>选择合适的JDK以及Scala版本</p><h2 id="三、项目配置"><a href="#三、项目配置" class="headerlink" title="三、项目配置"></a>三、项目配置</h2><p><code>bulid.sbt</code> 添加spark-core (注意版本要与linux中相同)</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">libraryDependencies += &quot;org.apache.spark&quot; %% &quot;spark-core&quot; % &quot;2.4.5&quot;</span><br></pre></td></tr></table></figure>]]></content>
     
