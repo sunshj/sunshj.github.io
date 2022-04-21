@@ -222,7 +222,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>851 字</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>850 字</span>
         </span>
     
     
@@ -338,7 +338,7 @@
 <figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.apache.spark.<span class="type">SparkContext</span></span><br><span class="line"><span class="keyword">import</span> org.apache.spark.<span class="type">SparkConf</span></span><br><span class="line">           </span><br><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">WordCount</span></span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args : <span class="type">Array</span>[<span class="type">String</span>])</span><br><span class="line">    &#123;</span><br><span class="line">       <span class="keyword">val</span> conf = <span class="keyword">new</span> <span class="type">SparkConf</span>().setAppName(<span class="string">&quot;WordCount&quot;</span>)</span><br><span class="line">       <span class="keyword">val</span> sc = <span class="keyword">new</span> <span class="type">SparkContext</span>(conf)</span><br><span class="line">       <span class="keyword">val</span> inFile = sc.textFile(<span class="string">&quot;hdfs://master:9000/input/test.txt&quot;</span>)</span><br><span class="line">       <span class="keyword">val</span> wordCount = inFile.flatMap(_.split(<span class="string">&quot; &quot;</span>)).map(word =&gt; (word,<span class="number">1</span>)).reduceByKey((a,b)=&gt;a+b)</span><br><span class="line">       wordCount.foreach(println)  </span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h3 id="4、打包提交"><a href="#4、打包提交" class="headerlink" title="4、打包提交"></a>4、打包提交</h3><p>打包：和java程序打包方法相同，打包为WordCount.jar</p>
-<p>上传至master主机，使用以下命令执行程序，其中 &#96;&#96;{Main-Class}<code> 为你的</code>MANIFEST.MF<code>文件中的 </code>Main-Class&#96;。</p>
+<p>上传至master主机，使用以下命令执行程序，其中 <code>&#123;Main-Class&#125;</code> 为你的<code>MANIFEST.MF</code>文件中的 <code>Main-Class</code>。</p>
 <p>首先删除不必要的文件</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zip -d WordCount.jar META-INF/*.RSA META-INF/*.DSA META-INF/*.SF</span><br></pre></td></tr></table></figure>
 
