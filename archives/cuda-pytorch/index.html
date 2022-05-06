@@ -9,7 +9,7 @@
     
     <title>
         
-            深度学习环境配置 |
+            CUDA+PyTorch环境配置 |
         
         sunshj&#39;s Blog
     </title>
@@ -164,7 +164,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">深度学习环境配置</span>
+            <span class="title-hover-animation">CUDA+PyTorch环境配置</span>
         </div>
 
         
@@ -183,8 +183,8 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fas fa-edit"></i>&nbsp;
-        <span class="pc">2022-02-24 17:10:12</span>
-        <span class="mobile">2022-02-24 17:10</span>
+        <span class="pc">2022-05-06 13:04:31</span>
+        <span class="mobile">2022-05-06 13:04</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -222,12 +222,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>251 字</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>513 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fas fa-clock"></i>&nbsp;<span>1 分钟</span>
+            <i class="fas fa-clock"></i>&nbsp;<span>2 分钟</span>
         </span>
     
     
@@ -243,29 +243,61 @@
         
 
         <div class="article-content markdown-body">
-            <h1 id="深度学习环境配置"><a href="#深度学习环境配置" class="headerlink" title="深度学习环境配置"></a>深度学习环境配置</h1><h2 id="一、安装tensorflow"><a href="#一、安装tensorflow" class="headerlink" title="一、安装tensorflow"></a>一、安装tensorflow</h2><h3 id="1、创建虚拟环境"><a href="#1、创建虚拟环境" class="headerlink" title="1、创建虚拟环境"></a>1、创建虚拟环境</h3><p>Python 虚拟环境用于将软件包安装与系统隔离开来。</p>
-<p>创建一个新的虚拟环境，方法是选择 Python 解释器并创建一个 <code>.\venv</code> 目录来存放它：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m venv --system-site-packages .\venv</span><br></pre></td></tr></table></figure>
+            <p>Cuda和cuDNN以及pytorch安装<span id="more"></span></p>
+<h2 id="一、CUDA和cuDNN安装"><a href="#一、CUDA和cuDNN安装" class="headerlink" title="一、CUDA和cuDNN安装"></a>一、CUDA和cuDNN安装</h2><h3 id="1、查看系统信息"><a href="#1、查看系统信息" class="headerlink" title="1、查看系统信息"></a>1、查看系统信息</h3><p>在win10的搜索框里搜索 NVIDIA Control Panel，左下角找到<code>系统信息</code>，在<code>组件</code>中查看<code>NVCUDA64.DLL</code>版本。</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/sunshj/Staticfile/img/cuda-01.png"
+                     
+                ></th>
+</tr>
+</thead>
+</table>
+<h3 id="2、CUDA下载链接"><a href="#2、CUDA下载链接" class="headerlink" title="2、CUDA下载链接"></a>2、CUDA下载链接</h3><p>最新版本下载链接: <a class="link"   target="_blank" rel="noopener" href="https://developer.nvidia.com/zh-cn/cuda-downloads" >https://developer.nvidia.com/zh-cn/cuda-downloads<i class="fas fa-external-link-alt"></i></a></p>
+<p>找过去的版本，在上面的链接页面中找到CUDA早期版本档案，对应的链接是：<a class="link"   target="_blank" rel="noopener" href="https://developer.nvidia.com/cuda-toolkit-archive" >https://developer.nvidia.com/cuda-toolkit-archive<i class="fas fa-external-link-alt"></i></a></p>
+<p>找到后，选择对应的操作系统<code>Operating System</code>，架构<code>Architecture</code>（一般默认x86_64），系统版本（<code>version</code>）（10就是win10），安装类型<code>Installer Type</code>（网好就network，一般都选local）</p>
+<h3 id="3、安装"><a href="#3、安装" class="headerlink" title="3、安装"></a>3、安装</h3><p>双击之后弹出的界面，选择的路径是临时解压文件夹，解压完成会自动删除文件夹，CUDA会安装在<code>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\</code>。</p>
+<h3 id="4、环境变量"><a href="#4、环境变量" class="headerlink" title="4、环境变量"></a>4、环境变量</h3><p>安装完成后会默认配置bin和libnvvp文件夹，还需要添加lib\x64文件夹。</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/sunshj/Staticfile/img/cuda-02.png"
+                     
+                ></th>
+</tr>
+</thead>
+</table>
+<h3 id="5、验证"><a href="#5、验证" class="headerlink" title="5、验证"></a>5、验证</h3><p>在命令行输入：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvcc -V</span><br></pre></td></tr></table></figure>
 
-<p>激活虚拟环境：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\venv\Scripts\activate</span><br></pre></td></tr></table></figure>
-
+<p>打印内容：</p>
 <blockquote>
-<p><strong>激活失败</strong>？在计算机上启动 Windows PowerShell 时，执行策略很可能是 Restricted（默认设置）</p>
-<p>想了解 计算机上的现用执行策略，打开PowerShell 然后输入<code>get-executionpolicy</code> ，查看是否为Restricted 。以管理员身份打开PowerShell 输入 <code>set-executionpolicy remotesigned</code> ，选择Y 即可。</p>
+<p>nvcc: NVIDIA (R) Cuda compiler driver<br>Copyright (c) 2005-2021 NVIDIA Corporation<br>Built on Fri_Dec_17_18:28:54_Pacific_Standard_Time_2021<br>Cuda compilation tools, release 11.6, V11.6.55<br>Build cuda_11.6.r11.6&#x2F;compiler.30794723_0s</p>
 </blockquote>
-<p>在不影响主机系统设置的情况下，在虚拟环境中安装软件包。首先升级 <code>pip</code>：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install --upgrade pip</span><br></pre></td></tr></table></figure>
+<h3 id="6、下载cuDNN"><a href="#6、下载cuDNN" class="headerlink" title="6、下载cuDNN"></a>6、下载cuDNN</h3><p>下载链接：<a class="link"   target="_blank" rel="noopener" href="https://developer.nvidia.com/rdp/cudnn-download" >https://developer.nvidia.com/rdp/cudnn-download<i class="fas fa-external-link-alt"></i></a><br>需要注册一个NVIDA账号，登录之后才可以下载。</p>
+<h3 id="7、安装cuDNN"><a href="#7、安装cuDNN" class="headerlink" title="7、安装cuDNN"></a>7、安装cuDNN</h3><p>解压下载的文件后得到三个文件夹<code>bin、 include、 lib</code>，把这三个文件夹中的所有内容分别放到之前cuda对应的文件夹中，<code>bin-&gt;bin、include-&gt;include、lib-&gt;lib/x64/</code>。</p>
+<h2 id="二、pytorch安装"><a href="#二、pytorch安装" class="headerlink" title="二、pytorch安装"></a>二、pytorch安装</h2><h3 id="1、安装"><a href="#1、安装" class="headerlink" title="1、安装"></a>1、安装</h3><p>pytorch官网：<a class="link"   target="_blank" rel="noopener" href="https://pytorch.org/" >pytorch<i class="fas fa-external-link-alt"></i></a></p>
+<p>选择自己合适的配置，然后去下载就好了</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio===0.11.0+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html</span><br></pre></td></tr></table></figure>
 
-<p>退出虚拟环境：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deactivate  </span><br></pre></td></tr></table></figure>
+<h3 id="2、验证"><a href="#2、验证" class="headerlink" title="2、验证"></a>2、验证</h3><p>在python环境中输入以下代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line">x = torch.rand(<span class="number">5</span>, <span class="number">3</span>)</span><br><span class="line"><span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure>
 
-<h3 id="2、安装tensorflow"><a href="#2、安装tensorflow" class="headerlink" title="2、安装tensorflow"></a>2、安装tensorflow</h3><p>前提是已进入虚拟环境，指定安装2.6.0版本</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install tensorflow==2.6.0</span><br></pre></td></tr></table></figure>
+<p>输出类似于：</p>
+<blockquote>
+<p>tensor([[0.3380, 0.3845, 0.3217],<br>        [0.8337, 0.9050, 0.2650],<br>        [0.2979, 0.7141, 0.9069],<br>        [0.1449, 0.1132, 0.1375],<br>        [0.4675, 0.3947, 0.1426]]) </p>
+</blockquote>
+<p>如果想检查GPU驱动和CUDA是否可以被PyTorch使用，运行以下命令：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line">torch.cuda.is_available()</span><br></pre></td></tr></table></figure>
 
-<h2 id="二、安装pytorch"><a href="#二、安装pytorch" class="headerlink" title="二、安装pytorch"></a>二、安装pytorch</h2><p>同样在虚拟环境下安装pytorch（cpuonly)</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install torch torchvision torchaudio</span><br></pre></td></tr></table></figure>
-
+<p>输出为True，表示安装成功。</p>
 
         </div>
 
@@ -273,11 +305,11 @@
             <div class="post-copyright-info">
                 <div class="article-copyright-info-container">
     <ul>
-        <li>本文标题：深度学习环境配置</li>
+        <li>本文标题：CUDA+PyTorch环境配置</li>
         <li>本文作者：sunshj</li>
-        <li>创建时间：2022-02-24 17:10:12</li>
+        <li>创建时间：2022-05-06 13:04:31</li>
         <li>
-            本文链接：https://me.sunshj.top/archives/deeplearning-env/
+            本文链接：https://me.sunshj.top/archives/cuda-pytorch/
         </li>
         <li>
             版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -309,29 +341,14 @@
         
             <div class="article-nav">
                 
-                    <div class="article-prev">
-                        <a class="prev"
-                           rel="prev"
-                           href="/archives/jsDelivrCDN/"
-                        >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">jsDelivr CDN的使用及缓存刷新</span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                        </a>
-                    </div>
-                
                 
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/archives/hexo/"
+                           href="/archives/bigdata-index/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">Github+Nodejs搭建Hexo</span>
+                                <span class="post-nav-title-item">本站大数据文章索引</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -527,7 +544,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="nav-text">深度学习环境配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%AE%89%E8%A3%85tensorflow"><span class="nav-text">一、安装tensorflow</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83"><span class="nav-text">1、创建虚拟环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E5%AE%89%E8%A3%85tensorflow"><span class="nav-text">2、安装tensorflow</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%AE%89%E8%A3%85pytorch"><span class="nav-text">二、安装pytorch</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81CUDA%E5%92%8CcuDNN%E5%AE%89%E8%A3%85"><span class="nav-text">一、CUDA和cuDNN安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E6%9F%A5%E7%9C%8B%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF"><span class="nav-text">1、查看系统信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81CUDA%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5"><span class="nav-text">2、CUDA下载链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81%E5%AE%89%E8%A3%85"><span class="nav-text">3、安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4%E3%80%81%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-text">4、环境变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5%E3%80%81%E9%AA%8C%E8%AF%81"><span class="nav-text">5、验证</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6%E3%80%81%E4%B8%8B%E8%BD%BDcuDNN"><span class="nav-text">6、下载cuDNN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7%E3%80%81%E5%AE%89%E8%A3%85cuDNN"><span class="nav-text">7、安装cuDNN</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81pytorch%E5%AE%89%E8%A3%85"><span class="nav-text">二、pytorch安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E5%AE%89%E8%A3%85"><span class="nav-text">1、安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E9%AA%8C%E8%AF%81"><span class="nav-text">2、验证</span></a></li></ol></li></ol>
     </div>
 </div>
         </aside>

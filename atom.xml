@@ -6,7 +6,7 @@
   <link href="https://me.sunshj.top/atom.xml" rel="self"/>
   
   <link href="https://me.sunshj.top/"/>
-  <updated>2022-04-28T05:17:01.225Z</updated>
+  <updated>2022-05-06T05:09:38.447Z</updated>
   <id>https://me.sunshj.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CUDA+PyTorch环境配置</title>
+    <link href="https://me.sunshj.top/archives/cuda-pytorch/"/>
+    <id>https://me.sunshj.top/archives/cuda-pytorch/</id>
+    <published>2022-05-06T05:04:31.995Z</published>
+    <updated>2022-05-06T05:09:38.447Z</updated>
+    
+    <content type="html"><![CDATA[<p>Cuda和cuDNN以及pytorch安装<span id="more"></span></p><h2 id="一、CUDA和cuDNN安装"><a href="#一、CUDA和cuDNN安装" class="headerlink" title="一、CUDA和cuDNN安装"></a>一、CUDA和cuDNN安装</h2><h3 id="1、查看系统信息"><a href="#1、查看系统信息" class="headerlink" title="1、查看系统信息"></a>1、查看系统信息</h3><p>在win10的搜索框里搜索 NVIDIA Control Panel，左下角找到<code>系统信息</code>，在<code>组件</code>中查看<code>NVCUDA64.DLL</code>版本。</p><table><thead><tr><th align="center"><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/sunshj/Staticfile/img/cuda-01.png"                                     ></th></tr></thead></table><h3 id="2、CUDA下载链接"><a href="#2、CUDA下载链接" class="headerlink" title="2、CUDA下载链接"></a>2、CUDA下载链接</h3><p>最新版本下载链接: <a class="link"   href="https://developer.nvidia.com/zh-cn/cuda-downloads" >https://developer.nvidia.com/zh-cn/cuda-downloads<i class="fas fa-external-link-alt"></i></a></p><p>找过去的版本，在上面的链接页面中找到CUDA早期版本档案，对应的链接是：<a class="link"   href="https://developer.nvidia.com/cuda-toolkit-archive" >https://developer.nvidia.com/cuda-toolkit-archive<i class="fas fa-external-link-alt"></i></a></p><p>找到后，选择对应的操作系统<code>Operating System</code>，架构<code>Architecture</code>（一般默认x86_64），系统版本（<code>version</code>）（10就是win10），安装类型<code>Installer Type</code>（网好就network，一般都选local）</p><h3 id="3、安装"><a href="#3、安装" class="headerlink" title="3、安装"></a>3、安装</h3><p>双击之后弹出的界面，选择的路径是临时解压文件夹，解压完成会自动删除文件夹，CUDA会安装在<code>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\</code>。</p><h3 id="4、环境变量"><a href="#4、环境变量" class="headerlink" title="4、环境变量"></a>4、环境变量</h3><p>安装完成后会默认配置bin和libnvvp文件夹，还需要添加lib\x64文件夹。</p><table><thead><tr><th align="center"><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.jsdelivr.net/gh/sunshj/Staticfile/img/cuda-02.png"                                     ></th></tr></thead></table><h3 id="5、验证"><a href="#5、验证" class="headerlink" title="5、验证"></a>5、验证</h3><p>在命令行输入：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvcc -V</span><br></pre></td></tr></table></figure><p>打印内容：</p><blockquote><p>nvcc: NVIDIA (R) Cuda compiler driver<br>Copyright (c) 2005-2021 NVIDIA Corporation<br>Built on Fri_Dec_17_18:28:54_Pacific_Standard_Time_2021<br>Cuda compilation tools, release 11.6, V11.6.55<br>Build cuda_11.6.r11.6&#x2F;compiler.30794723_0s</p></blockquote><h3 id="6、下载cuDNN"><a href="#6、下载cuDNN" class="headerlink" title="6、下载cuDNN"></a>6、下载cuDNN</h3><p>下载链接：<a class="link"   href="https://developer.nvidia.com/rdp/cudnn-download" >https://developer.nvidia.com/rdp/cudnn-download<i class="fas fa-external-link-alt"></i></a><br>需要注册一个NVIDA账号，登录之后才可以下载。</p><h3 id="7、安装cuDNN"><a href="#7、安装cuDNN" class="headerlink" title="7、安装cuDNN"></a>7、安装cuDNN</h3><p>解压下载的文件后得到三个文件夹<code>bin、 include、 lib</code>，把这三个文件夹中的所有内容分别放到之前cuda对应的文件夹中，<code>bin-&gt;bin、include-&gt;include、lib-&gt;lib/x64/</code>。</p><h2 id="二、pytorch安装"><a href="#二、pytorch安装" class="headerlink" title="二、pytorch安装"></a>二、pytorch安装</h2><h3 id="1、安装"><a href="#1、安装" class="headerlink" title="1、安装"></a>1、安装</h3><p>pytorch官网：<a class="link"   href="https://pytorch.org/" >pytorch<i class="fas fa-external-link-alt"></i></a></p><p>选择自己合适的配置，然后去下载就好了</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio===0.11.0+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html</span><br></pre></td></tr></table></figure><h3 id="2、验证"><a href="#2、验证" class="headerlink" title="2、验证"></a>2、验证</h3><p>在python环境中输入以下代码：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line">x = torch.rand(<span class="number">5</span>, <span class="number">3</span>)</span><br><span class="line"><span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure><p>输出类似于：</p><blockquote><p>tensor([[0.3380, 0.3845, 0.3217],<br>        [0.8337, 0.9050, 0.2650],<br>        [0.2979, 0.7141, 0.9069],<br>        [0.1449, 0.1132, 0.1375],<br>        [0.4675, 0.3947, 0.1426]]) </p></blockquote><p>如果想检查GPU驱动和CUDA是否可以被PyTorch使用，运行以下命令：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line">torch.cuda.is_available()</span><br></pre></td></tr></table></figure><p>输出为True，表示安装成功。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;Cuda和cuDNN以及pytorch安装</summary>
+    
+    
+    
+    <category term="文章" scheme="https://me.sunshj.top/categories/%E6%96%87%E7%AB%A0/"/>
+    
+    
+    <category term="教程" scheme="https://me.sunshj.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="总结" scheme="https://me.sunshj.top/tags/%E6%80%BB%E7%BB%93/"/>
+    
+    <category term="Python" scheme="https://me.sunshj.top/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>本站大数据文章索引</title>
@@ -33,9 +58,9 @@
     <category term="文章" scheme="https://me.sunshj.top/categories/%E6%96%87%E7%AB%A0/"/>
     
     
-    <category term="大数据" scheme="https://me.sunshj.top/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
-    
     <category term="总结" scheme="https://me.sunshj.top/tags/%E6%80%BB%E7%BB%93/"/>
+    
+    <category term="大数据" scheme="https://me.sunshj.top/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
     
   </entry>
   
@@ -56,11 +81,11 @@
     <category term="文章" scheme="https://me.sunshj.top/categories/%E6%96%87%E7%AB%A0/"/>
     
     
-    <category term="大数据" scheme="https://me.sunshj.top/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    <category term="教程" scheme="https://me.sunshj.top/tags/%E6%95%99%E7%A8%8B/"/>
     
     <category term="总结" scheme="https://me.sunshj.top/tags/%E6%80%BB%E7%BB%93/"/>
     
-    <category term="教程" scheme="https://me.sunshj.top/tags/%E6%95%99%E7%A8%8B/"/>
+    <category term="大数据" scheme="https://me.sunshj.top/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
     
   </entry>
   
@@ -152,9 +177,9 @@
     <category term="文章" scheme="https://me.sunshj.top/categories/%E6%96%87%E7%AB%A0/"/>
     
     
-    <category term="总结" scheme="https://me.sunshj.top/tags/%E6%80%BB%E7%BB%93/"/>
-    
     <category term="教程" scheme="https://me.sunshj.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="总结" scheme="https://me.sunshj.top/tags/%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
@@ -233,31 +258,6 @@
     <category term="教程" scheme="https://me.sunshj.top/tags/%E6%95%99%E7%A8%8B/"/>
     
     <category term="Linux" scheme="https://me.sunshj.top/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>批量替换 Front Matter中的tags</title>
-    <link href="https://me.sunshj.top/archives/hexo-tags-replace/"/>
-    <id>https://me.sunshj.top/archives/hexo-tags-replace/</id>
-    <published>2022-03-09T04:51:03.584Z</published>
-    <updated>2022-03-09T04:55:23.383Z</updated>
-    
-    <content type="html"><![CDATA[<p>在Markdown文档中可以通过Front Matter中的tags来设置hexo文章中的标签属性，但当想把一个标签改名，要批量替换为另一种标签时却很麻烦。<span id="more"></span>所以可以使用下面的方法来批量替换tags。</p><h1 id="批量替换-Front-Matter中的tags标签值"><a href="#批量替换-Front-Matter中的tags标签值" class="headerlink" title="批量替换 Front Matter中的tags标签值"></a>批量替换 Front Matter中的tags标签值</h1><blockquote><p>使用python实现</p></blockquote><p>需要下载<code>python-frontmatter</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install python-frontmatter</span><br></pre></td></tr></table></figure><p>实现脚本</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> frontmatter</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">update_front_matter</span>(<span class="params">file</span>):</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(file, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        post = frontmatter.loads(f.read())</span><br><span class="line">    is_write = <span class="literal">False</span></span><br><span class="line">    tags = post.get(<span class="string">&quot;tags&quot;</span>, [])</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;FrontMatter中的tags: &#x27;</span>, tags)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 将&#x27;教程&#x27;替换为&#x27;tutorial&#x27;，&#x27;总结&#x27;替换为&#x27;Summarize&#x27;。。。</span></span><br><span class="line">    new_tags = <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="keyword">lambda</span> x: x.replace(<span class="string">&#x27;教程&#x27;</span>, <span class="string">&#x27;tutorial&#x27;</span>).replace(<span class="string">&#x27;总结&#x27;</span>, <span class="string">&#x27;summary&#x27;</span>).replace(</span><br><span class="line">        <span class="string">&#x27;分享&#x27;</span>, <span class="string">&#x27;share&#x27;</span>).replace(<span class="string">&#x27;网站建设&#x27;</span>, <span class="string">&#x27;Web-building&#x27;</span>).replace(<span class="string">&#x27;大数据&#x27;</span>, <span class="string">&#x27;bigdata&#x27;</span>), tags))</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;替换之后的tags&#x27;</span><span class="string">&#x27;: &#x27;</span>, new_tags)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> post.get(<span class="string">&quot;tags&quot;</span>, <span class="literal">None</span>) != new_tags:</span><br><span class="line">        post[<span class="string">&quot;tags&quot;</span>] = new_tags</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> is_write:</span><br><span class="line">            is_write = <span class="literal">True</span></span><br><span class="line">    <span class="keyword">if</span> is_write:</span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(file, <span class="string">&#x27;w&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">            f.write(frontmatter.dumps(post))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 递归获取目录下所有文件</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">list_all_files</span>(<span class="params">root_path, ignore_dirs=[]</span>):</span><br><span class="line">    files = []</span><br><span class="line">    default_dirs = [<span class="string">&quot;.git&quot;</span>, <span class="string">&quot;.config&quot;</span>]</span><br><span class="line">    ignore_dirs.extend(default_dirs)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> parent, dirs, filenames <span class="keyword">in</span> os.walk(root_path):</span><br><span class="line">        dirs[:] = [d <span class="keyword">for</span> d <span class="keyword">in</span> dirs <span class="keyword">if</span> <span class="keyword">not</span> d <span class="keyword">in</span> ignore_dirs]</span><br><span class="line">        filenames = [f <span class="keyword">for</span> f <span class="keyword">in</span> filenames <span class="keyword">if</span> <span class="keyword">not</span> f[<span class="number">0</span>] == <span class="string">&#x27;.&#x27;</span>]</span><br><span class="line">        <span class="keyword">for</span> file <span class="keyword">in</span> filenames:</span><br><span class="line">            <span class="keyword">if</span> file.endswith(<span class="string">&quot;.md&quot;</span>):</span><br><span class="line">                files.append(os.path.join(parent, file))</span><br><span class="line">    <span class="keyword">return</span> files</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    files = list_all_files(<span class="string">&#x27;md/&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;当前目录: &quot;</span>, os.path.dirname(os.path.abspath(__file__)))</span><br><span class="line">    <span class="keyword">for</span> file <span class="keyword">in</span> files:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;---------------------------------------------------------------&quot;</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;当前文件: &#x27;</span>, file)</span><br><span class="line">        update_front_matter(file)</span><br></pre></td></tr></table></figure><p>使用方法：</p><ul><li><code> files = list_all_files(&#39;md/&#39;)</code>指定目录</li><li><code>new_tags</code>里设置需要更换的规则</li></ul><p><strong>注意：</strong></p><blockquote><p>文章的tag必须是<code>- XX</code>格式的才可进行转换</p></blockquote>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;在Markdown文档中可以通过Front Matter中的tags来设置hexo文章中的标签属性，但当想把一个标签改名，要批量替换为另一种标签时却很麻烦。</summary>
-    
-    
-    
-    <category term="文章" scheme="https://me.sunshj.top/categories/%E6%96%87%E7%AB%A0/"/>
-    
-    
-    <category term="分享" scheme="https://me.sunshj.top/tags/%E5%88%86%E4%BA%AB/"/>
-    
-    <category term="Python" scheme="https://me.sunshj.top/tags/Python/"/>
-    
-    <category term="网站建设" scheme="https://me.sunshj.top/tags/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/"/>
     
   </entry>
   
