@@ -183,8 +183,8 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fas fa-edit"></i>&nbsp;
-        <span class="pc">2022-03-06 18:15:56</span>
-        <span class="mobile">2022-03-06 18:15</span>
+        <span class="pc">2022-03-09 00:12:00</span>
+        <span class="mobile">2022-03-09 00:12</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -260,8 +260,6 @@
 
 <h2 id="三、选择排序"><a href="#三、选择排序" class="headerlink" title="三、选择排序"></a>三、选择排序</h2><p>选择排序其实就是每次都选择最小（或最大）的一个数，放在起始位置，然后再从剩余的未排序元素中寻找到最小（大）元素，然后放到已排序的数的后面。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*选择排序实现*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SelectionSort</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">int</span>[] arr = &#123;<span class="number">5</span>, <span class="number">2</span>, <span class="number">7</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">0</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">4</span>, <span class="number">6</span>&#125;;</span><br><span class="line">        test(arr);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">test</span><span class="params">(<span class="type">int</span>[] arr)</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; arr.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">min</span> <span class="operator">=</span> arr[i];</span><br><span class="line">            <span class="type">int</span> <span class="variable">pos</span> <span class="operator">=</span> i;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> i + <span class="number">1</span>; j &lt; arr.length; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (arr[j] &lt; min) &#123;</span><br><span class="line">                    min = arr[j];</span><br><span class="line">                    pos = j;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="type">int</span> <span class="variable">tmp</span> <span class="operator">=</span> arr[i];</span><br><span class="line">            arr[i] = min;</span><br><span class="line">            arr[pos] = tmp;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> k : arr) &#123;</span><br><span class="line">                System.out.print(k + <span class="string">&quot; &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
         </div>
 
         
@@ -270,7 +268,7 @@
     <ul>
         <li>本文标题：Java三大基本排序算法</li>
         <li>本文作者：sunshj</li>
-        <li>创建时间：2022-03-06 18:15:56</li>
+        <li>创建时间：2022-03-09 00:12:00</li>
         <li>
             本文链接：https://me.sunshj.top/archives/java-3basic-sorts/
         </li>
@@ -319,10 +317,10 @@
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/archives/centos7-internet-disappear/"
+                           href="/archives/jsDelivrCDN/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">CentOS 7虚拟机网络连接图标消失解决方法</span>
+                                <span class="post-nav-title-item">jsDelivr CDN的使用及缓存刷新</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                             <span class="right arrow-icon flex-center">
